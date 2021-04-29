@@ -44,29 +44,35 @@ const Navigation = () => {
 								</NavDropdown>
 							</Nav>
 
-							<Nav className='ml-right'>
-								<Nav.Link
-									style={{ color: 'white' }}
-									href='https://twitter.com/DylanDrechsel'>
-									<b>Twitter</b>
-								</Nav.Link>
-							</Nav>
+							<Animated animationIn='fadeInRightBig' animationInDelay='1500'>
+								<Nav className='ml-right'>
+									<Nav.Link
+										style={{ color: 'white' }}
+										href='https://twitter.com/DylanDrechsel'>
+										<b>Twitter</b>
+									</Nav.Link>
+								</Nav>
+							</Animated>
 
-							<Nav className='ml-right'>
-								<Nav.Link
-									style={{ color: 'white' }}
-									href='https://www.linkedin.com/in/dylan-drechsel/'>
-									<b>LinkedIn</b>
-								</Nav.Link>
-							</Nav>
+							<Animated animationIn='fadeInRightBig' animationInDelay='1750'>
+								<Nav className='ml-right'>
+									<Nav.Link
+										style={{ color: 'white' }}
+										href='https://www.linkedin.com/in/dylan-drechsel/'>
+										<b>LinkedIn</b>
+									</Nav.Link>
+								</Nav>
+							</Animated>
 
-							<Nav className='ml-right'>
-								<Nav.Link
-									style={{ color: 'white' }}
-									href='https://github.com/DylanDrechsel'>
-									<b>GitHub</b>
-								</Nav.Link>
-							</Nav>
+							<Animated animationIn='fadeInRightBig' animationInDelay='2000'>
+								<Nav className='ml-right'>
+									<Nav.Link
+										style={{ color: 'white' }}
+										href='https://github.com/DylanDrechsel'>
+										<b>GitHub</b>
+									</Nav.Link>
+								</Nav>
+							</Animated>
 
 							{/* <Form inline>
 							<FormControl
