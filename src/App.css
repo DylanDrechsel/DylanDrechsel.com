@@ -14,3 +14,24 @@
 .NavDiv {
   height: 25vh !important
 }
+
+.NavTitle {
+  font-family: Girassol;
+  font-size: 52px;
+}
+
+.NavTitle:hover {
+  letter-spacing: 4px;
+  font-size: 56px;
+  color: #39627F
+}
+
+.socialContact {
+  border: 2px solid white;
+  border-radius: 25px;
+  margin-right: 10px;
+}
+
+.socialContact:hover {
+  background-color: #39627F
+}
