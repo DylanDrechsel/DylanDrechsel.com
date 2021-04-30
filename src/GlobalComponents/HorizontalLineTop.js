@@ -4,7 +4,7 @@ import { Animated } from 'react-animated-css';
 
 const HorizontalLine = () => {
     return (
-			<Animated animationIn='slideInLeft' animationInDelay='100'>
+			<Animated animationIn='slideInLeft' animationInDelay='75'>
 				<div className='HorizontalLine'></div>
 			</Animated>
 		);
