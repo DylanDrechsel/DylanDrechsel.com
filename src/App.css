@@ -12,8 +12,8 @@
 }
 
 .NavDiv {
-  /* height: 8vh !important */
-  height: 15vh !important
+  height: 10vh !important
+  /* height: 15vh !important */
 }
 
 .NavTitle {
@@ -37,7 +37,25 @@
   background-color: #39627F
 }
 
+.Projects:hover {
+  background-color: #39627F !important
+}
+
 .HorizontalLine {
   height: 1px;
   background-color: #39627F;
+}
+
+.AnimatedVerticalLineLeft {
+  height: 74vh !important;
+  width: 2px !important;
+  background-color: #39627F;
+  /* background-position-x: 25%; */
+  /* background-position-x: center; */
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform: translate(-50%, -50%); */
+  /* left: 400px !important; */
 }
