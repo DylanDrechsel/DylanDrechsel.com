@@ -28,7 +28,7 @@ const Navigation = () => {
 										/* alignRight */
 										title={
 											<span
-												style={{ color: 'white' }}
+												style={{ color: 'white', 'font-size': '24px'}}
 												className='my-auto'>
 												<b>Projects</b>
 											</span>
