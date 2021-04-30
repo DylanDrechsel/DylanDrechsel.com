@@ -6,6 +6,8 @@ import HorizontalLineBottom from './GlobalComponents/HorizontalLineBottom'
 import Title from './HomeComponents/Title'
 import AnimatedVerticalLineLeft from './GlobalComponents/AnimatedVerticalLineLeft'
 import AnimatedVerticalLineRight from './GlobalComponents/AnimatedVerticalLineRight'
+import DylansInfo from './HomeComponents/DylansInfo'
+import HomeScreenSidePicture from './HomeComponents/HomeScreenSidePicture'
 
 
 function App() {
@@ -20,6 +22,8 @@ function App() {
          <Row>
             <AnimatedVerticalLineLeft />
             <AnimatedVerticalLineRight />
+               <DylansInfo />
+               <HomeScreenSidePicture />
          </Row>
          {/* </Col> */}
 
