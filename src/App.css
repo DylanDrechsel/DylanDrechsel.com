@@ -48,14 +48,22 @@
 
 .AnimatedVerticalLineLeft {
   height: 74vh !important;
-  width: 2px !important;
+  width: 3px !important;
   background-color: #39627F;
-  /* background-position-x: 25%; */
-  /* background-position-x: center; */
-  /* display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  transform: translate(-50%, -50%); */
-  /* left: 400px !important; */
+}
+
+.DylansInfo {
+  background-color: black;
+  height: 74vh !important;
+  width: 80vw !important;
+  margin-left: 2vw
+}
+
+.HomeSidePicture {
+  height: 74vh !important;
+  width: 18vw !important;
+  background-image: url("./Images/vertical-background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.7;
 }
