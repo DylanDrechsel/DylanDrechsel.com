@@ -12,7 +12,8 @@
 }
 
 .NavDiv {
-  height: 25vh !important
+  /* height: 8vh !important */
+  height: 15vh !important
 }
 
 .NavTitle {
@@ -34,4 +35,9 @@
 
 .socialContact:hover {
   background-color: #39627F
+}
+
+.HorizontalLine {
+  height: 1px;
+  background-color: #39627F;
 }
