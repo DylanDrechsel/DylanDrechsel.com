@@ -52,11 +52,18 @@
   background-color: #39627F;
 }
 
-.DylansInfo {
-  background-color: black;
-  height: 74vh !important;
-  width: 80vw !important;
-  margin-left: 2vw
+.DylansInfoPicture {
+  /* background-color: black; */
+  height: 70vh !important;
+  width: 75vw !important;
+  margin-left: 4.3vw;
+  margin-top: 2vh;
+  /* padding-right: 18vw !important; */
+  background-image: url("./Images/home-background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.4;
+  /* margin: auto; */
 }
 
 .HomeSidePicture {
@@ -66,4 +73,16 @@
   background-repeat: no-repeat;
   background-size: cover;
   opacity: 0.7;
+}
+
+.DylansInfoPictureDiv {
+  height: 74vh !important;
+  width: 82vw !important;
+}
+
+.ScrolldownAnimation {
+  background-color: white;
+  height: 50px !important;
+  width: 2.5px !important;
+  /* box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2); */
 }
