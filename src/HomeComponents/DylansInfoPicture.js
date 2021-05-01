@@ -1,14 +1,8 @@
 import React from 'react';
 import '../App.css'
 import { Animated } from 'react-animated-css';
-import { motion } from 'framer-motion';
+import Scrolldown from './Scrolldown'
 
-const animation = {
-	opacityChange: {
-		opacity: 1,
-		transition: { duration: 7 },
-	},
-};
 
 const DylansInfoPicture = () => {
     return (
@@ -17,12 +11,8 @@ const DylansInfoPicture = () => {
 				animationInDelay='1000'
 				animationInDuration={5000}
 				className='DylansInfoPictureDiv'>
-				{/* <motion.div
-					variants={animation}
-					initial={{ scale: 1 }}
-					animate='opacityChange'>
-				</motion.div> */}
-					<div className='DylansInfoPicture'></div>
+				<div className='DylansInfoPicture'></div>
+					<Scrolldown />
 			</Animated>
 		);
 };
