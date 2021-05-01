@@ -6,8 +6,9 @@ import HorizontalLineBottom from './GlobalComponents/HorizontalLineBottom'
 import Title from './HomeComponents/Title'
 import AnimatedVerticalLineLeft from './GlobalComponents/AnimatedVerticalLineLeft'
 import AnimatedVerticalLineRight from './GlobalComponents/AnimatedVerticalLineRight'
-import DylansInfo from './HomeComponents/DylansInfo'
+import DylansInfoPicture from './HomeComponents/DylansInfoPicture'
 import HomeScreenSidePicture from './HomeComponents/HomeScreenSidePicture'
+import ScrollDownAnimation from './GlobalComponents/ScrollDownAnimation'
 
 
 function App() {
@@ -18,14 +19,13 @@ function App() {
          <Title />
          <HorizontalLineBottom />
 
-         {/* <Col xs={3}> */}
          <Row>
             <AnimatedVerticalLineLeft />
             <AnimatedVerticalLineRight />
-               <DylansInfo />
-               <HomeScreenSidePicture />
+            <DylansInfoPicture />
+            <HomeScreenSidePicture />
+            <ScrollDownAnimation />
          </Row>
-         {/* </Col> */}
 
 		</div>
 

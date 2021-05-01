@@ -4,7 +4,7 @@ import { Animated } from 'react-animated-css';
 
 const HomeScreenSidePicture = () => {
     return (
-        <Animated animationIn='fadeIn' animationInDelay='750'>
+        <Animated animationIn='fadeIn' animationInDelay='1000' animationInDuration='1000'>
             <div className="HomeSidePicture"></div>
         </Animated>
             
