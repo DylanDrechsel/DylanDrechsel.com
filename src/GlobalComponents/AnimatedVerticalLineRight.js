@@ -8,14 +8,14 @@ const animation = {
 		transition: { duration: 0.5 },
 	},
 	slide: {
-		x: "82vw",
-		transition: { delay: .75, duration: 0.5 },
+		x: '82vw',
+		transition: { delay: 0.75, duration: 0.5 },
 	},
 };
 
 const AnimatedVerticalLineRight = () => {
 	return (
-		<motion.div variants={animation} animate='slide' style={{ x: '41vw '}}>
+		<motion.div variants={animation} animate='slide' style={{ x: '41vw ' }}>
 			<motion.div
 				variants={animation}
 				initial={{ scale: 0 }}

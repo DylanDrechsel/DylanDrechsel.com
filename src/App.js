@@ -9,6 +9,7 @@ import AnimatedVerticalLineRight from './GlobalComponents/AnimatedVerticalLineRi
 import DylansInfoPicture from './HomeComponents/DylansInfoPicture'
 import HomeScreenSidePicture from './HomeComponents/HomeScreenSidePicture'
 import ScrollDownAnimation from './GlobalComponents/ScrollDownAnimation'
+import Projects from './ProjectsComponents/Projects'
 
 
 function App() {
@@ -25,6 +26,10 @@ function App() {
             <DylansInfoPicture />
             <HomeScreenSidePicture />
             <ScrollDownAnimation />
+         </Row>
+
+         <Row>
+            <Projects />
          </Row>
 
 		</div>

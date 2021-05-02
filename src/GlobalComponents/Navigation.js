@@ -13,25 +13,27 @@ const Navigation = () => {
 						collapseOnSelect
 						variant='light'
 						expand='md'
-						/* bg="dark" */
-					>
+						/* fixed='top' */>
 						<Navbar.Brand href='#home' style={{ color: 'white' }}>
 							<h1>
 								<b className='NavTitle'>Dylan Drechsel</b>
 							</h1>
 						</Navbar.Brand>
 						<Navbar.Toggle aria-controls='basic-navbar-nav' />
-						{/* <Navbar.Collapse id='basic-navbar-nav' style={{ backgroundColor: 'white' }}> */}
 
 						<Nav className='m-auto'>
 							<Animated animationIn='fadeIn' animationInDelay='3000'>
 								<motion.div
 									whileHover={{
-										scale: 1.5
+										scale: 1.5,
 									}}
-									style={{ backgroundColor: 'black', 'border-radius': '25px', border: '2px solid white' }}>
+									style={{
+										backgroundColor: 'black',
+										'border-radius': '30px',
+										border: '4px solid white',
+									}}>
 									<Button
-										className='Projects'
+										className='ProjectsButton'
 										variant='outline-dark'
 										style={{
 											backgroundColor: 'black',
@@ -74,16 +76,6 @@ const Navigation = () => {
 								</Nav.Link>
 							</Nav>
 						</Animated>
-
-						{/* <Form inline>
-							<FormControl
-								type='text'
-								placeholder='Search'
-								className='mr-sm-2'
-							/>
-							<Button variant='outline-success'>Search</Button>
-						</Form> */}
-						{/* </Navbar.Collapse> */}
 					</Navbar>
 				</div>
 			</Animated>
