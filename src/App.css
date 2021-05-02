@@ -4,15 +4,29 @@
   height: 100vh;
   width: 100vw;
   overflow-x: hidden;
+  overflow-y: auto;
+  /* font-family: Girassol; */
+}
+
+.App::-webkit-scrollbar {
+  display: none;
+}
+
+.App {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 .Nav {
-  background-image: linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0));
-  z-index: 999;
+  /* background-image: linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0)); */
+  z-index: 2 !important;
+  /* position: absolute !important; */
 }
 
 .NavDiv {
-  height: 10vh !important
+  height: 10vh !important;
+  /* z-index: 2 !important; */
+  /* position: relative !important; */
   /* height: 15vh !important */
 }
 
@@ -37,7 +51,7 @@
   background-color: #39627F
 }
 
-.Projects:hover {
+.ProjectsButton:hover {
   background-color: #39627F !important
 }
 
@@ -53,16 +67,16 @@
 }
 
 .DylansInfoPicture {
-  /* background-color: black; */
+  /* background-color: rgb(255, 255, 255); */
   height: 70vh !important;
   width: 75vw !important;
   margin-left: 4.3vw;
   margin-top: 2vh;
   /* padding-right: 18vw !important; */
-  background-image: url("./Images/home-background.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  opacity: 0.4;
+  /* background-image: url("./Images/home-background.jpg"); */
+  /* background-repeat: no-repeat; */
+  /* background-size: cover; */
+  /* opacity: 0.4; */
   /* margin: auto; */
 }
 
@@ -91,4 +105,49 @@
   color: white;
   writing-mode: vertical-rl;
   text-orientation: mixed;
+}
+
+.TopLeftPicture {
+  background-image: url("./Images/home-background.jpg");
+  width: 30vw;
+  height: 30vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.BottomRightPicture {
+  background-image: url("./Images/home-background.jpg");
+  width: 30vw;
+  height: 40vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.MiddlePicture {
+  background-image: url("./Images/home-background-cropped.jpg");
+  width: 30vw;
+  height: 40vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+}
+
+.TopRightBlueDiv {
+  background-color: #39627F;
+  width:35vw;
+  height: 30vh;
+  /* opacity: .5; */
+}
+
+.BottomRightBlueDiv {
+  background-color: #39627F;
+  width:25vw;
+  height: 50vh;
+}
+
+.Projects {
+  background-color: rgba(255, 255, 255, 0.808);
+  height: 100vh !important;
+  width: 100vw !important;
+  margin-top: 2vh;
 }
