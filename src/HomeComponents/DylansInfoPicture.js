@@ -5,7 +5,7 @@ import TopLeftPicture from './DylansInfoPicturesComponents/TopLeftPicture'
 import BottomRightPicture from './DylansInfoPicturesComponents/BottomRightPicture'
 import MiddlePicture from './DylansInfoPicturesComponents/MiddlePicture'
 import TopRightBlueDiv from './DylansInfoPicturesComponents/TopRightBlueDiv'
-import BottomRightBlueDiv from './DylansInfoPicturesComponents/BottomRightBlueDiv'
+import BottomLeftBlueDiv from './DylansInfoPicturesComponents/BottomLeftBlueDiv'
 
 
 const DylansInfoPicture = () => {
@@ -18,7 +18,7 @@ const DylansInfoPicture = () => {
 			<div className='DylansInfoPictureDiv'>
 				<div className='DylansInfoPicture'>
 					<TopRightBlueDiv />
-					<BottomRightBlueDiv />
+					<BottomLeftBlueDiv />
 					<TopLeftPicture />
 					<BottomRightPicture />
 					<MiddlePicture />
