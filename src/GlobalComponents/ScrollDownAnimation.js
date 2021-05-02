@@ -7,7 +7,7 @@ const animation = {
 		y: '55vh',
 		transition: {
 			duration: 3,
-			delay: 4,
+			delay: 6,
 			repeat: Infinity,
 			repeatType: 'loop',
 			repeatDelay: 0,
