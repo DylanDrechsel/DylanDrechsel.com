@@ -10,7 +10,7 @@ const Title = () => {
 							style={{
 								color: 'white',
 								'font-size': '100px',
-								'font-family': 'Girassol',
+								// 'font-family': 'Girassol',
                                 'letter-spacing': '8px'
 							}}>
 							FULL STACK DEVELOPER
