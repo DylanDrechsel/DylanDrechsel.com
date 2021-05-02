@@ -5,6 +5,7 @@
   width: 100vw;
   overflow-x: hidden;
   overflow-y: auto;
+  font-family: 'Rubik'
   /* font-family: Girassol; */
 }
 
@@ -31,7 +32,7 @@
 }
 
 .NavTitle {
-  font-family: Girassol;
+  /* font-family: Girassol; */
   font-size: 52px;
 }
 
