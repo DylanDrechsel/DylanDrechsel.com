@@ -164,6 +164,8 @@
   background-size: cover;
   height: 30vh;
   width: 30vw;
+  position: relative;
+  z-index: 1;
 }
 
 .CombatMapPicture {
@@ -172,4 +174,72 @@
   background-size: cover;
   height: 30vh;
   width: 30vw;
+  position: relative;
+  top: -37vh;
+  position: relative;
+  z-index: 1 !important;
+}
+
+.CharactersGif {
+  background-image: url("./Images/dungeon-dive-characters.gif");
+  background-repeat: no-repeat;
+  background-size: 50%;
+  height: 12vh;
+  width: 30vw;
+  position: relative;
+  z-index: 1 !important;
+  left:9vw;
+  bottom: 30vh;
+}
+
+.MainTitle {
+  background-image: url("./Images/dungeon-dive-title.gif");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 12vh;
+  width: 53vw;
+  margin-left: 25vw;
+  position: relative;
+  z-index: 1 !important;
+}
+
+.CenterBlackDiv {
+  background-color: black;
+  width: 60vw;
+  height: 60vh;
+}
+
+.RightBlueDiv {
+  background-color: #39627F;
+  width: 40vw;
+  height: 70vh;
+}
+
+.MainInfo {
+  position: relative;
+  z-index: 1 !important;
+  width: 30vw;
+  color: white;
+  top: 3vh;
+  left: 2vw;
+}
+
+.SmallKeyFeatures {
+  /* background-color: red; */
+  width: 50vw;
+  height: 20vh;
+  position: relative;
+  z-index: 1 !important;
+  left: 10vw;
+  color: white;
+}
+
+.LargeKeyFeature {
+  width: 40vw;
+  height: 20vh;
+  position: relative;
+  z-index: 1 !important;
+  left: 45vw;
+  bottom: 35vh;
+  color: rgb(255, 255, 255);
 }
