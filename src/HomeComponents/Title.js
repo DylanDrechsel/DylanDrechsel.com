@@ -11,7 +11,7 @@ const Title = () => {
 								color: 'white',
 								'font-size': '100px',
 								// 'font-family': 'Girassol',
-                                'letter-spacing': '8px'
+                                // 'letter-spacing': '2px'
 							}}>
 							FULL STACK DEVELOPER
 						</b>

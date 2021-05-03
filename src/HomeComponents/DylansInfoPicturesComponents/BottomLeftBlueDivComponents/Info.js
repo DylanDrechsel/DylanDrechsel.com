@@ -6,7 +6,7 @@ const animation = {
 		opacity: 1,
 		y: '0vh',
 		transition: {
-			delay: 3.5,
+			delay: 4,
 			duration: 1,
 		},
 	},
@@ -14,7 +14,7 @@ const animation = {
 		y: '0vh',
 		opacity: 1,
 		transition: {
-			delay: 4.0,
+			delay: 4.5,
 			duration: 1,
 		},
 	},
@@ -22,7 +22,7 @@ const animation = {
 		y: '0vh',
 		opacity: 1,
 		transition: {
-			delay: 4.5,
+			delay: 5,
 			duration: 1,
 		},
 	},
@@ -40,7 +40,7 @@ const Info = () => {
 		<motion.div
 			style={{
 				x: '-6vw',
-				y: '14.5vh',
+				y: '15.5vh',
 				color: 'white',
 				width: '10vw',
 			}}>

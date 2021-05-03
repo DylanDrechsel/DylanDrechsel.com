@@ -9,31 +9,29 @@ import AnimatedVerticalLineRight from './GlobalComponents/AnimatedVerticalLineRi
 import DylansInfoPicture from './HomeComponents/DylansInfoPicture'
 import HomeScreenSidePicture from './HomeComponents/HomeScreenSidePicture'
 import ScrollDownAnimation from './GlobalComponents/ScrollDownAnimation'
-import Projects from './ProjectsComponents/Projects'
+import Projects from './Projects/Projects'
 
 
 function App() {
   return (
 		<div className='App'>
-         <Navigation />
-         <HorizontalLineTop />
-         <Title />
-         <HorizontalLineBottom />
+			<Navigation />
+			<HorizontalLineTop />
+			<Title />
+			<HorizontalLineBottom />
 
-         <Row>
-            <AnimatedVerticalLineLeft />
-            <AnimatedVerticalLineRight />
-            <DylansInfoPicture />
-            <HomeScreenSidePicture />
-            <ScrollDownAnimation />
-         </Row>
+			<Row>
+				<AnimatedVerticalLineLeft />
+				<AnimatedVerticalLineRight />
+				<DylansInfoPicture />
+				<HomeScreenSidePicture />
+				<ScrollDownAnimation />
+			</Row>
 
-         <Row>
-            <Projects />
-         </Row>
-
+			<Row>
+				<Projects/>
+			</Row>
 		</div>
-
 	);
 }
 
