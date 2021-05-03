@@ -1,7 +1,8 @@
 import React from 'react';
-import { Navbar, Nav, NavDropdown, Form, FormControl, Button } from 'react-bootstrap';
+import { Navbar, Nav, Button } from 'react-bootstrap';
 import { Animated } from 'react-animated-css';
 import { motion } from 'framer-motion'
+
 
 const Navigation = () => {
     return (
@@ -31,6 +32,7 @@ const Navigation = () => {
 										backgroundColor: 'black',
 										'border-radius': '30px',
 										border: '4px solid white',
+										x: '-3vw',
 									}}>
 									<Button
 										className='ProjectsButton'
@@ -39,9 +41,11 @@ const Navigation = () => {
 											backgroundColor: 'black',
 											'border-radius': '25px',
 										}}>
-										<b style={{ color: 'white', 'font-size': '24px' }}>
-											Projects
-										</b>
+										<a href='#projects' style={{ textDecoration: 'none' }}>
+											<b style={{ color: 'white', 'font-size': '24px' }}>
+												Projects
+											</b>
+										</a>
 									</Button>{' '}
 								</motion.div>
 							</Animated>

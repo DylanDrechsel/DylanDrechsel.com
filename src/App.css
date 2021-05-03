@@ -125,9 +125,9 @@
 }
 
 .MiddlePicture {
-  background-image: url("./Images/home-background-cropped.jpg");
   width: 30vw;
   height: 40vh;
+  background-image: url("./Images/home-background-cropped.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   
@@ -151,4 +151,25 @@
   height: 100vh !important;
   width: 100vw !important;
   margin-top: 2vh;
+}
+
+.DungeonDive {
+  width: 100vw;
+  height: 50vh;
+}
+
+.MainMenuPicture {
+  background-image: url("./Images/dungeon-dive-main-menu.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 30vh;
+  width: 30vw;
+}
+
+.CombatMapPicture {
+  background-image: url("./Images/dungeon-dive-combat-map.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 30vh;
+  width: 30vw;
 }
