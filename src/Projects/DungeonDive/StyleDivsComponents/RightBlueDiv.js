@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 
 const RightBlueDiv = () => {
     return (
-        <motion.div className="RightBlueDiv" style={{ x: "45vw", y: "-150vh" }}>
+        <motion.div className="RightBlueDiv" style={{ x: "50vw", y: "-140vh" }}>
             
         </motion.div>
     );
