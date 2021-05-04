@@ -147,7 +147,7 @@
 }
 
 .Projects {
-  background-color: rgba(255, 255, 255, 0.808);
+  background-color: black;
   height: 100vh !important;
   width: 100vw !important;
   margin-top: 2vh;
@@ -155,7 +155,7 @@
 
 .DungeonDive {
   width: 100vw;
-  height: 50vh;
+  height: 100vh;
 }
 
 .MainMenuPicture {
@@ -201,18 +201,29 @@
   margin-left: 25vw;
   position: relative;
   z-index: 1 !important;
+  top: 1vh;
 }
 
-.CenterBlackDiv {
-  background-color: black;
+.CenterRedDiv {
+  background-color:#a31622ab;
   width: 60vw;
-  height: 60vh;
+  height: 30vh;
+  /* z-index: 2 !important; */
 }
 
 .RightBlueDiv {
   background-color: #39627F;
-  width: 40vw;
+  width: 35vw;
   height: 70vh;
+}
+
+.BottomLeftDiv {
+  width: 25vw;
+  height: 20vh;
+  background-color: white;
+  position: relative;
+  bottom: 48vh;
+  left: 15vw;
 }
 
 .MainInfo {
@@ -239,7 +250,7 @@
   height: 20vh;
   position: relative;
   z-index: 1 !important;
-  left: 45vw;
+  left: 55vw;
   bottom: 35vh;
   color: rgb(255, 255, 255);
 }

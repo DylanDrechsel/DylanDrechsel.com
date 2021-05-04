@@ -1,0 +1,3 @@
+- React Scroll
+- Glow on verticle lines
+- Scrolling Navbar
