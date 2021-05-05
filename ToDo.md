@@ -1,3 +1,4 @@
 - React Scroll
 - Glow on verticle lines
 - Scrolling Navbar
+- Sizing for phones
