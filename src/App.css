@@ -5,8 +5,7 @@
   width: 100vw;
   overflow-x: hidden;
   overflow-y: auto;
-  font-family: 'Rubik'
-  /* font-family: Girassol; */
+  font-family: 'Rubik';
 }
 
 .App::-webkit-scrollbar {
@@ -151,11 +150,13 @@
   height: 100vh !important;
   width: 100vw !important;
   margin-top: 2vh;
+  overflow: hidden;
 }
 
 .DungeonDive {
   width: 100vw;
   height: 100vh;
+  overflow: hidden;
 }
 
 .MainMenuPicture {
