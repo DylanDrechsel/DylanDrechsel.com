@@ -188,8 +188,8 @@
   width: 30vw;
   position: relative;
   z-index: 1 !important;
-  left:9vw;
-  bottom: 30vh;
+  left: 20vw;
+  bottom: 162vh;
 }
 
 .MainTitle {
@@ -231,7 +231,7 @@
   z-index: 1 !important;
   width: 30vw;
   color: white;
-  top: 3vh;
+  top: 4.3vh;
   left: 2vw;
 }
 

@@ -35,6 +35,8 @@ const DungeonDive = () => {
 				<BottomLeftDiv />
 				<CenterRedDiv />
 				<RightBlueDiv />
+
+				<CharactersGif />
 			</div>
 		);
 };
