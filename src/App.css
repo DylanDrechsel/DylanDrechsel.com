@@ -485,7 +485,7 @@
   }
 }
 
-@media screen and (max-height: 550), (max-width: 1200px) {
+@media screen and (max-height: 750), (max-width: 1200px) {
   .Title {
     position: relative;
     bottom: 1.25vh;
