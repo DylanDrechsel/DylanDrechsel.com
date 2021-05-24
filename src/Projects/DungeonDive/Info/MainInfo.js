@@ -25,8 +25,8 @@ const MainInfo = () => {
 	
 	return (
 		<motion.div ref={ref} animate={animation} className='MainInfo'>
-			<h1 style={{ fontSize: '32px' }}>
-				<b>
+			<h1 className='MainInfoText'>
+				<b className='MainInfoText'>
 					Dungeon Dive is a web app using React that is inspired by the early
 					<br />
 					8-bit GameBoy games. Fight your way through the dungeon to reach the

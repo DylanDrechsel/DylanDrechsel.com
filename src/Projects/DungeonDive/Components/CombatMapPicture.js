@@ -20,13 +20,15 @@ const CombatMapPicture = () => {
 
         if(!inView) {
             animation.start({
-                x: 500
+                x: 800
             })
         }
     }, [inView])
 
     return (
-        <motion.div ref={ref} animate={animation} className="CombatMapPicture" />
+        <div ref={ref}>
+            <motion.div ref={ref} animate={animation} className="CombatMapPicture" />
+        </div>
     );
 };
 

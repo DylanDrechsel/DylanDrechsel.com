@@ -25,8 +25,8 @@ const SmallKeyFeatures = () => {
 	}, [inView]);
 
 	return (
-		<motion.div ref={ref} animate={animation}className='SmallKeyFeatures'>
-			<h1 style={{ fontSize: '48px' }}>
+		<motion.div ref={ref} animate={animation} className='SmallKeyFeatures'>
+			<h1 className='SmallKeyFeaturesText' style={{ fontSize: '48px' }}>
 				<b>
 					Computer AI to battle against <br />
 					Animated characters and main screen

@@ -24,9 +24,8 @@ const BottomLeftDiv = () => {
     }, [inView])
 
 	return (
-      
-            <motion.div ref={ref} animate={animation} className='BottomLeftDiv' />
-    )
+			<motion.div ref={ref} animate={animation} className='BottomLeftDiv' />
+	);
 };
 
 export default BottomLeftDiv;

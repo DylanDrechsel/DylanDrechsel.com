@@ -23,14 +23,29 @@ const animation = {
 
 const Info = () => {
     return (
-			<motion.div style={{ x: '1.5vw', y: '7.5vh', opacity: 0, width: "40vw", color: 'white'}} variants={animation} animate="firstFade">
-				<h1 style={{ fontSize: 48 }}>
+			<motion.div
+				style={{
+					x: '1.5vw',
+					y: '7.5vh',
+					opacity: 0,
+					width: '40vw',
+					color: 'white',
+				}}
+				variants={animation}
+				animate='firstFade'>
+				<h1 className='TopRightInfoText' style={{ fontSize: 48 }}>
 					<b>Solves complex problems with</b> <br />
-
-                    <motion.div style={{ width: '10vw', opacity: 0 }} variants={animation} animate="secondFade">
-                        <b style={{ textAlign: 'center', fontSize: 60 }}>Creative Solutions</b>
-                    </motion.div>
-
+					<motion.div
+						className='GrayDiv'
+						style={{ width: '10vw', opacity: 0 }}
+						variants={animation}
+						animate='secondFade'>
+						<b
+							className='TopRightInfoTextBottom'
+							style={{ textAlign: 'center', fontSize: 60 }}>
+							Creative Solutions
+						</b>
+					</motion.div>
 				</h1>
 			</motion.div>
 		);
