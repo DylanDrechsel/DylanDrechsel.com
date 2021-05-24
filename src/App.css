@@ -395,10 +395,10 @@
   }
 }
 
-@media screen and (max-height: 650), (max-width: 1300px) {
+@media screen and (max-height: 800), (max-width: 1500px) {
   .Title {
     position: relative;
-    bottom: .5vh;
+    bottom: 1vh;
     font-size: 66px;
   }
   .TopRightInfoText {
@@ -485,7 +485,7 @@
   }
 }
 
-@media screen and (max-height: 750), (max-width: 1200px) {
+@media screen and (max-height: 550), (max-width: 1000px) {
   .Title {
     position: relative;
     bottom: 1.25vh;
