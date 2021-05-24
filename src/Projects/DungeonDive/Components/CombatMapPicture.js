@@ -26,7 +26,7 @@ const CombatMapPicture = () => {
     }, [inView])
 
     return (
-        <div ref={ref}>
+        <div ref={ref} className='CombatMapPictureDiv'>
             <motion.div ref={ref} animate={animation} className="CombatMapPicture" />
         </div>
     );
