@@ -26,7 +26,7 @@ const LargeKeyFeatures = () => {
 
 	return (
 		<motion.div ref={ref} animate={animation} className='LargeKeyFeature'>
-			<h1 style={{ fontSize: '28px' }}>
+			<h1 className='LargeKeyFeatureText' style={{ fontSize: '28px' }}>
 				<b>
 					Able to move the character around the screen using the arrow keys &
 					has animations for every step & direction

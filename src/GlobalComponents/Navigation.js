@@ -25,9 +25,10 @@ const Navigation = () => {
 						<Nav className='m-auto'>
 							<Animated animationIn='fadeIn' animationInDelay='3000'>
 								<motion.div
-									whileHover={{
-										scale: 1.5,
-									}}
+									className='ProjectsDiv'
+									// whileHover={{
+									// 	scale: 1.5,
+									// }}
 									style={{
 										backgroundColor: 'black',
 										'border-radius': '30px',
@@ -42,7 +43,7 @@ const Navigation = () => {
 											'border-radius': '25px',
 										}}>
 										<a href='#projects' style={{ textDecoration: 'none' }}>
-											<b style={{ color: 'white', 'font-size': '24px' }}>
+											<b className='ProjectText' style={{ color: 'white', 'font-size': '24px' }}>
 												Projects
 											</b>
 										</a>

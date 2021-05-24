@@ -52,7 +52,7 @@
 }
 
 .ProjectsButton:hover {
-  background-color: #39627F !important
+  background-color: #39627F !important;
 }
 
 .HorizontalLine {
@@ -392,5 +392,95 @@
     position: relative;
     left: .5vw;
     font-size: 14px
+  }
+}
+
+@media screen and (max-height: 650), (max-width: 1300px) {
+  .Title {
+    position: relative;
+    bottom: .5vh;
+    font-size: 66px;
+  }
+  .TopRightInfoText {
+    font-size: 26px !important;
+    position: relative;
+    left: .5vw;
+    top: .5vh;
+  }
+  .TopRightInfoTextBottom {
+    font-size: 36px !important;
+    position: relative;
+    bottom: -.5vh;
+    left: 1vw
+  }
+  .ScrolldownText {
+    position: relative;
+    left: .5vw;
+    top: 1vh;
+    font-size: 12px
+  }
+  .ProjectText {
+    font-size: 18px !important;
+  }
+  .ProjectsDiv {
+    position: relative;
+    bottom: .5vh;
+  }
+  .Plan {
+    position: relative;
+    bottom: 5vh;
+    font-size: 36px
+  }
+  .Design {
+    position: relative;
+    bottom: 9vh;
+    font-size: 36px
+  }
+  .Build {
+    position: relative;
+    bottom: 12vh;
+    font-size: 36px
+  }
+  .Create {
+    position: relative;
+    bottom: 14vh;
+    font-size: 60px !important
+  }
+  .GrayDiv {
+    position: relative;
+    top: -.2vh
+  }
+  .BottomLeftDiv {
+    width: 25vw;
+    height: 20vh;
+    background-color: white;
+    position: relative;
+    bottom: 44vh;
+    left: 15vw;
+  }
+  .CenterRedDiv {
+    background-color: #a31622ab;
+    width: 60vw;
+    height: 31vh;
+    position: relative;
+    bottom: -3vh
+  }
+  .CombatMapPictureDiv {
+    position: relative !important;
+    /* bottom: 15vh !important; */
+  }
+  .MainInfoText {
+    font-size: 24px !important
+  }
+  .SmallKeyFeaturesText {
+    position: relative;
+    right: 18vw;
+    top: 3vh;
+    font-size: 32px !important;
+  }
+  .LargeKeyFeatureText {
+    font-size: 24px !important;
+    position: relative;
+    right: 4vw;
   }
 }
