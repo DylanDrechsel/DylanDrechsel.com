@@ -349,3 +349,48 @@
     bottom: 1.5vh
   }
 }
+
+@media screen and (max-width: 1350px) {
+  .Title {
+    position: relative;
+    bottom: .5vh;
+    font-size: 78px;
+  }
+  .TopRightInfoText {
+    font-size: 26px !important;
+    position: relative;
+    left: .5vw;
+    top: 1.3vh;
+  }
+  .TopRightInfoTextBottom {
+    font-size: 40px !important;
+    position: relative;
+    bottom: 1vh;
+    left: 1vw
+  }
+  .Plan {
+    position: relative;
+    bottom: 3vh;
+    font-size: 48px
+  }
+  .Design {
+    position: relative;
+    bottom: 4vh;
+    font-size: 48px
+  }
+  .Build {
+    position: relative;
+    bottom: 5vh;
+    font-size: 48px
+  }
+  .Create {
+    position: relative;
+    bottom: 7vh;
+    font-size: 72px !important
+  }
+  .ScrolldownText {
+    position: relative;
+    left: .5vw;
+    font-size: 14px
+  }
+}

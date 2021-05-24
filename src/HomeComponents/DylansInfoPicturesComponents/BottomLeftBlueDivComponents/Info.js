@@ -48,19 +48,19 @@ const Info = () => {
 				<b>
 
                     <motion.div variants={animation} animate='planEnter' style={{ y: "-10vh", opacity: 0 }}>
-					    <span>Plan </span><br />
+					    <span className='Plan'>Plan </span><br />
                     </motion.div>
 
                     <motion.div variants={animation} animate='designEnter' style={{ y: "-20vh", opacity: 0 }}>
-					    <span style={{ paddingLeft: '4vw' }}>Design</span> <br />
+					    <span className='Design' style={{ paddingLeft: '4vw' }}>Design</span> <br />
                     </motion.div>
 
                     <motion.div variants={animation} animate='buildEnter' style={{ y: "-30vh", opacity: 0 }} >
-					    <span style={{ paddingLeft: '8vw' }}>Build</span> <br />
+					    <span className='Build' style={{ paddingLeft: '8vw' }}>Build</span> <br />
                     </motion.div>
 
                     <motion.div variants={animation} animate='createEnter' style={{ opacity: 0 }}>
-					    <span style={{ paddingLeft: '12vw', fontSize: 90 }}>Create</span> <br />
+					    <span className='Create' style={{ paddingLeft: '12vw', fontSize: 90 }}>Create</span> <br />
                     </motion.div>
 
 

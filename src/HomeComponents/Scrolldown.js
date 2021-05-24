@@ -13,7 +13,7 @@ const Scrolldown = () => {
 				className='Scrolldown'
 				animate={{ rotate: 180 }}
 				style={{ x: '80.5vw', y: '-10vh' }}>
-				<b style={{ color: 'white' }}>Scroll Down</b>
+				<b className='ScrolldownText' style={{ color: 'white' }}>Scroll Down</b>
 			</motion.div>
         </Animated>
 		);
