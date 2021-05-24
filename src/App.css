@@ -484,3 +484,88 @@
     right: 4vw;
   }
 }
+
+@media screen and (max-height: 550), (max-width: 1200px) {
+  .Title {
+    position: relative;
+    bottom: 1.25vh;
+  }
+  .ProjectText {
+    font-size: 16px !important;
+  }
+  .ProjectsDiv {
+    position: relative;
+    bottom: .75vh;
+  }
+  .TopRightInfoText {
+    position: relative;
+    top: 01vh !important;
+  }
+  .TopRightInfoTextBottom {
+    font-size: 30px !important;
+    position: relative;
+    bottom: -1vh;
+  }
+  .Plan {
+    position: relative;
+    bottom: 8vh;
+    font-size: 36px
+  }
+  .Design {
+    position: relative;
+    bottom: 13vh;
+    font-size: 36px
+  }
+  .Build {
+    position: relative;
+    bottom: 17vh;
+    font-size: 36px
+  }
+  .Create {
+    position: relative;
+    bottom: 19vh;
+    font-size: 60px !important
+  }
+  .GrayDiv {
+    position: relative;
+    left: 2vh
+  }
+  .ScrolldownText {
+    position: relative;
+    left: 1vw;
+    top: 1vh;
+    font-size: 12px
+  }
+  .BottomLeftDiv {
+    width: 25vw;
+    height: 20vh;
+    background-color: white;
+    position: relative;
+    bottom: 44vh;
+    left: 15vw;
+  }
+  .CenterRedDiv {
+    background-color: #a31622ab;
+    width: 60vw;
+    height: 31vh;
+    position: relative;
+    bottom: -3vh
+  }
+  .RightBlueDiv {
+    position: relative;
+    bottom: 3vh;
+  }
+  .MainInfoText {
+    font-size: 20px !important
+  }
+  .SmallKeyFeaturesText {
+    font-size: 24px !important;
+  }
+  .SmallKeyFeatures {
+    position: relative;
+    top: 1vh
+  }
+  .LargeKeyFeatureText {
+    font-size: 20px !important
+  }
+}
