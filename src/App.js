@@ -11,9 +11,8 @@ import HomeScreenSidePicture from './HomeComponents/HomeScreenSidePicture'
 import ScrollDownAnimation from './GlobalComponents/ScrollDownAnimation'
 import Projects from './Projects/Projects'
 
-
 function App() {
-  return (
+  	return (
 		<div className='App'>
 			<Navigation />
 			<HorizontalLineTop />

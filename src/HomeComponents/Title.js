@@ -7,12 +7,7 @@ const Title = () => {
 				<div style={{ height: '12vh' }}>
 					<h1>
 						<b
-							style={{
-								color: 'white',
-								'font-size': '100px',
-								// 'font-family': 'Girassol',
-                                // 'letter-spacing': '2px'
-							}}>
+							className='Title'>
 							FULL STACK DEVELOPER
 						</b>
 					</h1>

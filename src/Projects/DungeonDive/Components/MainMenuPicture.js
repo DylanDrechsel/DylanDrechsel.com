@@ -5,6 +5,7 @@ import { useInView } from 'react-intersection-observer';
 const MainMenuPicture = () => {
     const { ref, inView } = useInView();
     const animation = useAnimation();
+    console.log(inView)
 
     useEffect(() => {
         if(inView) {
@@ -26,8 +27,10 @@ const MainMenuPicture = () => {
     }, [inView])
 
     return (
-        <motion.div ref={ref} animate={animation} className="MainMenuPicture" />
-    );
+			<div ref={ref}>
+				<motion.div animate={animation} className='MainMenuPicture' />
+			</div>
+		);
 };
 
 export default MainMenuPicture;
