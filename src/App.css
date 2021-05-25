@@ -266,7 +266,12 @@
 }
 
 /* Screen Size around 15inch macbook */
-@media screen and (max-width: 1540px) and (max-height: 870px) {
+@media screen and (max-width: 1920px) and (max-height: 1080px) {
+
+}
+
+/* Screen Size around 13inch macbook */
+@media screen and (max-width: 1540px) and (max-height: 870px) {1530
   .Title {
     font-size: 84px !important
   }
@@ -304,9 +309,52 @@
     position: relative;
     left: .25vw
   }
+  .MainInfoText {
+    position: relative;
+    bottom: 2vh;
+    font-size: 28px !important;
+  }
+  .SmallKeyFeaturesText {
+    font-size: 42px !important;
+    position: relative;
+    right: 5vw;
+    top: 2vh
+  }
+  .CombatMapPicture {
+    max-width: 30vw;
+    max-height: 25vh;
+    position: relative;
+    right: 2vw;
+    object-fit: cover;
+  }
+  .LargeKeyFeatureText {
+    position: relative;
+    top: 6vh
+  }
+  .MainMenuPicture {
+    max-height: 25vh;
+    background-size: fill;
+    object-fit: cover;
+  }
+  .RightBlueDiv {
+    position: relative;
+    top: 5vh;
+  }
+  .CenterRedDiv {
+    position: relative;
+    top: 5vh;
+  }
+  .BottomLeftDiv {
+    position: relative;
+    bottom: 43vh;
+    left: 15vw;
+  }
+  .CharactersGif {
+    position: relative;
+    left: 20vw;
+    bottom: 157vh;
+  }
 }
-
-/* Screen Size around 13inch macbook */
 
 
 /* Screen Size around Macbook air */
