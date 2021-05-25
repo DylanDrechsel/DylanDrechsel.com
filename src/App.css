@@ -307,6 +307,18 @@
     bottom: 1.5vh;
     font-size: 14px;
   }
+  .MainInfoText {
+    font-size: 24px !important;
+  }
+  /* .LargeKeyFeatureText {
+    font-size: 36px !important;
+  } */
+  .SmallKeyFeaturesText {
+    font-size: 36px !important;
+    position: relative;
+    right: 5vw;
+    top: 2vh
+  }
 }
 
 /* @media screen and (max-height: 928px) {
