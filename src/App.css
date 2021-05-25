@@ -265,7 +265,51 @@
   font-size: 100px;
 }
 
-@media screen and (max-height: 928px) {
+@media screen and (max-width: 1450px) and (max-height: 750px) {
+  .Title {
+    font-size: 72px;
+  }
+  .TopRightInfoText {
+    font-size: 36px !important;
+  }
+  .TopRightInfoTextBottom {
+    font-size: 44px !important;
+    position: relative;
+    bottom: .5vh;
+  }
+  .GrayDiv {
+    position: relative;
+    top: 1vh
+  }
+  .Plan {
+    position: relative;
+    bottom: 4vh;
+    font-size: 48px !important;
+  }
+  .Design {
+    position: relative;
+    bottom: 5vh;
+    font-size: 48px !important;
+  }
+  .Build {
+    position: relative;
+    bottom: 6vh;
+    font-size: 48px !important;
+  }
+  .Create {
+    position: relative;
+    bottom: 7vh;
+    font-size: 72px !important;
+  }
+  .ScrolldownText {
+    position: relative;
+    left: .25vw;
+    bottom: 1.5vh;
+    font-size: 14px;
+  }
+}
+
+/* @media screen and (max-height: 928px) {
   .TopRightInfoText{
     font-size: 36px !important;
     position: relative;
@@ -393,9 +437,9 @@
     left: .5vw;
     font-size: 14px
   }
-}
+} */
 
-@media screen and (max-height: 800), (max-width: 1500px) {
+/* @media screen and (max-height: 800), (max-width: 1375px) {
   .Title {
     position: relative;
     bottom: 1vh;
@@ -467,7 +511,6 @@
   }
   .CombatMapPictureDiv {
     position: relative !important;
-    /* bottom: 15vh !important; */
   }
   .MainInfoText {
     font-size: 24px !important
@@ -483,9 +526,9 @@
     position: relative;
     right: 4vw;
   }
-}
+} */
 
-@media screen and (max-height: 550), (max-width: 1000px) {
+/* @media screen and (max-height: 550), (max-width: 1000px) {
   .Title {
     position: relative;
     bottom: 1.25vh;
@@ -568,4 +611,4 @@
   .LargeKeyFeatureText {
     font-size: 20px !important
   }
-}
+} */
