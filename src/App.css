@@ -266,7 +266,7 @@
 }
 
 /* Screen Size around 15inch macbook */
-@media screen and (max-width: 1920px) and (max-height: 1080px) {
+/* @media screen and (max-width: 1920px) and (max-height: 1080px) {
   .NavDiv {
     height: 8vh !important;
   }
@@ -350,7 +350,7 @@
     left: 20vw;
     bottom: 157vh;
   }
-}
+} */
 
 /* Screen Size around 13inch macbook */
 @media screen and (max-width: 1540px) and (max-height: 870px) {
