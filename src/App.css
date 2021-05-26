@@ -265,10 +265,54 @@
   font-size: 100px;
 }
 
-@media screen and (max-height: 980px) and (max-width: 1920px) {
-  .Title {
-    color: rgb(170, 9, 9);
-    font-size: 24px;
+/* Screen Size around 21inch wide screen */
+@media screen and (max-width: 1920px) and (max-height: 980px) {
+  .NavTitle {
+    position: relative;
+    bottom: .75vh;
+  }
+  .ProjectsDiv {
+    position: relative;
+    top: -1vh;
+  }
+  .socialContact {
+    position: relative;
+    top: -1vh;
+  }
+  .TopRightInfoTextBottom {
+    position: relative;
+    top: -1.75vh !important
+  }
+  .Plan {
+    position: relative;
+    bottom: 2vh !important
+  }
+  .Design {
+    position: relative;
+    top: -1vh !important;
+  }
+  .Build {
+    position: relative;
+    top: 1vh !important
+  }
+  .Create {
+    position: relative;
+    top: 1vh !important;
+  }
+  .LargeKeyFeatureText {
+    position: relative;
+    top: 10vh !important
+  }
+  .MainMenuPicture {
+    background-size: contain !important;
+    position: relative;
+    top: 2vh !important;
+    left: 5vw !important
+  }
+  .CombatMapPicture {
+    background-size: contain !important;
+    position: relative;
+    left: 1vw !important
   }
 }
 
@@ -323,12 +367,16 @@
     position: relative;
     right: 2vw;
     object-fit: cover;
-    top: -30vh
+    top: -30vh;
+    background-size: contain !important;
   }
   .MainMenuPicture {
     max-height: 25vh;
-    background-size: fill;
     object-fit: cover;
+    background-size: contain !important;
+    position: relative;
+    top: 2vh !important;
+    left: 2vw !important
   }
   .SmallKeyFeaturesText {
     position: relative;
@@ -380,19 +428,19 @@
   }
   .Plan {
     position: relative;
-    bottom: 3vh;
+    top: -3vh !important;
   }
   .Design {
     position: relative;
-    bottom: 3vh;
+    top: -3vh !important;
   }
   .Build {
     position: relative;
-    bottom: 3vh;
+    top: -2vh !important;
   }
   .Create {
     position: relative;
-    bottom: 3vh;
+    top: -3vh !important;
   }
   .ScrolldownText {
     position: relative;
@@ -415,11 +463,13 @@
     position: relative;
     right: 2vw;
     object-fit: cover;
+    background-size: contain !important;
   }
   .MainMenuPicture {
     max-height: 25vh;
     background-size: fill;
     object-fit: cover;
+    background-size: contain !important;
   }
   .LargeKeyFeatureText {
     position: relative;
@@ -449,7 +499,7 @@
 /* Screen Size around Macbook air */
 @media screen and (max-width: 1450px) and (max-height: 770px) {
   .Title {
-    font-size: 72px;
+    font-size: 72px !important;
   }
   .TopRightInfoText {
     font-size: 36px !important;
@@ -457,31 +507,32 @@
   .TopRightInfoTextBottom {
     font-size: 44px !important;
     position: relative;
-    bottom: .5vh;
+    top: 0vh !important;
+    right: 1vw !important;
   }
   .GrayDiv {
     position: relative;
-    top: 1.4vh;
-    right: 2vw;
+    top: 1.4vh !important;
+    right: 2vw !important;
   }
   .Plan {
     position: relative;
-    bottom: 4vh;
+    bottom: 4vh !important;
     font-size: 48px !important;
   }
   .Design {
     position: relative;
-    bottom: 5vh;
+    top: -4vh !important;
     font-size: 48px !important;
   }
   .Build {
     position: relative;
-    bottom: 6vh;
+    top: -4vh !important;
     font-size: 48px !important;
   }
   .Create {
     position: relative;
-    bottom: 7vh;
+    top: -5vh !important;
     font-size: 72px !important;
   }
   .ScrolldownText {
@@ -492,10 +543,9 @@
   }
   .MainInfoText {
     font-size: 24px !important;
+    position: relative;
+    top: 0vh
   }
-  /* .LargeKeyFeatureText {
-    font-size: 36px !important;
-  } */
   .SmallKeyFeaturesText {
     font-size: 36px !important;
     position: relative;
