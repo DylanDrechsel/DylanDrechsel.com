@@ -51,7 +51,7 @@ const Navigation = () => {
 								</motion.div>
 							</Animated>
 						</Nav>
-
+						
 						<Animated animationIn='fadeInRightBig' animationInDelay='1500'>
 							<Nav className='ml-right socialContact'>
 								<Nav.Link
