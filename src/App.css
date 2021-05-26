@@ -310,6 +310,46 @@
     position: relative;
     top: 2vh
   }
+  .CombatMapPicture {
+    max-width: 30vw;
+    max-height: 25vh;
+    position: relative;
+    right: 2vw;
+    object-fit: cover;
+    top: -30vh
+  }
+  .MainMenuPicture {
+    max-height: 25vh;
+    background-size: fill;
+    object-fit: cover;
+  }
+  .SmallKeyFeaturesText {
+    position: relative;
+    right: 10vw;
+    top: 4vh
+  }
+  .LargeKeyFeatureText {
+    position: relative;
+    top: 6vh
+  }
+  .RightBlueDiv {
+    position: relative;
+    top: 5vh;
+  }
+  .CenterRedDiv {
+    position: relative;
+    top: 5vh;
+  }
+  .BottomLeftDiv {
+    position: relative;
+    bottom: 43vh;
+    left: 15vw;
+  }
+  .CharactersGif {
+    position: relative;
+    left: 20vw;
+    bottom: 157vh;
+  }
 }
 
 /* Screen Size around 13inch macbook */
@@ -369,14 +409,14 @@
     right: 2vw;
     object-fit: cover;
   }
-  .LargeKeyFeatureText {
-    position: relative;
-    top: 6vh
-  }
   .MainMenuPicture {
     max-height: 25vh;
     background-size: fill;
     object-fit: cover;
+  }
+  .LargeKeyFeatureText {
+    position: relative;
+    top: 6vh
   }
   .RightBlueDiv {
     position: relative;

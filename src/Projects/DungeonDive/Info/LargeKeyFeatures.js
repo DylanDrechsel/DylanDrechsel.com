@@ -32,7 +32,7 @@ const LargeKeyFeatures = () => {
 					has animations for every step & direction
 					<br />
 					<br />
-					Fully functional comabt map with move & attack functions (Move
+					Fully functional combat map with move & attack functions (Move
 					indicated by green tile & Attack indicated by red tile)
 				</b>
 			</h1>
