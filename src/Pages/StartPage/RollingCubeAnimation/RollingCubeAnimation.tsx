@@ -1,9 +1,11 @@
+import React from 'react';
+import { FC } from 'react';
 import './RollingCubeAnimation.scss';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-object-type
 interface RollingCubeProps {};
 
-const RollingCubeAnimation: RollingCubeProps= () => {
+const RollingCubeAnimation: FC<RollingCubeProps>= () => {
   return (
     // The 'scene' container acts as the perspective and animation wrapper
     <div className="scene">

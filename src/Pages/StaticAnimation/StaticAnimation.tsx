@@ -159,7 +159,7 @@ const StaticAnimation = ({ onAnimationComplete }: StaticAnimationProps) => {
 
             // ------------> Signal parent to show content earlier <------------
             // Call onAnimationComplete after a delay to allow overlapping fade
-            setTimeout(() => {
+            const showContentTimeoutId = setTimeout(() => {
                 if (onAnimationComplete) {
                     onAnimationComplete();
                 }
@@ -192,6 +192,11 @@ const StaticAnimation = ({ onAnimationComplete }: StaticAnimationProps) => {
 
             startTime = Date.now(); // Reset start time for the static fade
             animateStatic();
+
+            // --- Cleanup Function for the setTimeout in the Callback ---
+            return () => {
+                clearTimeout(showContentTimeoutId);
+            };
         });
 
         return () => {
@@ -201,8 +206,8 @@ const StaticAnimation = ({ onAnimationComplete }: StaticAnimationProps) => {
             }
         };
 
-    });
- 
+    }, []);
+
     return (
         <div className="static-animation-container">
             <div ref={overlayRef} className="tv-overlay">
