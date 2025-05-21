@@ -1,35 +1,49 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './App.scss';
 import { Routes, Route, Link } from 'react-router-dom';
-import StaticAnimation from './Pages/StaticAnimation/StaticAnimation.tsx'
+import StaticAnimation from './Pages/StaticAnimation/StaticAnimation.tsx';
 import AboutMe from './Pages/AboutMe/AboutMe';
 
 const App = () => {
-  const [animationComplete, setAnimationComplete] = useState(false);
+  const [showMainContent, setShowMainContent] = useState(false);
+  const [renderAnimationOverlay, setRenderAnimationOverlay] = useState(true);
 
-  const handleAnimationComplete = () => {
-    setAnimationComplete(true);
+  const handleShowMainContent = () => {
+    setShowMainContent(true);
   };
+
+  useEffect(() => {
+    let unmountTimer: number;
+
+    if (showMainContent) {
+      unmountTimer = setTimeout(() => {
+        setRenderAnimationOverlay(false);
+      }, 1500);
+
+      return () => clearTimeout(unmountTimer);
+    }
+  }, [showMainContent]);
 
   return (
     <>
-    {!animationComplete && (
-      <StaticAnimation onAnimationComplete={handleAnimationComplete}/>
+    {renderAnimationOverlay && (
+      <StaticAnimation onAnimationComplete={handleShowMainContent}/>
     )}
 
-    <div>
-      <nav>
-        <ul>
-          <li>
-            <Link to='/'> Home </Link>
-          </li>
-          <li>
-            <Link to='/about_me'> About Me </Link>
-          </li>
-        </ul>
-      </nav>
-    </div>
-      
+    <div className={`main-app-content ${showMainContent ? 'visible' : ''}`}>
+      <div>
+        <nav>
+          <ul>
+            <li>
+              <Link to='/'> Home </Link>
+            </li>
+            <li>
+              <Link to='/about_me'> About Me </Link>
+            </li>
+          </ul>
+        </nav>
+      </div>
+        
       <h1> DylanDrechsel.com </h1>
 
       <Routes>
@@ -43,6 +57,7 @@ const App = () => {
 
         <Route path='about_me' element={<AboutMe />} />
       </Routes>
+    </div>
     </>
   );
 }

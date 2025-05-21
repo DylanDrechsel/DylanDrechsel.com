@@ -6,7 +6,7 @@ interface StaticAnimationProps {
 }
 
 const generateStatic = (
-    ctx: CanvasRenderingContext2D, 
+    ctx: CanvasRenderingContext2D,      // ctx is a 2D rendering context
     width: number, 
     height: number, 
     intensity: number
@@ -31,9 +31,9 @@ const generateStatic = (
 };
 
 const drawCRTEffect = (
-    canvas: HTMLCanvasElement, 
-    ctx: CanvasRenderingContext2D, 
-    callback: () => void
+    canvas: HTMLCanvasElement,          // canvas is an HTMLCanvasElement
+    ctx: CanvasRenderingContext2D,     // ctx is a 2D rendering context
+    callback: () => void              // callback is a function that returns nothing
 ): void => {
     const width = canvas.width;
     const height = canvas.height;
@@ -48,13 +48,14 @@ const drawCRTEffect = (
         const elapsed = currentTime - startTime;
         const progress = Math.min(elapsed / duration, 1); // Progress of CRT effect (0 to 1)
 
-        ctx.fillStyle = 'black';
+        ctx.fillStyle = '#000000';
         ctx.fillRect(0, 0, width, height);
 
         // Draw different stages of the effect based on progress
         if (progress < 0.2) {
             // Stage 1: Green dot in center expanding
-            const dotSize = 10 + 20 * (progress / 0.2);
+            const dotProgress = progress / 0.2;
+            const dotSize = 10 + 20 * dotProgress;
             ctx.fillStyle = '#00ff00';
             ctx.beginPath();
             // Arguments: (x-coordinate, y-coordinate, radius, startAngle, endAngle)
@@ -135,7 +136,6 @@ const StaticAnimation = ({ onAnimationComplete }: StaticAnimationProps) => {
         }
 
         const ctx = canvas.getContext('2d');
-
         if (!ctx) {
             console.error('Could not get 2D rendering context');
             return;
@@ -153,9 +153,17 @@ const StaticAnimation = ({ onAnimationComplete }: StaticAnimationProps) => {
 
         drawCRTEffect(canvas, ctx, () => {
             // After CRT effect completes, start static animation fade-out
-            let intensity = 1;
             let startTime = Date.now();
             const staticFadeDuration = 1750;
+            const contentShowDelay = 500;   // Delay before signaling parent to show content
+
+            // ------------> Signal parent to show content earlier <------------
+            // Call onAnimationComplete after a delay to allow overlapping fade
+            const showContentTimeoutId = setTimeout(() => {
+                if (onAnimationComplete) {
+                    onAnimationComplete();
+                }
+            }, contentShowDelay);
 
             const animateStatic = () => {
                 const currentTime = Date.now();
@@ -163,7 +171,10 @@ const StaticAnimation = ({ onAnimationComplete }: StaticAnimationProps) => {
                 const progress = Math.min(elapsed / staticFadeDuration, 1); // Progress of static fade (0 to 1)
 
                 // Calculate intensity based on progress (fades from 1 down to a small value)
-                intensity = 1 - progress * 0.95;
+                let intensity = 1 - progress * 0.95;
+                if (intensity < 0) {
+                    intensity = 0;
+                }
 
                 generateStatic(ctx, canvas.width, canvas.height, intensity);
 
@@ -174,17 +185,34 @@ const StaticAnimation = ({ onAnimationComplete }: StaticAnimationProps) => {
                 }
 
                 // Continue animation if intensity is still significant
-                if (intensity > 0.06) {
+                if (intensity > 0.00) {
                     animationFrameIdRef.current = requestAnimationFrame(animateStatic);
                 } else {
-                    if (onAnimationComplete) {
-                        onAnimationComplete();
-                    }
+                    // Static is gone, now fully hide the overlay element
+                    // Use a small timeout to ensure the CSS opacity transition finishes
+                    // before the component might be unmounted by the parent.
+                    // This timeout is separate from the showContentTimeoutId above.
+                    setTimeout(() => {
+                        if (overlayRef.current) {
+                            overlayRef.current.style.display = 'none';
+                        }
+
+                        if (animationFrameIdRef.current !== null) {
+                            cancelAnimationFrame(animationFrameIdRef.current);
+                        }
+                    }, 1000); // Match the CSS transition duration
                 }
             };
 
             startTime = Date.now(); // Reset start time for the static fade
             animateStatic();
+
+            // --- Cleanup Function for this specific callback scope ---
+            // This ensures the showContentTimeoutId is cleared if the component unmounts
+            // before the timeout finishes.
+            return () => {
+                clearTimeout(showContentTimeoutId);
+            };
         });
 
         return () => {
@@ -194,7 +222,7 @@ const StaticAnimation = ({ onAnimationComplete }: StaticAnimationProps) => {
             }
         };
 
-    }, [onAnimationComplete]);
+    }, []);
 
     return (
         <div className="static-animation-container">
