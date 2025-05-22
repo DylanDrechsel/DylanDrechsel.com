@@ -3,6 +3,7 @@ import './StaticAnimation.scss';
 
 interface StaticAnimationProps {
     onAnimationComplete?: () => void;
+    startDice?: () => void;
 }
 
 const generateStatic = (
@@ -122,7 +123,7 @@ const drawCRTEffect = (
     animate();
 };
 
-const StaticAnimation = ({ onAnimationComplete }: StaticAnimationProps) => {
+const StaticAnimation = ({ onAnimationComplete, startDice }: StaticAnimationProps) => {
     const canvasRef = useRef<HTMLCanvasElement>(null);
     const overlayRef = useRef<HTMLDivElement>(null);
     const animationFrameIdRef = useRef<number | null>(null); // Ref to store requestAnimationFrame ID
@@ -155,7 +156,7 @@ const StaticAnimation = ({ onAnimationComplete }: StaticAnimationProps) => {
             // After CRT effect completes, start static animation fade-out
             let startTime = Date.now();
             const staticFadeDuration = 1750;
-            const contentShowDelay = 500;   // Delay before signaling parent to show content
+            const contentShowDelay = 250;   // Delay before signaling parent to show content
 
             // ------------> Signal parent to show content earlier <------------
             // Call onAnimationComplete after a delay to allow overlapping fade
@@ -187,29 +188,13 @@ const StaticAnimation = ({ onAnimationComplete }: StaticAnimationProps) => {
                 // Continue animation if intensity is still significant
                 if (intensity > 0.00) {
                     animationFrameIdRef.current = requestAnimationFrame(animateStatic);
-                } else {
-                    // Static is gone, now fully hide the overlay element
-                    // Use a small timeout to ensure the CSS opacity transition finishes
-                    // before the component might be unmounted by the parent.
-                    // This timeout is separate from the showContentTimeoutId above.
-                    setTimeout(() => {
-                        if (overlayRef.current) {
-                            overlayRef.current.style.display = 'none';
-                        }
-
-                        if (animationFrameIdRef.current !== null) {
-                            cancelAnimationFrame(animationFrameIdRef.current);
-                        }
-                    }, 1000); // Match the CSS transition duration
                 }
             };
 
             startTime = Date.now(); // Reset start time for the static fade
             animateStatic();
 
-            // --- Cleanup Function for this specific callback scope ---
-            // This ensures the showContentTimeoutId is cleared if the component unmounts
-            // before the timeout finishes.
+            // --- Cleanup Function for the setTimeout in the Callback ---
             return () => {
                 clearTimeout(showContentTimeoutId);
             };
@@ -217,8 +202,12 @@ const StaticAnimation = ({ onAnimationComplete }: StaticAnimationProps) => {
 
         return () => {
             window.removeEventListener('resize', resizeCanvas);
+            // if (startDice !== undefined) {
+            //     startDice();
+            // }
             if (animationFrameIdRef.current !== null) {
-                 cancelAnimationFrame(animationFrameIdRef.current);
+                startDice(); // Start the Rolling Cube Animation when the component unmounts
+                cancelAnimationFrame(animationFrameIdRef.current);
             }
         };
 
