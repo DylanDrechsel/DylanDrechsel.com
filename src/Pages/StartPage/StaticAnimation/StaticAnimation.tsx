@@ -3,6 +3,7 @@ import './StaticAnimation.scss';
 
 interface StaticAnimationProps {
     onAnimationComplete?: () => void;
+    startDice?: () => void;
 }
 
 const generateStatic = (
@@ -122,7 +123,7 @@ const drawCRTEffect = (
     animate();
 };
 
-const StaticAnimation = ({ onAnimationComplete }: StaticAnimationProps) => {
+const StaticAnimation = ({ onAnimationComplete, startDice }: StaticAnimationProps) => {
     const canvasRef = useRef<HTMLCanvasElement>(null);
     const overlayRef = useRef<HTMLDivElement>(null);
     const animationFrameIdRef = useRef<number | null>(null); // Ref to store requestAnimationFrame ID
@@ -201,8 +202,12 @@ const StaticAnimation = ({ onAnimationComplete }: StaticAnimationProps) => {
 
         return () => {
             window.removeEventListener('resize', resizeCanvas);
+            // if (startDice !== undefined) {
+            //     startDice();
+            // }
             if (animationFrameIdRef.current !== null) {
-                 cancelAnimationFrame(animationFrameIdRef.current);
+                startDice(); // Start the Rolling Cube Animation when the component unmounts
+                cancelAnimationFrame(animationFrameIdRef.current);
             }
         };
 

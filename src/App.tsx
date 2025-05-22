@@ -1,37 +1,18 @@
 import { useState, useEffect } from 'react';
 import './App.scss';
 import { Routes, Route, Link } from 'react-router-dom';
-import StaticAnimation from './Pages/StaticAnimation/StaticAnimation.tsx';
+import StartMenu from './Pages/StartPage/StartMenu.tsx';
 import AboutMe from './Pages/AboutMe/AboutMe';
 
 const App = () => {
-  const [showMainContent, setShowMainContent] = useState(false);
-  const [renderAnimationOverlay, setRenderAnimationOverlay] = useState(true);
-
-  const handleShowMainContent = () => {
-    setShowMainContent(true);
-  };
-
-  useEffect(() => {
-    let unmountTimer: number;
-
-    if (showMainContent) {
-      unmountTimer = setTimeout(() => {
-        setRenderAnimationOverlay(false);
-      }, 1500);
-
-      return () => clearTimeout(unmountTimer);
-    }
-  }, [showMainContent]);
-
+  
   return (
     <>
-    {renderAnimationOverlay && (
-      <StaticAnimation onAnimationComplete={handleShowMainContent}/>
-    )}
+      <StartMenu />
+    
 
-    <div className={`main-app-content ${showMainContent ? 'visible' : ''}`}>
-      <div>
+    {/* <div> */}
+      {/* <div>
         <nav>
           <ul>
             <li>
@@ -56,8 +37,8 @@ const App = () => {
         } />
 
         <Route path='about_me' element={<AboutMe />} />
-      </Routes>
-    </div>
+      </Routes> */}
+    {/* </div> */}
     </>
   );
 }

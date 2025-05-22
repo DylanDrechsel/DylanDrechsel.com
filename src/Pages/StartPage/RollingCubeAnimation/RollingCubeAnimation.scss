@@ -1,17 +1,20 @@
+// src/components/RollingCube/RollingCube.scss
+
+// Styles for the component's root container
+// This sets up the 3D perspective and centers the content.
 .scene {
-    min-height: 100vh;
+    min-height: 100vh; // Ensure it takes full viewport height for centering
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #f0f0f0;
+    background: #f0f0f0; // Background color for the scene
     margin: 0;
     perspective: 1000px; // Defines the perspective for 3D elements
     overflow: hidden; // Prevent scrollbars if elements go out of bounds
     position: relative; // Needed for animation positioning
     transform-style: preserve-3d; // Crucial for 3D transformations of children
-    animation:
-        roll-in 1.5s ease-out forwards, // Initial roll-in animation
-        rotate 16s 1.5s infinite linear; // Continuous rotation after roll-in
+    // The main continuous rotation animation is moved to .cube
+    // The initial roll-in animation is also moved to .cube
 }
 
 .cube {
@@ -19,6 +22,10 @@
     width: 200px; // Fixed width of the cube
     height: 200px; // Fixed height of the cube
     transform-style: preserve-3d; // Allows faces to be positioned in 3D
+    // NEW: Apply the animations directly to the cube
+    animation:
+        roll-in 1.5s ease-out forwards, // Initial roll-in animation
+        rotate 16s 1.5s infinite linear; // Continuous rotation after roll-in
 }
 
 .shadow {
@@ -58,6 +65,7 @@
         2px 2px 3px rgba(255, 255, 255, 0.3); // Lighter and more spread shadow bottom-right
 }
 
+/* Positioning for each face of the cube */
 .front  { transform: translateZ(100px); } // Moves face forward by half cube width
 .back   { transform: rotateY(180deg) translateZ(100px); } // Rotates and moves back
 .right  { transform: rotateY(90deg) translateZ(100px); }  // Rotates right and moves forward
@@ -78,8 +86,10 @@
 }
 
 @keyframes rotate {
-    0% { transform: translateY(0) rotateX(-15deg) rotateY(0deg); }
-    100% { transform: translateY(0) rotateX(-15deg) rotateY(360deg); } // Rotates 360deg on Y-axis
+    // NEW: The 'rotate' animation now only applies to the cube itself.
+    // It continues from the end state of 'roll-in'.
+    0% { transform: rotateX(-15deg) rotateY(0deg); }
+    100% { transform: rotateX(-15deg) rotateY(360deg); } // Rotates 360deg on Y-axis
 }
 
 @keyframes shadow {
