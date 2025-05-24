@@ -1,15 +1,15 @@
 import React, { useEffect, useRef, type FC } from 'react';
-import './PixelButtonFadeOut.scss';
+import './PixelButtonFadeIn.scss';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-object-type
-interface PixelButtonProps {};
+interface PixelButtonProps {}
 
-const PixelButtonFadeOut: FC<PixelButtonProps> = () => {
+const PixelButtonFadeIn: FC<PixelButtonProps> = () => {
     const buttonRef = useRef<HTMLButtonElement>(null);
     const pixelContainerRef = useRef<HTMLDivElement>(null);
 
     const buttonStyle = {
-        '--clr': '#ff5722'
+        '--clr': '#03a9f4'
     } as React.CSSProperties;
 
     useEffect(() => {
@@ -30,31 +30,25 @@ const PixelButtonFadeOut: FC<PixelButtonProps> = () => {
         for (let row = 0; row < rows; row++) {
             for (let col = 0; col < cols; col++) {
                 const pixel = document.createElement('div');
-                pixel?.classList.add('pixel-FO');
+                pixel.classList.add('pixel-FI');
                 pixel.style.left = `${col * pixelSize}px`;
                 pixel.style.top = `${row * pixelSize}px`;
 
-                const delay = Math.random() * 0.5;
+                const delay = Math.random() * 1;
                 pixel.style.transitionDelay = `${delay}s`;
-
-                const tx = (Math.random() - 0.5) * 30;
-                const ty = (Math.random() - 0.5) * 30;
-
-                pixel?.style.setProperty('--tx', `${tx}px`);
-                pixel?.style.setProperty('--ty', `${ty}px`);
                 
-                pixelContainer?.appendChild(pixel);
+                pixelContainer.appendChild(pixel);
             }
         }
     }, []);
 
     return (
-        <div className='pixel-button-container-FO'>
-            <button ref={buttonRef} className='pixel-button-FO'>
-                <span>Hover Me</span>
+        <div className='pixel-button-container-FI'>
+            <button ref={buttonRef} className='pixel-button-FI'>
+                <span>Fade In</span>
                 <div 
                     ref={pixelContainerRef} 
-                    className='pixel-container-FO' 
+                    className='pixel-container-FI' 
                     style={buttonStyle}
                 ></div>
             </button>
@@ -62,4 +56,4 @@ const PixelButtonFadeOut: FC<PixelButtonProps> = () => {
     );
 };
 
-export default PixelButtonFadeOut;
+export default PixelButtonFadeIn;

@@ -3,6 +3,7 @@ import './StartMenu.scss';
 import StaticAnimation from './StaticAnimation/StaticAnimation';
 import RollingCubeAnimation from './RollingCubeAnimation/RollingCubeAnimation';
 import PixelButtonFadeOut from '../../Common/Components/Buttons/PixelButtonFadeOut/PixelButtonFadeOut';
+import PixelButtonFadeIn from '../../Common/Components/Buttons/PixelButtonFadeIn/PixelButtonFadeIn';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-object-type
 interface StartMenuProps {};
@@ -48,7 +49,11 @@ const StartMenu: FC<StartMenuProps> = () => {
         )}
 
         <div className={`main-app-content ${showMainContent ? 'visible' : ''}`}>
+            <div className={'padding'} />
             <PixelButtonFadeOut />
+            <div className={'padding'} />
+            <PixelButtonFadeIn />
+            <div className={'padding'} />
             {/* <h1>TEST FROM THE START MENU</h1> */}
             {showDice && (
                 <RollingCubeAnimation cubePositions={desiredCubePositions} />
