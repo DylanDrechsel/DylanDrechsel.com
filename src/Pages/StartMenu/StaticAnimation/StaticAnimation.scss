@@ -47,11 +47,11 @@
 }
 
 // The .flicker and @keyframes flicker are not used anymore
-.flicker {
-    animation: flicker 0.01s infinite alternate;
-}
+// .flicker {
+//     animation: flicker 0.01s infinite alternate;
+// }
 
-@keyframes flicker {
-    0% { opacity: 0.95; }
-    100% { opacity: 1; }
-}
+// @keyframes flicker {
+//     0% { opacity: 0.95; }
+//     100% { opacity: 1; }
+// }

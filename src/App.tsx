@@ -1,8 +1,7 @@
-import { useState, useEffect } from 'react';
+// import { useState, useEffect } from 'react';
 import './App.scss';
-import { Routes, Route, Link } from 'react-router-dom';
-import StartMenu from './Pages/StartPage/StartMenu.tsx';
-import AboutMe from './Pages/AboutMe/AboutMe';
+// import { Routes, Route, Link } from 'react-router-dom';
+import StartMenu from './Pages/StartMenu/StartMenu.tsx';
 
 const App = () => {
   
@@ -17,9 +16,6 @@ const App = () => {
           <ul>
             <li>
               <Link to='/'> Home </Link>
-            </li>
-            <li>
-              <Link to='/about_me'> About Me </Link>
             </li>
           </ul>
         </nav>
@@ -36,7 +32,6 @@ const App = () => {
           </div>
         } />
 
-        <Route path='about_me' element={<AboutMe />} />
       </Routes> */}
     {/* </div> */}
     </>

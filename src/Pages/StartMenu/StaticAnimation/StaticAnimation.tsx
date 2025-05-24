@@ -202,15 +202,16 @@ const StaticAnimation = ({ onAnimationComplete, startDice }: StaticAnimationProp
 
         return () => {
             window.removeEventListener('resize', resizeCanvas);
-            // if (startDice !== undefined) {
-            //     startDice();
-            // }
+            
             if (animationFrameIdRef.current !== null) {
-                startDice(); // Start the Rolling Cube Animation when the component unmounts
+                if (startDice !== undefined) {
+                    startDice(); // Start the Rolling Cube Animation when the component unmounts
+                }
                 cancelAnimationFrame(animationFrameIdRef.current);
             }
         };
 
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     return (
