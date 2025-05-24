@@ -31,6 +31,15 @@ const StartMenu: FC<StartMenuProps> = () => {
         }
     }, [showMainContent]);
 
+    // Define the positions for the cubes
+    const desiredCubePositions = [
+        { x: -250, y: 0 },
+        { x: -125, y: 0 },
+        { x: 0, y: 0 },
+        { x: 125, y: 0 },
+        { x: 250, y: 0 },
+    ];
+
     return (
         <>
         {renderAnimationOverlay && (
@@ -40,7 +49,7 @@ const StartMenu: FC<StartMenuProps> = () => {
         <div className={`main-app-content ${showMainContent ? 'visible' : ''}`}>
             <h1>TEST FROM THE START MENU</h1>
             {showDice && (
-                <RollingCubeAnimation />
+                <RollingCubeAnimation cubePositions={desiredCubePositions} />
             )}
         </div>
         </>

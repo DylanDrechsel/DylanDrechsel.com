@@ -15,13 +15,9 @@
   "dependencies": {
     "@reduxjs/toolkit": "^2.8.2",
     "@tailwindcss/vite": "^4.1.7",
-    "@tanstack/react-query": "^5.76.1",
     "@uidotdev/usehooks": "^2.4.1",
-    "axios": "^1.9.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
-    "react-hook-form": "^7.56.4",
-    "react-lazy-load-image-component": "^1.6.3",
     "react-redux": "^9.2.0",
     "react-router-dom": "^7.6.0",
     "scss": "^0.2.4",
