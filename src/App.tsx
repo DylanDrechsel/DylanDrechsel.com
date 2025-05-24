@@ -6,7 +6,7 @@ import StartMenu from './Pages/StartMenu/StartMenu.tsx';
 const App = () => {
   
   return (
-    <>
+    <div  className='app-main'>
       <StartMenu />
     
 
@@ -34,7 +34,7 @@ const App = () => {
 
       </Routes> */}
     {/* </div> */}
-    </>
+    </div>
   );
 }
 
