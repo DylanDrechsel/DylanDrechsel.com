@@ -2,44 +2,61 @@ import React, { useEffect, useRef, type FC } from 'react';
 import './PixelButtonFadeOut.scss';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-object-type
-interface PixelButtonProps {};
+interface PixelButtonProps {}
 
 const PixelButtonFadeOut: FC<PixelButtonProps> = () => {
+    const buttonRef = useRef<HTMLButtonElement>(null);
+    const pixelContainerRef = useRef<HTMLDivElement>(null);
+
     const buttonStyle = {
         '--clr': '#ff5722'
-    } as React.CSSProperties; // Type assertion for custom properties
+    } as React.CSSProperties;
 
-    const button = document.querySelector('.pixel-button') as HTMLButtonElement | null;
-    const pixelContainer = button?.querySelector('.pixel-container') as HTMLDivElement | null;
-    const pixelSize = 10;
-    const [buttonWidth, buttonHeight] = button ? [button.offsetWidth, button.offsetHeight] : [0, 0];
-    const cols = Math.floor(buttonWidth / pixelSize);
-    const rows = Math.floor(buttonHeight / pixelSize);
+    useEffect(() => {
+        const button = buttonRef.current;
+        const pixelContainer = pixelContainerRef.current;
+        
+        if (!button || !pixelContainer) return;
 
-    for (let row = 0; row < rows; row++) {
-        for (let col = 0; col < cols; col++) {
-            const pixel = document.createElement('div');
-            pixel?.classList.add('pixel');
-            pixel.style.left = `${col * pixelSize}px`;
-            pixel.style.top = `${row * pixelSize}px`;
+        // Clear any existing pixels (in case of re-renders)
+        pixelContainer.innerHTML = '';
 
-            const delay = Math.random() * 0.5;
-            pixel.style.transitionDelay = `${delay}s`;
+        const pixelSize = 10;
+        const buttonWidth = button.offsetWidth;
+        const buttonHeight = button.offsetHeight;
+        const cols = Math.floor(buttonWidth / pixelSize);
+        const rows = Math.floor(buttonHeight / pixelSize);
 
-            const tx = (Math.random() - 0.5) * 30;
-            const ty = (Math.random() - 0.5) * 30;
+        for (let row = 0; row < rows; row++) {
+            for (let col = 0; col < cols; col++) {
+                const pixel = document.createElement('div');
+                pixel?.classList.add('pixel');
+                pixel.style.left = `${col * pixelSize}px`;
+                pixel.style.top = `${row * pixelSize}px`;
 
-            pixel?.style.setProperty('--tx', `${tx}px`);
-            pixel?.style.setProperty('--ty', `${ty}px`);
-            pixelContainer?.appendChild(pixel);
+                const delay = Math.random() * 0.5;
+                pixel.style.transitionDelay = `${delay}s`;
+
+                const tx = (Math.random() - 0.5) * 30;
+                const ty = (Math.random() - 0.5) * 30;
+
+                pixel?.style.setProperty('--tx', `${tx}px`);
+                pixel?.style.setProperty('--ty', `${ty}px`);
+                
+                pixelContainer?.appendChild(pixel);
+            }
         }
-    }
+    }, []);
 
     return (
         <div className='pixel-button-container'>
-            <button className='pixel-button'>
-                <span> Hover Me </span>
-                <div className='pixel-container' style={buttonStyle}></div>
+            <button ref={buttonRef} className='pixel-button'>
+                <span>Hover Me</span>
+                <div 
+                    ref={pixelContainerRef} 
+                    className='pixel-container' 
+                    style={buttonStyle}
+                ></div>
             </button>
         </div>
     );
