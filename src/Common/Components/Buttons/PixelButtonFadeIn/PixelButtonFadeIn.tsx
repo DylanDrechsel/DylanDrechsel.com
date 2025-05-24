@@ -1,0 +1,59 @@
+import React, { useEffect, useRef, type FC } from 'react';
+import './PixelButtonFadeIn.scss';
+
+// eslint-disable-next-line @typescript-eslint/no-empty-object-type
+interface PixelButtonProps {}
+
+const PixelButtonFadeIn: FC<PixelButtonProps> = () => {
+    const buttonRef = useRef<HTMLButtonElement>(null);
+    const pixelContainerRef = useRef<HTMLDivElement>(null);
+
+    const buttonStyle = {
+        '--clr': '#03a9f4'
+    } as React.CSSProperties;
+
+    useEffect(() => {
+        const button = buttonRef.current;
+        const pixelContainer = pixelContainerRef.current;
+        
+        if (!button || !pixelContainer) return;
+
+        // Clear any existing pixels (in case of re-renders)
+        pixelContainer.innerHTML = '';
+
+        const pixelSize = 10;
+        const buttonWidth = button.offsetWidth;
+        const buttonHeight = button.offsetHeight;
+        const cols = Math.floor(buttonWidth / pixelSize);
+        const rows = Math.floor(buttonHeight / pixelSize);
+
+        for (let row = 0; row < rows; row++) {
+            for (let col = 0; col < cols; col++) {
+                const pixel = document.createElement('div');
+                pixel.classList.add('pixel-FI');
+                pixel.style.left = `${col * pixelSize}px`;
+                pixel.style.top = `${row * pixelSize}px`;
+
+                const delay = Math.random() * 1;
+                pixel.style.transitionDelay = `${delay}s`;
+                
+                pixelContainer.appendChild(pixel);
+            }
+        }
+    }, []);
+
+    return (
+        <div className='pixel-button-container-FI'>
+            <button ref={buttonRef} className='pixel-button-FI'>
+                <span>Fade In</span>
+                <div 
+                    ref={pixelContainerRef} 
+                    className='pixel-container-FI' 
+                    style={buttonStyle}
+                ></div>
+            </button>
+        </div>
+    );
+};
+
+export default PixelButtonFadeIn;

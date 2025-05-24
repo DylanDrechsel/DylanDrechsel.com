@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.pixel-button-container-FI {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 2vh;
+}
+
+.pixel-button-FI {
+    position: relative;
+    width: 180px;
+    height: 60px;
+    border: none;
+    background: #333;
+    color: #f0f0f0;
+    font-size: 1.15em;
+    text-transform:  uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 400;
+    cursor: pointer;
+    outline: none;
+}
+
+.pixel-button-FI span {
+    position: relative;
+    z-index: 2;
+}
+
+.pixel-container-FI {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.pixel-container-FI .pixel-FI {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    pointer-events: none;
+    background: var(--clr);
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.pixel-button-FI:hover .pixel-FI {
+    opacity: 1;
+}

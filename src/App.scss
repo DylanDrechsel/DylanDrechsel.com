@@ -1,6 +1,10 @@
 @import './Common/scss/global.scss';
 
 #root {
+  background: #f0f0f0;
+}
+
+.app-main {
   background-color: #000000;
   font-family: $fontStyle_bitter;
   color: $amaranth;
