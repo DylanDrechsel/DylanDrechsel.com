@@ -17,6 +17,7 @@ Scss --> Completed!
 TypeScript --> Completed!
 TailwindCss --> Completed! (Maybe replace with React Bootstrap but just want the Grid and Responsive Layout functionality from it)
 Zod --> Completed!
+dotenv -->
 
 Phaser
 ThreeJs

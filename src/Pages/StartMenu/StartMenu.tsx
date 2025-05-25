@@ -33,8 +33,8 @@ const StartMenu: FC<StartMenuProps> = () => {
         }
     }, [showMainContent]);
 
-    // Define the positions for the cubes
-    const desiredCubePositions = [
+    // Define the props for the cubes
+    const desiredCubeProps = [
         { x: -250, y: 0, letter: 'D' },
         { x: -125, y: 0, letter: 'Y' },
         { x: 0, y: 0, letter: 'L' },
@@ -48,7 +48,7 @@ const StartMenu: FC<StartMenuProps> = () => {
             <StaticAnimation onAnimationComplete={handleShowMainContent} startDice={handleShowDice}/>
         )}
 
-        <div className={`main-app-content ${showMainContent ? 'visible' : ''}`}>
+        <div className={`start-menu-content ${showMainContent ? 'visible' : ''}`}>
             <div className={'padding'} />
             <PixelButtonFadeOut color={'#ff5722'} title={'Hover Me'} width={180} height={60}/>
             <div className={'padding'} />
@@ -56,7 +56,7 @@ const StartMenu: FC<StartMenuProps> = () => {
             <div className={'padding'} />
             {/* <h1>TEST FROM THE START MENU</h1> */}
             {showDice && (
-                <RollingCubeAnimation cubePositions={desiredCubePositions} />
+                <RollingCubeAnimation desiredCubeProps={desiredCubeProps} />
             )}
         </div>
         </>

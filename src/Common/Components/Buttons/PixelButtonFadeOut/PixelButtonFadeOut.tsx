@@ -55,13 +55,12 @@ const PixelButtonFadeOut: FC<PixelButtonProps> = ({ color, title, width, height 
     }, []);
 
     return (
-        <div className='pixel-button-container-FO'>
-            <button ref={buttonRef} style={buttonStyle} className='pixel-button-FO'>
+        <div className='pixel-button-container-FO' style={buttonStyle}>
+            <button ref={buttonRef} className='pixel-button-FO'>
                 <span>{title}</span>
                 <div 
                     ref={pixelContainerRef} 
                     className='pixel-container-FO' 
-                    style={buttonStyle}
                 ></div>
             </button>
         </div>

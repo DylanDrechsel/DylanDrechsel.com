@@ -31,12 +31,12 @@ const Cube: FC<CubeProps> = ({ index, xPos, yPos, letter }) => {
 };
 
 interface RollingCubeAnimationProps {
-  cubePositions?: { x: number, y: number, letter: string }[];
+  desiredCubeProps?: { x: number, y: number, letter: string }[];
 };
 
-const RollingCubeAnimation: FC<RollingCubeAnimationProps> = ({ cubePositions }) => {
+const RollingCubeAnimation: FC<RollingCubeAnimationProps> = ({ desiredCubeProps }) => {
   // Default positions if none are provided
-  const defaultCubePositions = [
+  const defaultCubeProps = [
     { x: -250, y: 0, letter: 'D' },
     { x: -125, y: 0, letter: 'Y' },
     { x: 0, y: 0, letter: 'L' },
@@ -44,7 +44,7 @@ const RollingCubeAnimation: FC<RollingCubeAnimationProps> = ({ cubePositions }) 
     { x: 250, y: 0, letter: 'N' },
   ];
 
-  const positionsToUse = cubePositions || defaultCubePositions
+  const positionsToUse = desiredCubeProps || defaultCubeProps
 
   return (
     <div className="cubes-container">
