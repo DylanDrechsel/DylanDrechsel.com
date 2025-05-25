@@ -1,15 +1,21 @@
 import React, { useEffect, useRef, type FC } from 'react';
 import './PixelButtonFadeOut.scss';
 
-// eslint-disable-next-line @typescript-eslint/no-empty-object-type
-interface PixelButtonProps {};
+interface PixelButtonProps {
+    color: string;
+    title: string;
+    width: number;
+    height: number;
+};
 
-const PixelButtonFadeOut: FC<PixelButtonProps> = () => {
+const PixelButtonFadeOut: FC<PixelButtonProps> = ({ color, title, width, height }) => {
     const buttonRef = useRef<HTMLButtonElement>(null);
     const pixelContainerRef = useRef<HTMLDivElement>(null);
 
     const buttonStyle = {
-        '--clr': '#ff5722'
+        '--color': color,
+        '--width': `${width}px`,
+        '--height': `${height}px`,
     } as React.CSSProperties;
 
     useEffect(() => {
@@ -50,8 +56,8 @@ const PixelButtonFadeOut: FC<PixelButtonProps> = () => {
 
     return (
         <div className='pixel-button-container-FO'>
-            <button ref={buttonRef} className='pixel-button-FO'>
-                <span>Hover Me</span>
+            <button ref={buttonRef} style={buttonStyle} className='pixel-button-FO'>
+                <span>{title}</span>
                 <div 
                     ref={pixelContainerRef} 
                     className='pixel-container-FO' 

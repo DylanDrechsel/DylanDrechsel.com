@@ -35,11 +35,11 @@ const StartMenu: FC<StartMenuProps> = () => {
 
     // Define the positions for the cubes
     const desiredCubePositions = [
-        { x: -250, y: 0 },
-        { x: -125, y: 0 },
-        { x: 0, y: 0 },
-        { x: 125, y: 0 },
-        { x: 250, y: 0 },
+        { x: -250, y: 0, letter: 'D' },
+        { x: -125, y: 0, letter: 'Y' },
+        { x: 0, y: 0, letter: 'L' },
+        { x: 125, y: 0, letter: 'A' },
+        { x: 250, y: 0, letter: 'N' },
     ];
 
     return (
@@ -50,9 +50,9 @@ const StartMenu: FC<StartMenuProps> = () => {
 
         <div className={`main-app-content ${showMainContent ? 'visible' : ''}`}>
             <div className={'padding'} />
-            <PixelButtonFadeOut />
+            <PixelButtonFadeOut color={'#ff5722'} title={'Hover Me'} width={180} height={60}/>
             <div className={'padding'} />
-            <PixelButtonFadeIn />
+            <PixelButtonFadeIn color={'#03a9f4'} title={'Fade In'} width={180} height={60}/>
             <div className={'padding'} />
             {/* <h1>TEST FROM THE START MENU</h1> */}
             {showDice && (

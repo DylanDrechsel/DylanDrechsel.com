@@ -5,9 +5,10 @@ interface CubeProps {
   index: number;
   xPos: number;
   yPos: number;
+  letter: string;
 };
 
-const Cube: FC<CubeProps> = ({ index, xPos, yPos }) => {
+const Cube: FC<CubeProps> = ({ index, xPos, yPos, letter }) => {
   const cubeStyle = {
     '--cube-x': `${xPos}px`,
     '--cube-y': `${yPos}px`,
@@ -17,12 +18,12 @@ const Cube: FC<CubeProps> = ({ index, xPos, yPos }) => {
   return (
     <div className="cube-wrapper" style={cubeStyle}>
       <div className="cube">
-        <div className="face front">D</div>
-        <div className="face back">D</div>
-        <div className="face right">D</div>
-        <div className="face left">D</div>
-        <div className="face top">D</div>
-        <div className="face bottom">D</div>
+        <div className="face front">{letter}</div>
+        <div className="face back">{letter}</div>
+        <div className="face right">{letter}</div>
+        <div className="face left">{letter}</div>
+        <div className="face top">{letter}</div>
+        <div className="face bottom">{letter}</div>
       </div>
       <div className="shadow"></div>
     </div>
@@ -30,25 +31,25 @@ const Cube: FC<CubeProps> = ({ index, xPos, yPos }) => {
 };
 
 interface RollingCubeAnimationProps {
-  cubePositions?: { x: number, y: number }[];
+  cubePositions?: { x: number, y: number, letter: string }[];
 };
 
 const RollingCubeAnimation: FC<RollingCubeAnimationProps> = ({ cubePositions }) => {
   // Default positions if none are provided
   const defaultCubePositions = [
-    { x: -250, y: 0 },
-    { x: -125, y: 0 },
-    { x: 0, y: 0 },
-    { x: 125, y: 0 },
-    { x: 250, y: 0 },
+    { x: -250, y: 0, letter: 'D' },
+    { x: -125, y: 0, letter: 'Y' },
+    { x: 0, y: 0, letter: 'L' },
+    { x: 125, y: 0, letter: 'A' },
+    { x: 250, y: 0, letter: 'N' },
   ];
 
-  const positionsToUse = cubePositions || defaultCubePositions;
+  const positionsToUse = cubePositions || defaultCubePositions
 
   return (
     <div className="cubes-container">
       {positionsToUse.map((pos, index) => (
-        <Cube key={index} index={index} xPos={pos.x} yPos={pos.y} />
+        <Cube key={index} index={index} xPos={pos.x} yPos={pos.y} letter={pos.letter} />
       ))}
     </div>
   );
