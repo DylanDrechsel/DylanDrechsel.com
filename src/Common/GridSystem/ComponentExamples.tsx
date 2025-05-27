@@ -28,22 +28,22 @@ const ComponentTest: React.FC = () => {
       {/* Responsive Grid Example */}
       <Container>
         <Row>
-          <Col xs={12} sm={6} md={4} lg={3}>
+          <Col xxs={12} xs={6} sm={4} md={3} lg={3} xl={3} xxl={3}>
             <div style={{ background: '#cfe2ff', padding: '1rem', marginBottom: '1rem' }}>
               Responsive Column
             </div>
           </Col>
-          <Col xs={12} sm={6} md={4} lg={3}>
+          <Col xxs={12} xs={6} sm={4} md={3} lg={3} xl={3} xxl={3}>
             <div style={{ background: '#b3d9ff', padding: '1rem', marginBottom: '1rem' }}>
               Responsive Column
             </div>
           </Col>
-          <Col xs={12} sm={6} md={4} lg={3}>
+          <Col xxs={12} xs={6} sm={4} md={3} lg={3} xl={3} xxl={3}>
             <div style={{ background: '#99ccff', padding: '1rem', marginBottom: '1rem' }}>
               Responsive Column
             </div>
           </Col>
-          <Col xs={12} sm={6} md={12} lg={3}>
+          <Col xxs={12} xs={6} sm={12} md={3} lg={3} xl={3} xxl={3}>
             <div style={{ background: '#80bfff', padding: '1rem', marginBottom: '1rem' }}>
               Responsive Column
             </div>

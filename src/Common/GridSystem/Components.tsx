@@ -16,7 +16,7 @@ interface ContainerProps {
     fluid?: boolean;
     children: React.ReactNode; // Accepts anything that React is capable of rendering as its children (HTML Elements, Strings, Numbers, etc...)
     className?: string;
-}
+};
 
 const Container: FC<ContainerProps> = ({
     fluid = false,
@@ -49,7 +49,7 @@ interface RowProps {
     children: React.ReactNode;
     className?: string;
     noGutters?: boolean;
-}
+};
 
 const Row: FC<RowProps> = ({
     children,
@@ -112,7 +112,7 @@ interface ColProps {
     offsetLg?: number;
     offsetXl?: number;
     offsetXxl?: number;
-}
+};
 
 const Col: FC<ColProps> = ({
     children, 
