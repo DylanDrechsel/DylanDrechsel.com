@@ -29,8 +29,35 @@ $disabled-text: #bbbbbb;
 $amber: #f47b19;
 $black-semi-transparent: #00000080;
 
-// Font Styles
+// Padding and Margin
+$spacing-xxs: 4px;
+$spacing-xs: 8px;
+$spacing-sm: 12px;
+$spacing-md: 16px;
+$spacing-lg: 24px;
+$spacing-xl: 32px;
+$spacing-xxl: 48px;
+$spacing-xxxl: 64px;
+
+$padding-xxs: $spacing-xxs;
+$padding-xs: $spacing-xs;
+$padding-sm: $spacing-sm;
+$padding-md: $spacing-md;
+$padding-lg: $spacing-lg;
+$padding-xl: $spacing-xl;
+$padding-xxl: $spacing-xxl;
+$padding-xxxl: $spacing-xxxl;
+
+$margin-xxs: $spacing-xxs;
+$margin-xs: $spacing-xs;
+$margin-sm: $spacing-sm;
+$margin-md: $spacing-md;
+$margin-lg: $spacing-lg;
+$margin-xl: $spacing-xl;
+$margin-xxl: $spacing-xxl;
+$margin-xxxl: $spacing-xxxl;
+
+// Font Styles & Imports
+@import url('https://fonts.googleapis.com/css2?family=Bitter&display=swap');
 $fontStyle_bitter: 'Bitter', serif;
 
-// Font Style Imports
-@import url('https://fonts.googleapis.com/css2?family=Bitter&display=swap');
