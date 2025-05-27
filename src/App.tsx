@@ -1,15 +1,15 @@
 // import { useState, useEffect } from 'react';
 import './App.scss';
-// import ComponentExamples from './Common/GridSystem/ComponentExamples.tsx';
+import ComponentExamples from './Common/GridSystem/ComponentExamples.tsx';
 // import { Routes, Route, Link } from 'react-router-dom';
-import StartMenu from './Pages/StartMenu/StartMenu.tsx';
+// import StartMenu from './Pages/StartMenu/StartMenu.tsx';
 
 const App = () => {
   
   return (
     <div  className='app-main'>
-      {/* <ComponentExamples /> */}
-      <StartMenu />
+      <ComponentExamples />
+      {/* <StartMenu /> */}
 
 
     {/* <div> */}
