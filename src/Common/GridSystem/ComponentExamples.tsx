@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Row, Col } from './Components';
 
-const ComponentTest: React.FC = () => {
+const ComponentExamples: React.FC = () => {
   return (
     <div className="App">
       {/* Basic Grid Example */}
@@ -110,4 +110,4 @@ const ComponentTest: React.FC = () => {
   );
 };
 
-export default ComponentTest;
+export default ComponentExamples;

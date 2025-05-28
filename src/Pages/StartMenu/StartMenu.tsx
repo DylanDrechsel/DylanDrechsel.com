@@ -43,14 +43,14 @@ const StartMenu: FC<StartMenuProps> = () => {
     ];
 
     const secondDesiredCubeProps = [
-        { x: -500, y: - 200, letter: 'D'},
-        { x: -375, y: - 200, letter: 'R'},
-        { x: -250, y: - 200, letter: 'E'},
-        { x: -125, y: - 200, letter: 'C'},
-        { x:  125, y: - 200, letter: 'H'},
-        { x:  250, y: - 200, letter: 'S'},
-        { x:  375, y: - 200, letter: 'E'},
-        { x:  500, y: - 200, letter: 'L'},
+        { x: -425, y: 250, letter: 'D'},
+        { x: -300, y: 200, letter: 'R'},
+        { x: -175, y: 150, letter: 'E'},
+        { x: -50, y: 100, letter: 'C'},
+        { x:  50, y: 100, letter: 'H'},
+        { x:  175, y: 150, letter: 'S'},
+        { x:  300, y: 200, letter: 'E'},
+        { x:  425, y: 250, letter: 'L'},
     ];
 
     return (
@@ -60,16 +60,11 @@ const StartMenu: FC<StartMenuProps> = () => {
         )}
 
         <div className={`start-menu-content ${showMainContent ? 'visible' : ''}`}>
-            {/* <div className={'padding'} />
-            <PixelButtonFadeOut color={'#ff5722'} title={'Hover Me'} width={180} height={60}/>
-            <div className={'padding'} />
-            <PixelButtonFadeIn color={'#03a9f4'} title={'Fade In'} width={180} height={60}/>
-            <div className={'padding'} /> */}
             {showDice && (
-                <div>
+                <>
                     <RollingCubeAnimation desiredCubeProps={desiredCubeProps} />
                     <RollingCubeAnimation desiredCubeProps={secondDesiredCubeProps} />
-                </div>
+                </>
             )}
         </div>
         </>

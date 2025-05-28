@@ -35,22 +35,14 @@ interface RollingCubeAnimationProps {
 };
 
 const RollingCubeAnimation: FC<RollingCubeAnimationProps> = ({ desiredCubeProps }) => {
-  // Default positions if none are provided
-  const defaultCubeProps = [
-    { x: -250, y: 0, letter: 'D' },
-    { x: -125, y: 0, letter: 'Y' },
-    { x: 0, y: 0, letter: 'L' },
-    { x: 125, y: 0, letter: 'A' },
-    { x: 250, y: 0, letter: 'N' },
-  ];
-
-  const positionsToUse = desiredCubeProps || defaultCubeProps
+  const positionsToUse = desiredCubeProps || null
+  const checkName = desiredCubeProps?.map(cube => cube.letter).join('');
 
   return (
-    <div className="cubes-container">
-      {positionsToUse.map((pos, index) => (
+    <div className={`cubes-container ${checkName === 'DYLAN' ? 'first-name' : ''}`}>
+      {positionsToUse !== null ? positionsToUse.map((pos, index) => (
         <Cube key={index} index={index} xPos={pos.x} yPos={pos.y} letter={pos.letter} />
-      ))}
+      )) : null}
     </div>
   );
 };
