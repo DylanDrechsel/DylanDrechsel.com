@@ -253,7 +253,7 @@ $grid-gutter-width: 1.5rem;
 
         @for $i from 0 through ($grid-columns - 1) {
             @if not ($breakpoint == xxs and $i == 0) {
-                .offset-#{breakpoint}-#{$i} {
+                .offset-#{$breakpoint}-#{$i} {
                     margin-left: percentage($number: ($i / $grid-columns));
                 }
             }
