@@ -35,22 +35,22 @@ const StartMenu: FC<StartMenuProps> = () => {
 
     // Define the props for the cubes
     const desiredCubeProps = [
-        { x: -250, y: 0, letter: 'D' },
-        { x: -125, y: -25, letter: 'Y' },
-        { x: 0, y: -50, letter: 'L' },
-        { x: 125, y: -25, letter: 'A' },
-        { x: 250, y: 0, letter: 'N' },
+        { x: -250, y: 0, letter: 'D', cubeSize: 200, fontSize: 8 },
+        { x: -125, y: -25, letter: 'Y', cubeSize: 200, fontSize: 8 },
+        { x: 0, y: -50, letter: 'L', cubeSize: 200, fontSize: 8 },
+        { x: 125, y: -25, letter: 'A', cubeSize: 200, fontSize: 8 },
+        { x: 250, y: 0, letter: 'N', cubeSize: 200, fontSize: 8 },
     ];
 
     const secondDesiredCubeProps = [
-        { x: -425, y: 250, letter: 'D'},
-        { x: -300, y: 200, letter: 'R'},
-        { x: -175, y: 150, letter: 'E'},
-        { x: -50, y: 100, letter: 'C'},
-        { x:  50, y: 100, letter: 'H'},
-        { x:  175, y: 150, letter: 'S'},
-        { x:  300, y: 200, letter: 'E'},
-        { x:  425, y: 250, letter: 'L'},
+        { x: -425, y: 250, letter: 'D', cubeSize: 200, fontSize: 8 },
+        { x: -300, y: 200, letter: 'R', cubeSize: 200, fontSize: 8 },
+        { x: -175, y: 150, letter: 'E', cubeSize: 200, fontSize: 8 },
+        { x: -50, y: 100, letter: 'C', cubeSize: 200, fontSize: 8 },
+        { x:  50, y: 100, letter: 'H', cubeSize: 200, fontSize: 8 },
+        { x:  175, y: 150, letter: 'S', cubeSize: 200, fontSize: 8 },
+        { x:  300, y: 200, letter: 'E', cubeSize: 200, fontSize: 8 },
+        { x:  425, y: 250, letter: 'L', cubeSize: 200, fontSize: 8 },
     ];
 
     return (

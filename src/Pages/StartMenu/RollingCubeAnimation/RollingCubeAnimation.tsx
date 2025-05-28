@@ -6,12 +6,14 @@ interface CubeProps {
   xPos: number;
   yPos: number;
   letter: string;
+  cubeSize: number;
 };
 
-const Cube: FC<CubeProps> = ({ index, xPos, yPos, letter }) => {
+const Cube: FC<CubeProps> = ({ index, xPos, yPos, letter, cubeSize }) => {
   const cubeStyle = {
     '--cube-x': `${xPos}px`,
     '--cube-y': `${yPos}px`,
+    '--cube-size': `${cubeSize}px`,
     '--animation-delay': `${index * 0.1}s`
   } as React.CSSProperties; // Type assertion for custom properties
 
@@ -31,7 +33,7 @@ const Cube: FC<CubeProps> = ({ index, xPos, yPos, letter }) => {
 };
 
 interface RollingCubeAnimationProps {
-  desiredCubeProps?: { x: number, y: number, letter: string }[];
+  desiredCubeProps?: { x: number, y: number, letter: string, cubeSize: number, fontSize: number }[];
 };
 
 const RollingCubeAnimation: FC<RollingCubeAnimationProps> = ({ desiredCubeProps }) => {
@@ -40,8 +42,8 @@ const RollingCubeAnimation: FC<RollingCubeAnimationProps> = ({ desiredCubeProps 
 
   return (
     <div className={`cubes-container ${checkName === 'DYLAN' ? 'first-name' : ''}`}>
-      {positionsToUse !== null ? positionsToUse.map((pos, index) => (
-        <Cube key={index} index={index} xPos={pos.x} yPos={pos.y} letter={pos.letter} />
+      {positionsToUse !== null ? positionsToUse.map((props, index) => (
+        <Cube key={index} index={index} xPos={props.x} yPos={props.y} letter={props.letter} cubeSize={props.cubeSize} />
       )) : null}
     </div>
   );
