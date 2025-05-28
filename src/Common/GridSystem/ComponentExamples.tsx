@@ -3,7 +3,7 @@ import { Container, Row, Col } from './Components';
 
 const ComponentExamples: React.FC = () => {
   return (
-    <div className="App">
+    <div>
       {/* Basic Grid Example */}
       <Container>
         <Row>
@@ -72,7 +72,7 @@ const ComponentExamples: React.FC = () => {
         </Row>
         
         <Row>
-          <Col md={6} offsetMd={4}>
+          <Col md={6} offsetMd={1}>
             <div style={{ background: '#d1ecf1', padding: '1rem', marginBottom: '1rem' }}>
               Centered with offset
             </div>
