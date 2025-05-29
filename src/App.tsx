@@ -1,6 +1,6 @@
 // import { useState, useEffect } from 'react';
 import './App.scss';
-import EyeOfSauron from './Common/Components/EyeOfSauron/EyeOfSauron';
+// import EyeOfSauron from './Common/Components/EyeOfSauron/EyeOfSauron';
 // import ComponentExamples from './Common/GridSystem/ComponentExamples.tsx';
 // import { Routes, Route, Link } from 'react-router-dom';
 import StartMenu from './Pages/StartMenu/StartMenu.tsx';
@@ -10,8 +10,8 @@ const App = () => {
   return (
     <div  className='app-main'>
       {/* <ComponentExamples /> */}
-      <EyeOfSauron />
-      {/* <StartMenu /> */}
+      {/* <EyeOfSauron /> */}
+      <StartMenu />
 
 
     {/* <div> */}
