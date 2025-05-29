@@ -1,4 +1,5 @@
 // --- Padding Utility Classes ---
+// |       xxxs --> 2px          |
 // |        xxs --> 4px          |
 // |         xs --> 8px          |
 // |         sm --> 12px         |
@@ -10,6 +11,7 @@
 // -------------------------------
 //
 // Padding All Sides
+.p-xxxs { padding: $padding-xxxs; }
 .p-xxs { padding: $padding-xxs; }
 .p-xs { padding: $padding-xs; }
 .p-sm { padding: $padding-sm; }
@@ -20,6 +22,7 @@
 .p-xxxl { padding: $padding-xxxl; }
 
 // Padding Top
+.pt-xxxs { padding-top: $padding-xxxs; }
 .pt-xxs { padding-top: $padding-xxs; }
 .pt-xs { padding-top: $padding-xs; }
 .pt-sm { padding-top: $padding-sm; }
@@ -30,6 +33,7 @@
 .pt-xxxl { padding-top: $padding-xxxl; }
 
 // Padding Right
+.pr-xxxs { padding-right: $padding-xxxs; }
 .pr-xxs { padding-right: $padding-xxs; }
 .pr-xs { padding-right: $padding-xs; }
 .pr-sm { padding-right: $padding-sm; }
@@ -40,6 +44,7 @@
 .pr-xxxl { padding-right: $padding-xxxl; }
 
 // Padding Bottom
+.pb-xxxs { padding-bottom: $padding-xxxs; }
 .pb-xxs { padding-bottom: $padding-xxs; }
 .pb-xs { padding-bottom: $padding-xs; }
 .pb-sm { padding-bottom: $padding-sm; }
@@ -50,6 +55,7 @@
 .pb-xxxl { padding-bottom: $padding-xxxl; }
 
 // Padding Left
+.pl-xxxs { padding-left: $padding-xxxs; }
 .pl-xxs { padding-left: $padding-xxs; }
 .pl-xs { padding-left: $padding-xs; }
 .pl-sm { padding-left: $padding-sm; }
@@ -60,6 +66,7 @@
 .pl-xxxl { padding-left: $padding-xxxl; }
 
 // Padding X-axis (left and right)
+.px-xxxs { padding-left: $padding-xxxs; padding-right: $padding-xxxs; }
 .px-xxs { padding-left: $padding-xxs; padding-right: $padding-xxs; }
 .px-xs { padding-left: $padding-xs; padding-right: $padding-xs; }
 .px-sm { padding-left: $padding-sm; padding-right: $padding-sm; }
@@ -70,6 +77,7 @@
 .px-xxxl { padding-left: $padding-xxxl; padding-right: $padding-xxxl; }
 
 // Padding Y-axis (top and bottom)
+.py-xxxs { padding-top: $padding-xxxs; padding-bottom: $padding-xxxs; }
 .py-xxs { padding-top: $padding-xxs; padding-bottom: $padding-xxs; }
 .py-xs { padding-top: $padding-xs; padding-bottom: $padding-xs; }
 .py-sm { padding-top: $padding-sm; padding-bottom: $padding-sm; }
@@ -81,6 +89,7 @@
 
 // --- Margin Utility Classes ---
 // Margin All Sides
+.m-xxxs { margin: $margin-xxxs; }
 .m-xxs { margin: $margin-xxs; }
 .m-xs { margin: $margin-xs; }
 .m-sm { margin: $margin-sm; }
@@ -91,6 +100,7 @@
 .m-xxxl { margin: $margin-xxxl; }
 
 // Margin Top
+.mt-xxxs { margin-top: $margin-xxxs; }
 .mt-xxs { margin-top: $margin-xxs; }
 .mt-xs { margin-top: $margin-xs; }
 .mt-sm { margin-top: $margin-sm; }
@@ -101,6 +111,7 @@
 .mt-xxxl { margin-top: $margin-xxxl; }
 
 // Margin Right
+.mr-xxxs { margin-right: $margin-xxxs; }
 .mr-xxs { margin-right: $margin-xxs; }
 .mr-xs { margin-right: $margin-xs; }
 .mr-sm { margin-right: $margin-sm; }
@@ -111,6 +122,7 @@
 .mr-xxxl { margin-right: $margin-xxxl; }
 
 // Margin Bottom
+.mb-xxxs { margin-bottom: $margin-xxxs; }
 .mb-xxs { margin-bottom: $margin-xxs; }
 .mb-xs { margin-bottom: $margin-xs; }
 .mb-sm { margin-bottom: $margin-sm; }
@@ -121,6 +133,7 @@
 .mb-xxxl { margin-bottom: $margin-xxxl; }
 
 // Margin Left
+.ml-xxxs { margin-left: $margin-xxxs; }
 .ml-xxs { margin-left: $margin-xxs; }
 .ml-xs { margin-left: $margin-xs; }
 .ml-sm { margin-left: $margin-sm; }
@@ -131,6 +144,7 @@
 .ml-xxxl { margin-left: $margin-xxxl; }
 
 // Margin X-axis (left and right)
+.mx-xxxs { margin-left: $margin-xxxs; margin-right: $margin-xxxs; }
 .mx-xxs { margin-left: $margin-xxs; margin-right: $margin-xxs; }
 .mx-xs { margin-left: $margin-xs; margin-right: $margin-xs; }
 .mx-sm { margin-left: $margin-sm; margin-right: $margin-sm; }
@@ -141,6 +155,7 @@
 .mx-xxxl { margin-left: $margin-xxxl; margin-right: $margin-xxxl; }
 
 // Margin Y-axis (top and bottom)
+.my-xxxs { margin-top: $margin-xxxs; margin-bottom: $margin-xxxs; }
 .my-xxs { margin-top: $margin-xxs; margin-bottom: $margin-xxs; }
 .my-xs { margin-top: $margin-xs; margin-bottom: $margin-xs; }
 .my-sm { margin-top: $margin-sm; margin-bottom: $margin-sm; }
