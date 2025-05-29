@@ -273,7 +273,7 @@ const EyeOfSauron: React.FC = () => {
   const drawParticlePixel = (x: number, y: number, rgbColor: { red: number; green: number; blue: number }, opacity: number): void => {
     if (!contextRef?.current) return;
     contextRef.current.fillStyle = `rgba(${rgbColor.red},${rgbColor.green},${rgbColor.blue},${opacity})`;
-    contextRef?.current?.fillRect(centerCoordinate(x), centerCoordinate(y), 1, 1);
+    contextRef?.current?.fillRect(centerCoordinate(x), centerCoordinate(y), 1.075, 1.15);
   };
 
   const updateParticleStyle = (particle: Particle, particleIndex: number): void => {
@@ -301,7 +301,7 @@ const EyeOfSauron: React.FC = () => {
     if (!contextRef?.current) return;
     
     const pupilCenterX = centerCoordinate(stateRef?.current?.pupilPosition?.x);
-    const pupilCenterY = centerCoordinate(stateRef?.current?.pupilPosition?.y);
+    const pupilCenterY = centerCoordinate(stateRef?.current?.pupilPosition?.y - 10);
 
     contextRef.current.fillStyle = 'rgba(0, 0, 0, 1)';
     contextRef?.current?.beginPath();
@@ -384,7 +384,7 @@ const EyeOfSauron: React.FC = () => {
 
   const getParticleEndPosition = (angle: number, noiseAmount: number): Position => ({
     x: config.outerEyeRadius.x * Math.cos(angle) + generateRandomOffset(noiseAmount),
-    y: config.outerEyeRadius.y * Math.sin(angle) + generateRandomOffset(noiseAmount)
+    y: config.outerEyeRadius.y * Math.sin(angle) + generateRandomOffset(noiseAmount) - 25
   });;
 
   const createParticle = (): void => {
