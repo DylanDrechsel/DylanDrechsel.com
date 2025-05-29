@@ -1,5 +1,28 @@
+// RollingCubeAnimation.tsx
 import React, { type FC } from 'react';
 import './RollingCubeAnimation.scss';
+
+interface ShadowProps {
+  index: number;
+  xPos: number;
+  yPos: number;
+  shadowSize: number;
+}
+
+const Shadow: FC<ShadowProps> = ({ index, xPos, yPos, shadowSize }) => {
+  const shadowStyle = {
+    '--shadow-x': `${xPos}px`,
+    '--shadow-y': `${yPos}px`,
+    '--shadow-size': `${shadowSize}px`,
+    '--animation-delay': `${index * 0.1}s`
+  } as React.CSSProperties;
+
+  return (
+    <div className="shadow-wrapper" style={shadowStyle}>
+      <div className="shadow"></div>
+    </div>
+  );
+};
 
 interface CubeProps {
   index: number;
@@ -7,15 +30,17 @@ interface CubeProps {
   yPos: number;
   letter: string;
   cubeSize: number;
-};
+  fontSize: number;
+}
 
-const Cube: FC<CubeProps> = ({ index, xPos, yPos, letter, cubeSize }) => {
+const Cube: FC<CubeProps> = ({ index, xPos, yPos, letter, cubeSize, fontSize }) => {
   const cubeStyle = {
     '--cube-x': `${xPos}px`,
     '--cube-y': `${yPos}px`,
     '--cube-size': `${cubeSize}px`,
+    '--font-size': `${fontSize}rem`,
     '--animation-delay': `${index * 0.1}s`
-  } as React.CSSProperties; // Type assertion for custom properties
+  } as React.CSSProperties;
 
   return (
     <div className="cube-wrapper" style={cubeStyle}>
@@ -27,24 +52,41 @@ const Cube: FC<CubeProps> = ({ index, xPos, yPos, letter, cubeSize }) => {
         <div className="face top">{letter}</div>
         <div className="face bottom">{letter}</div>
       </div>
-      <div className="shadow"></div>
     </div>
   );
 };
 
 interface RollingCubeAnimationProps {
   desiredCubeProps?: { x: number, y: number, letter: string, cubeSize: number, fontSize: number }[];
-};
+}
 
 const RollingCubeAnimation: FC<RollingCubeAnimationProps> = ({ desiredCubeProps }) => {
-  const positionsToUse = desiredCubeProps || null
+  const positionsToUse = desiredCubeProps || [];
   const checkName = desiredCubeProps?.map(cube => cube.letter).join('');
 
   return (
-    <div className={`cubes-container ${checkName === 'DYLAN' ? 'first-name' : ''}`}>
-      {positionsToUse !== null ? positionsToUse.map((props, index) => (
-        <Cube key={index} index={index} xPos={props.x} yPos={props.y} letter={props.letter} cubeSize={props.cubeSize} />
-      )) : null}
+    <div className={`animation-group ${checkName === 'DYLAN' ? 'first-name' : checkName === 'DRECHSEL' ? 'last-name' : ''}`}>
+      {positionsToUse.map((props, index) => (
+        <Cube 
+          key={`cube-${index}`}
+          index={index} 
+          xPos={props.x} 
+          yPos={props.y} 
+          letter={props.letter} 
+          cubeSize={props.cubeSize} 
+          fontSize={props.fontSize} 
+        />
+      ))}
+      
+      {positionsToUse.map((props, index) => (
+        <Shadow 
+          key={`shadow-${index}`}
+          index={index} 
+          xPos={props.x} 
+          yPos={props.y} 
+          shadowSize={props.cubeSize} 
+        />
+      ))}
     </div>
   );
 };

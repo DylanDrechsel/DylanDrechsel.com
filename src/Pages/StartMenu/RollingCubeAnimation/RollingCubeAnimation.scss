@@ -1,27 +1,28 @@
-.cubes-container {
+.animation-group {
+    position: relative;
+    transform-style: preserve-3d;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
-    min-height: 68vh;
-    width: 100%;
-    position: relative;
-    perspective: 3000px;
-    overflow: hidden;
-    transform-style: preserve-3d;
-    background: #f0f0f0;
-}
-
-.first-name {
-    padding-top: 150px;
+    align-items: center;
+    
+    &.first-name {
+        perspective: 3000px;
+        min-height: 300px;
+    }
+    
+    &.last-name {
+        perspective: 3000px;
+        min-height: 200px;
+    }
 }
 
 .cube-wrapper {
-    position: relative;
+    position: absolute;
     width: var(--cube-size);
     height: var(--cube-size);
     transform-style: preserve-3d;
     
-    // Initial position - start above screen
+    // Initial position - start above screen with X position
     transform: translateY(-100vh) translateX(var(--cube-x, 0px));
     
     // Roll-in animation first, then continuous rotation
@@ -35,32 +36,21 @@
     width: var(--cube-size);
     height: var(--cube-size);
     transform-style: preserve-3d;
-    transform-origin: center center center; // Ensure rotation happens around center
+    transform-origin: center center center;
 }
 
-.shadow {
-    position: absolute;
-    width: var(--cube-size);
-    height: var(--cube-size);
-    background: rgba(0, 0, 0, 0.8);
-    border-radius: 50%;
-    filter: blur(20px);
-    transform: translateY(350px) rotateX(90deg);
-    opacity: 0;
-    animation: shadow-fade 1.5s calc(1.5s + var(--animation-delay, 0s)) ease-out forwards;
-}
 
 .face {
     position: absolute;
     width: var(--cube-size);
     height: var(--cube-size);
     background: linear-gradient(135deg, #D33643, #21302D);
-    border: 2px solid rgba(255, 255, 255, .1);
+    border: 2px solid rgba(0, 0, 0, .1);
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: Arial, sans-serif;
-    font-size: 8rem;
+    font-size: var(--font-size);
     font-weight: bold;
     color: rgba(255, 255, 255, 0.8);
     backface-visibility: hidden;
@@ -70,6 +60,27 @@
     text-shadow:
         -2px -2px 3px rgba(0, 0, 0, 0.9),
         2px 2px 3px rgba(255, 255, 255, 0.3);
+}
+
+.shadow-wrapper {
+    position: absolute;
+    width: var(--shadow-size);
+    height: var(--shadow-size);
+    perspective: 1000px;
+    transform: translateX(var(--shadow-x, 0px)) translateY(var(--shadow-y, 0px));
+    pointer-events: none;
+    transform-style: preserve-3d;
+}
+
+.shadow {
+    position: absolute;
+    width: var(--shadow-size);
+    height: var(--shadow-size);
+    background: rgba(0, 0, 0, 0.9);
+    border-radius: 50%;
+    filter: blur(20px);
+    opacity: 0;
+    animation: shadow-fade 1.5s calc(1.5s + var(--animation-delay, 0s)) ease-out forwards;
 }
 
 /* Positioning for each face of the cube */
@@ -82,7 +93,6 @@
 
 @keyframes roll-in {
     0% {
-        // Start above screen with lots of rotation
         transform: 
             translateY(-100vh) 
             translateX(var(--cube-x, 0px)) 
@@ -91,7 +101,6 @@
             rotateZ(360deg);
     }
     100% {
-        // End at final position with slight tilt
         transform: 
             translateY(var(--cube-y, 0px)) 
             translateX(var(--cube-x, 0px)) 
