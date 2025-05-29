@@ -30,6 +30,7 @@ $amber: #f47b19;
 $black-semi-transparent: #00000080;
 
 // Padding and Margin
+$spacing-xxxs: 2px;
 $spacing-xxs: 4px;
 $spacing-xs: 8px;
 $spacing-sm: 12px;
@@ -39,6 +40,7 @@ $spacing-xl: 32px;
 $spacing-xxl: 48px;
 $spacing-xxxl: 64px;
 
+$padding-xxxs: $spacing-xxxs;
 $padding-xxs: $spacing-xxs;
 $padding-xs: $spacing-xs;
 $padding-sm: $spacing-sm;
@@ -48,6 +50,7 @@ $padding-xl: $spacing-xl;
 $padding-xxl: $spacing-xxl;
 $padding-xxxl: $spacing-xxxl;
 
+$margin-xxxs: $spacing-xxxs;
 $margin-xxs: $spacing-xxs;
 $margin-xs: $spacing-xs;
 $margin-sm: $spacing-sm;
