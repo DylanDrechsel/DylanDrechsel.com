@@ -31,15 +31,18 @@ interface CubeProps {
   letter: string;
   cubeSize: number;
   fontSize: number;
+  cubeColors: string[];
 }
 
-const Cube: FC<CubeProps> = ({ index, xPos, yPos, letter, cubeSize, fontSize }) => {
+const Cube: FC<CubeProps> = ({ index, xPos, yPos, letter, cubeSize, fontSize, cubeColors }) => {
   const cubeStyle = {
     '--cube-x': `${xPos}px`,
     '--cube-y': `${yPos}px`,
     '--cube-size': `${cubeSize}px`,
     '--font-size': `${fontSize}rem`,
-    '--animation-delay': `${index * 0.1}s`
+    '--animation-delay': `${index * 0.1}s`,
+    '--first-color': `${cubeColors[0]}`,
+    '--second-color': `${cubeColors[1]}`
   } as React.CSSProperties;
 
   return (
@@ -57,7 +60,14 @@ const Cube: FC<CubeProps> = ({ index, xPos, yPos, letter, cubeSize, fontSize }) 
 };
 
 interface RollingCubeAnimationProps {
-  desiredCubeProps?: { x: number, y: number, letter: string, cubeSize: number, fontSize: number }[];
+  desiredCubeProps?: {
+    x: number,
+    y: number,
+    letter: string,
+    cubeSize: number,
+    fontSize: number,
+    cubeColors: string[],
+  }[];
 }
 
 const RollingCubeAnimation: FC<RollingCubeAnimationProps> = ({ desiredCubeProps }) => {
@@ -74,7 +84,8 @@ const RollingCubeAnimation: FC<RollingCubeAnimationProps> = ({ desiredCubeProps 
           yPos={props.y} 
           letter={props.letter} 
           cubeSize={props.cubeSize} 
-          fontSize={props.fontSize} 
+          fontSize={props.fontSize}
+          cubeColors={props.cubeColors} 
         />
       ))}
       
@@ -84,7 +95,7 @@ const RollingCubeAnimation: FC<RollingCubeAnimationProps> = ({ desiredCubeProps 
           index={index} 
           xPos={props.x} 
           yPos={props.y} 
-          shadowSize={props.cubeSize} 
+          shadowSize={props.cubeSize}
         />
       ))}
     </div>
