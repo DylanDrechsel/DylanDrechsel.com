@@ -22,7 +22,7 @@
     transform-style: preserve-3d;
     
     // Initial position - start above screen with X position
-    transform: translateY(-100vh) translateX(var(--cube-x, 0px));
+    transform: translateY(var(--cube-yStart, 0px)) translateX(var(--cube-xStart, 0px));
     
     // Roll-in animation first, then continuous rotation
     animation:
@@ -118,36 +118,37 @@
 
 @keyframes roll-in {
     0% {
-        transform: 
-            translateY(-100vh) 
-            translateX(var(--cube-x, 0px)) 
+        transform:
+            translateY(var(--cube-yStart, 0px)) 
+            translateX(var(--cube-xStart, 0px)) 
             rotateX(720deg) 
             rotateY(360deg) 
             rotateZ(360deg);
     }
     100% {
-        transform: 
-            translateY(var(--cube-y, 0px)) 
-            translateX(var(--cube-x, 0px)) 
+        transform:
+            translateY(var(--cube-yEnd, 0px)) 
+            translateX(var(--cube-xEnd, 0px)) 
             rotateX(-15deg) 
             rotateY(0deg) 
             rotateZ(0deg);
+            
     }
 }
 
 @keyframes continuous-rotate {
     0% { 
         transform: 
-            translateY(var(--cube-y, 0px)) 
-            translateX(var(--cube-x, 0px)) 
+            translateY(var(--cube-yEnd, 0px)) 
+            translateX(var(--cube-xEnd, 0px)) 
             rotateX(-15deg) 
-            rotateY(0deg) 
+            rotateY(0deg)
             rotateZ(0deg);
     }
     100% { 
         transform: 
-            translateY(var(--cube-y, 0px)) 
-            translateX(var(--cube-x, 0px)) 
+            translateY(var(--cube-yEnd, 0px)) 
+            translateX(var(--cube-xEnd, 0px)) 
             rotateX(-15deg) 
             rotateY(360deg) 
             rotateZ(0deg);

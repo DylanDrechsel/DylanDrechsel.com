@@ -7,14 +7,15 @@ interface ShadowProps {
   xPos: number;
   yPos: number;
   shadowSize: number;
+  animationDelay: number;
 }
 
-const Shadow: FC<ShadowProps> = ({ index, xPos, yPos, shadowSize }) => {
+const Shadow: FC<ShadowProps> = ({ xPos, yPos, shadowSize, animationDelay }) => {
   const shadowStyle = {
     '--shadow-x': `${xPos}px`,
     '--shadow-y': `${yPos}px`,
     '--shadow-size': `${shadowSize}px`,
-    '--animation-delay': `${index * 0.1}s`
+    '--animation-delay': `${animationDelay}s`
   } as React.CSSProperties;
 
   return (
@@ -26,21 +27,28 @@ const Shadow: FC<ShadowProps> = ({ index, xPos, yPos, shadowSize }) => {
 
 interface CubeProps {
   index: number;
-  xPos: number;
-  yPos: number;
   letter: string;
   cubeSize: number;
   fontSize: number;
   cubeColors: string[];
+  animationOptions: {
+    xStart: number,
+    yStart: number,
+    xEnd: number,
+    yEnd: number,
+    animationDelay: number
+  };
 }
 
-const Cube: FC<CubeProps> = ({ index, xPos, yPos, letter, cubeSize, fontSize, cubeColors }) => {
+const Cube: FC<CubeProps> = ({ letter, cubeSize, fontSize, cubeColors, animationOptions }) => {
   const cubeStyle = {
-    '--cube-x': `${xPos}px`,
-    '--cube-y': `${yPos}px`,
+    '--cube-xEnd': `${animationOptions.xEnd}px`,
+    '--cube-yEnd': `${animationOptions.yEnd}px`,
+    '--cube-xStart': `${animationOptions.xStart}px`,
+    '--cube-yStart': `${animationOptions.yStart}px`,
     '--cube-size': `${cubeSize}px`,
     '--font-size': `${fontSize}rem`,
-    '--animation-delay': `${index * 0.1}s`,
+    '--animation-delay': `${animationOptions.animationDelay}s`,
     '--first-color': `${cubeColors[0]}`,
     '--second-color': `${cubeColors[1]}`
   } as React.CSSProperties;
@@ -61,12 +69,17 @@ const Cube: FC<CubeProps> = ({ index, xPos, yPos, letter, cubeSize, fontSize, cu
 
 interface RollingCubeAnimationProps {
   desiredCubeProps?: {
-    x: number,
-    y: number,
     letter: string,
     cubeSize: number,
     fontSize: number,
     cubeColors: string[],
+    animationOptions: {
+      xStart: number,
+      yStart: number,
+      xEnd: number,
+      yEnd: number,
+      animationDelay: number
+    };
   }[];
 }
 
@@ -79,9 +92,8 @@ const RollingCubeAnimation: FC<RollingCubeAnimationProps> = ({ desiredCubeProps 
       {positionsToUse.map((props, index) => (
         <Cube 
           key={`cube-${index}`}
-          index={index} 
-          xPos={props.x} 
-          yPos={props.y} 
+          index={index}
+          animationOptions={props.animationOptions}
           letter={props.letter} 
           cubeSize={props.cubeSize} 
           fontSize={props.fontSize}
@@ -93,9 +105,10 @@ const RollingCubeAnimation: FC<RollingCubeAnimationProps> = ({ desiredCubeProps 
         <Shadow 
           key={`shadow-${index}`}
           index={index} 
-          xPos={props.x} 
-          yPos={props.y} 
+          xPos={props.animationOptions.xEnd} 
+          yPos={props.animationOptions.yEnd} 
           shadowSize={props.cubeSize}
+          animationDelay={props.animationOptions.animationDelay}
         />
       ))}
     </div>

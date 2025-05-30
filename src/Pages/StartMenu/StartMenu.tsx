@@ -33,24 +33,23 @@ const StartMenu: FC<StartMenuProps> = () => {
         }
     }, [showMainContent]);
 
-    // Define the props for the cubes
     const desiredCubeProps = [
-        { x: -600, y: 0, letter: 'D', cubeSize: 200, fontSize: 8, cubeColors: ['#ff5722', '#03a9f4'] },
-        { x: -300, y: 25, letter: 'Y', cubeSize: 200, fontSize: 8, cubeColors: ['#ff5722', '#03a9f4'] },
-        { x: 0, y: 50, letter: 'L', cubeSize: 200, fontSize: 8, cubeColors: ['#ff5722', '#03a9f4'] },
-        { x: 300, y: 25, letter: 'A', cubeSize: 200, fontSize: 8, cubeColors: ['#ff5722', '#03a9f4'] },
-        { x: 600, y: 0, letter: 'N', cubeSize: 200, fontSize: 8, cubeColors: ['#ff5722', '#03a9f4'] },
+        { animationOptions: { xStart: -600, yStart: -1000, xEnd: -600, yEnd: 0, animationDelay: 0 }, letter: 'D', cubeSize: 200, fontSize: 8, cubeColors: ['#ff5722', '#03a9f4'] },
+        { animationOptions: { xStart: -300, yStart: -1000, xEnd: -300, yEnd: 25, animationDelay: 0.1 }, letter: 'Y', cubeSize: 200, fontSize: 8, cubeColors: ['#ff5722', '#03a9f4'] },
+        { animationOptions: { xStart: 0, yStart: -1000, xEnd: 0, yEnd: 50, animationDelay: 0.2 }, letter: 'L', cubeSize: 200, fontSize: 8, cubeColors: ['#ff5722', '#03a9f4'] },
+        { animationOptions: { xStart: 300, yStart: -1000, xEnd: 300, yEnd: 25, animationDelay: 0.3 }, letter: 'A', cubeSize: 200, fontSize: 8, cubeColors: ['#ff5722', '#03a9f4'] },
+        { animationOptions: { xStart: 600, yStart: -1000, xEnd: 600, yEnd: 0, animationDelay: 0.4 }, letter: 'N', cubeSize: 200, fontSize: 8, cubeColors: ['#ff5722', '#03a9f4'] },
     ];
 
     const secondDesiredCubeProps = [
-        { x: -625, y: 250, letter: 'D', cubeSize: 100, fontSize: 4, cubeColors: ['#ff5722', '#03a9f4'] },
-        { x: -450, y: 200, letter: 'R', cubeSize: 100, fontSize: 4, cubeColors: ['#ff5722', '#03a9f4'] },
-        { x: -275, y: 150, letter: 'E', cubeSize: 100, fontSize: 4, cubeColors: ['#ff5722', '#03a9f4'] },
-        { x: -100, y: 100, letter: 'C', cubeSize: 100, fontSize: 4, cubeColors: ['#ff5722', '#03a9f4'] },
-        { x:  100, y: 100, letter: 'H', cubeSize: 100, fontSize: 4, cubeColors: ['#ff5722', '#03a9f4'] },
-        { x:  275, y: 150, letter: 'S', cubeSize: 100, fontSize: 4, cubeColors: ['#ff5722', '#03a9f4'] },
-        { x:  450, y: 200, letter: 'E', cubeSize: 100, fontSize: 4, cubeColors: ['#ff5722', '#03a9f4'] },
-        { x:  625, y: 250, letter: 'L', cubeSize: 100, fontSize: 4, cubeColors: ['#ff5722', '#03a9f4'] },
+        { animationOptions: { xStart: -625, yStart: -1000, xEnd: -625, yEnd: 250, animationDelay: 0.5 }, letter: 'D', cubeSize: 100, fontSize: 4, cubeColors: ['#ff5722', '#03a9f4'] },
+        { animationOptions: { xStart: -450, yStart: -1000, xEnd: -450, yEnd: 200, animationDelay: 0.6 }, letter: 'R', cubeSize: 100, fontSize: 4, cubeColors: ['#ff5722', '#03a9f4'] },
+        { animationOptions: { xStart: -275, yStart: -1000, xEnd: -275, yEnd: 150, animationDelay: 0.7 }, letter: 'E', cubeSize: 100, fontSize: 4, cubeColors: ['#ff5722', '#03a9f4'] },
+        { animationOptions: { xStart: -100, yStart: -1000, xEnd: -100, yEnd: 100, animationDelay: 0.8 }, letter: 'C', cubeSize: 100, fontSize: 4, cubeColors: ['#ff5722', '#03a9f4'] },
+        { animationOptions: { xStart: 100, yStart: -1000, xEnd: 100, yEnd: 100, animationDelay: 0.9 }, letter: 'H', cubeSize: 100, fontSize: 4, cubeColors: ['#ff5722', '#03a9f4'] },
+        { animationOptions: { xStart: 275, yStart: -1000, xEnd: 275, yEnd: 150, animationDelay: 1.0 }, letter: 'S', cubeSize: 100, fontSize: 4, cubeColors: ['#ff5722', '#03a9f4'] },
+        { animationOptions: { xStart: 450, yStart: -1000, xEnd: 450, yEnd: 200, animationDelay: 1.1 }, letter: 'E', cubeSize: 100, fontSize: 4, cubeColors: ['#ff5722', '#03a9f4'] },
+        { animationOptions: { xStart: 625, yStart: -1000, xEnd: 625, yEnd: 250, animationDelay: 1.2 }, letter: 'L', cubeSize: 100, fontSize: 4, cubeColors: ['#ff5722', '#03a9f4'] },
     ];
 
     return (
