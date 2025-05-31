@@ -40,7 +40,7 @@ const PixelButtonFadeIn: FC<PixelButtonProps> = ({ color, title, width, height }
                 pixel.style.left = `${col * pixelSize}px`;
                 pixel.style.top = `${row * pixelSize}px`;
 
-                const delay = Math.random() * 1;
+                const delay = Math.random();
                 pixel.style.transitionDelay = `${delay}s`;
                 
                 pixelContainer.appendChild(pixel);

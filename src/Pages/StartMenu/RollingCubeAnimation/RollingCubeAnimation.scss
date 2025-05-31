@@ -26,8 +26,9 @@
     
     // Roll-in animation first, then continuous rotation
     animation:
-        roll-in var(--animation-duration, 1.5s) ease-out forwards var(--animation-delay, 0s),
-        continuous-rotate 10s calc(1.5s + var(--animation-delay, 0s)) infinite linear;
+        roll-in var(--animation-duration, 1.5s) ease-out forwards var(--animation-delay, 0s);
+        // roll-in var(--animation-duration, 1.5s) ease-out forwards var(--animation-delay, 0s),
+        // continuous-rotate 10s calc(1.5s + var(--animation-delay, 0s)) infinite linear;
 
     // Pixelated rendering for retro look
     image-rendering: pixelated;
@@ -80,6 +81,10 @@
     text-shadow: 
         2px 2px 3px #000000,
         1px 1px 1px #AA2F15;
+}
+
+.face span {
+    z-index: 2;
 }
 
 .shadow-wrapper {
