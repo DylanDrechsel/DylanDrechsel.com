@@ -22,7 +22,7 @@
     transform-style: preserve-3d;
     
     // Initial position - start above screen with X position
-    transform: translateY(-100vh) translateX(var(--cube-x, 0px));
+    transform: translateY(var(--cube-yStart, 0px)) translateX(var(--cube-xStart, 0px));
     
     // Roll-in animation first, then continuous rotation
     animation:
@@ -56,8 +56,10 @@
     font-weight: bold;
     backface-visibility: hidden;
     transform-origin: center center center;
-    background: linear-gradient(135deg, #D33643, #21302D);
     color: rgba(255, 255, 255, 0.8);
+
+    // Default background color incase of any issues
+    background: linear-gradient(135deg, #D33643, #21302D);
 
     // Pixelated rendering
     image-rendering: pixelated;
@@ -70,10 +72,10 @@
 
     // Pixelated-style borders using box-shadow to create retro edge effect
     box-shadow: 
-        inset -1px -1px 0px #ff5722,
-        inset 1px 1px 0px #ff5722,
-        inset -1px -1px 0px #ff5722,
-        inset 1px 1px 0px #ff5722;
+        inset -1px -1px 0px var(--first-color),
+        inset 1px 1px 0px var(--first-color),
+        inset -1px -1px 0px var(--first-color),
+        inset 1px 1px 0px var(--first-color);
     
     text-shadow: 
         2px 2px 3px #000000,
@@ -107,45 +109,46 @@
 }
 
 // Positioning for each face of the cube
-.front  { transform: translateZ(calc(var(--cube-size) / 2)); background: #ff5722; }
-.back   { transform: rotateY(180deg) translateZ(calc(var(--cube-size) / 2)); background: #ff5722; }
-.right  { transform: rotateY(90deg) translateZ(calc(var(--cube-size) / 2)); background: #03a9f4; }
-.left   { transform: rotateY(-90deg) translateZ(calc(var(--cube-size) / 2)); background: #03a9f4; }
-.top    { transform: rotateX(90deg) translateZ(calc(var(--cube-size) / 2)); background: #ff5722; }
-.bottom { transform: rotateX(-90deg) translateZ(calc(var(--cube-size) / 2)); background: #03a9f4; }
+.front  { transform: translateZ(calc(var(--cube-size) / 2)); background: var(--first-color); }
+.back   { transform: rotateY(180deg) translateZ(calc(var(--cube-size) / 2)); background: var(--first-color); }
+.right  { transform: rotateY(90deg) translateZ(calc(var(--cube-size) / 2)); background: var(--second-color); }
+.left   { transform: rotateY(-90deg) translateZ(calc(var(--cube-size) / 2)); background: var(--second-color); }
+.top    { transform: rotateX(90deg) translateZ(calc(var(--cube-size) / 2)); background: var(--first-color); }
+.bottom { transform: rotateX(-90deg) translateZ(calc(var(--cube-size) / 2)); background: var(--second-color); }
 
 @keyframes roll-in {
     0% {
-        transform: 
-            translateY(-100vh) 
-            translateX(var(--cube-x, 0px)) 
+        transform:
+            translateY(var(--cube-yStart, 0px)) 
+            translateX(var(--cube-xStart, 0px)) 
             rotateX(720deg) 
             rotateY(360deg) 
             rotateZ(360deg);
     }
     100% {
-        transform: 
-            translateY(var(--cube-y, 0px)) 
-            translateX(var(--cube-x, 0px)) 
+        transform:
+            translateY(var(--cube-yEnd, 0px)) 
+            translateX(var(--cube-xEnd, 0px)) 
             rotateX(-15deg) 
             rotateY(0deg) 
             rotateZ(0deg);
+            
     }
 }
 
 @keyframes continuous-rotate {
     0% { 
         transform: 
-            translateY(var(--cube-y, 0px)) 
-            translateX(var(--cube-x, 0px)) 
+            translateY(var(--cube-yEnd, 0px)) 
+            translateX(var(--cube-xEnd, 0px)) 
             rotateX(-15deg) 
-            rotateY(0deg) 
+            rotateY(0deg)
             rotateZ(0deg);
     }
     100% { 
         transform: 
-            translateY(var(--cube-y, 0px)) 
-            translateX(var(--cube-x, 0px)) 
+            translateY(var(--cube-yEnd, 0px)) 
+            translateX(var(--cube-xEnd, 0px)) 
             rotateX(-15deg) 
             rotateY(360deg) 
             rotateZ(0deg);
