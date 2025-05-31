@@ -145,6 +145,7 @@ export const usePixelatedFade = (options: UsePixelatedFadeOptions = {}) => {
 //      usePixelatedFade( pixelatedFadeOptions.enabled ? { animationConfigs } : undefined );
 //
 // 3. In your component create a div inside the 'wall' you want to pixelate and set the ref to 'pixelContainerRef'
+//    and set the ref in the parent element to 'elementRef'
 //
 // <div 
 //   className="face front" 
