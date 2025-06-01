@@ -1,14 +1,14 @@
 export type CubeConfig = {
-    pixelatedFadeOptions ? : {
-        enabled ? : boolean;
-        color ? : string;
-        pixelSize ? : number;
-        transitionDuration ? : number;
-        trigger ? : 'always' | 'hover' | 'click';
-        initialDelay ? : number;
-        showDuration ? : number;
-        hideDuration ? : number;
-    };
+    // pixelatedFadeOptions ? : {
+    //     enabled ? : boolean;
+    //     color ? : string;
+    //     pixelSize ? : number;
+    //     transitionDuration ? : number;
+    //     trigger ? : 'always' | 'hover' | 'click';
+    //     initialDelay ? : number;
+    //     showDuration ? : number;
+    //     hideDuration ? : number;
+    // };
     animationOptions: {
         xStart: number;
         yStart: number;
@@ -24,16 +24,6 @@ export type CubeConfig = {
 };
 
 export const firstNameCubeConfigs: CubeConfig[] = [{
-        pixelatedFadeOptions: {
-            enabled: true,
-            color: '#ff6b6b',
-            pixelSize: 10,
-            transitionDuration: 0.7,
-            trigger: 'always',
-            initialDelay: 6000,
-            showDuration: 4000,
-            hideDuration: 6000
-        },
         animationOptions: {
             xStart: -600,
             yStart: -1000,
@@ -48,16 +38,6 @@ export const firstNameCubeConfigs: CubeConfig[] = [{
         animationGroupClassName: 'first-name'
     },
     {
-        pixelatedFadeOptions: {
-            enabled: true,
-            color: '#ff6b6b',
-            pixelSize: 10,
-            transitionDuration: 0.7,
-            trigger: 'always',
-            initialDelay: 6000,
-            showDuration: 4000,
-            hideDuration: 6000
-        },
         animationOptions: {
             xStart: -300,
             yStart: -1000,
@@ -72,16 +52,6 @@ export const firstNameCubeConfigs: CubeConfig[] = [{
         animationGroupClassName: 'first-name'
     },
     {
-        pixelatedFadeOptions: {
-            enabled: true,
-            color: '#ff6b6b',
-            pixelSize: 10,
-            transitionDuration: 0.7,
-            trigger: 'always',
-            initialDelay: 6000,
-            showDuration: 4000,
-            hideDuration: 6000
-        },
         animationOptions: {
             xStart: 0,
             yStart: -1000,
@@ -96,16 +66,6 @@ export const firstNameCubeConfigs: CubeConfig[] = [{
         animationGroupClassName: 'first-name'
     },
     {
-        pixelatedFadeOptions: {
-            enabled: true,
-            color: '#ff6b6b',
-            pixelSize: 10,
-            transitionDuration: 0.7,
-            trigger: 'always',
-            initialDelay: 6000,
-            showDuration: 4000,
-            hideDuration: 6000
-        },
         animationOptions: {
             xStart: 300,
             yStart: -1000,
@@ -120,16 +80,6 @@ export const firstNameCubeConfigs: CubeConfig[] = [{
         animationGroupClassName: 'first-name'
     },
     {
-        pixelatedFadeOptions: {
-            enabled: true,
-            color: '#ff6b6b',
-            pixelSize: 10,
-            transitionDuration: 0.7,
-            trigger: 'always',
-            initialDelay: 6000,
-            showDuration: 4000,
-            hideDuration: 6000
-        },
         animationOptions: {
             xStart: 600,
             yStart: -1000,
@@ -146,16 +96,6 @@ export const firstNameCubeConfigs: CubeConfig[] = [{
 ];
 
 export const lastNameCubeConfigs: CubeConfig[] = [{
-        pixelatedFadeOptions: {
-            enabled: true,
-            color: '#ff6b6b',
-            pixelSize: 10,
-            transitionDuration: 0.7,
-            trigger: 'always',
-            initialDelay: 6000,
-            showDuration: 4000,
-            hideDuration: 6000
-        },
         animationOptions: {
             xStart: -1625,
             yStart: -1000,
@@ -170,16 +110,6 @@ export const lastNameCubeConfigs: CubeConfig[] = [{
         animationGroupClassName: 'last-name'
     },
     {
-        pixelatedFadeOptions: {
-            enabled: true,
-            color: '#ff6b6b',
-            pixelSize: 10,
-            transitionDuration: 0.7,
-            trigger: 'always',
-            initialDelay: 6000,
-            showDuration: 4000,
-            hideDuration: 6000
-        },
         animationOptions: {
             xStart: -1450,
             yStart: -1000,
@@ -194,16 +124,6 @@ export const lastNameCubeConfigs: CubeConfig[] = [{
         animationGroupClassName: 'last-name'
     },
     {
-        pixelatedFadeOptions: {
-            enabled: true,
-            color: '#ff6b6b',
-            pixelSize: 10,
-            transitionDuration: 0.7,
-            trigger: 'always',
-            initialDelay: 6000,
-            showDuration: 4000,
-            hideDuration: 6000
-        },
         animationOptions: {
             xStart: -1275,
             yStart: -1000,
@@ -218,16 +138,6 @@ export const lastNameCubeConfigs: CubeConfig[] = [{
         animationGroupClassName: 'last-name'
     },
     {
-        pixelatedFadeOptions: {
-            enabled: true,
-            color: '#ff6b6b',
-            pixelSize: 10,
-            transitionDuration: 0.7,
-            trigger: 'always',
-            initialDelay: 6000,
-            showDuration: 4000,
-            hideDuration: 6000
-        },
         animationOptions: {
             xStart: -1100,
             yStart: -1000,
@@ -242,16 +152,6 @@ export const lastNameCubeConfigs: CubeConfig[] = [{
         animationGroupClassName: 'last-name'
     },
     {
-        pixelatedFadeOptions: {
-            enabled: true,
-            color: '#ff6b6b',
-            pixelSize: 10,
-            transitionDuration: 0.7,
-            trigger: 'always',
-            initialDelay: 6000,
-            showDuration: 4000,
-            hideDuration: 6000
-        },
         animationOptions: {
             xStart: 1100,
             yStart: -1000,
@@ -266,16 +166,6 @@ export const lastNameCubeConfigs: CubeConfig[] = [{
         animationGroupClassName: 'last-name'
     },
     {
-        pixelatedFadeOptions: {
-            enabled: true,
-            color: '#ff6b6b',
-            pixelSize: 10,
-            transitionDuration: 0.7,
-            trigger: 'always',
-            initialDelay: 6000,
-            showDuration: 4000,
-            hideDuration: 6000
-        },
         animationOptions: {
             xStart: 1275,
             yStart: -1000,
@@ -290,16 +180,6 @@ export const lastNameCubeConfigs: CubeConfig[] = [{
         animationGroupClassName: 'last-name'
     },
     {
-        pixelatedFadeOptions: {
-            enabled: true,
-            color: '#ff6b6b',
-            pixelSize: 10,
-            transitionDuration: 0.7,
-            trigger: 'always',
-            initialDelay: 6000,
-            showDuration: 4000,
-            hideDuration: 6000
-        },
         animationOptions: {
             xStart: 1450,
             yStart: -1000,
@@ -314,16 +194,6 @@ export const lastNameCubeConfigs: CubeConfig[] = [{
         animationGroupClassName: 'last-name'
     },
     {
-        pixelatedFadeOptions: {
-            enabled: true,
-            color: '#ff6b6b',
-            pixelSize: 10,
-            transitionDuration: 0.7,
-            trigger: 'always',
-            initialDelay: 6000,
-            showDuration: 4000,
-            hideDuration: 6000
-        },
         animationOptions: {
             xStart: 1625,
             yStart: -1000,
