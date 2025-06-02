@@ -26,9 +26,8 @@
     
     // Roll-in animation first, then continuous rotation
     animation:
-        roll-in var(--animation-duration, 1.5s) ease-out forwards var(--animation-delay, 0s);
-        // roll-in var(--animation-duration, 1.5s) ease-out forwards var(--animation-delay, 0s),
-        // continuous-rotate 10s calc(1.5s + var(--animation-delay, 0s)) infinite linear;
+        roll-in var(--animation-duration, 1.5s) ease-out forwards var(--animation-delay, 0s),
+        floating-movement 10s calc(1.5s + var(--animation-delay, 0s)) infinite linear;
 
     // Pixelated rendering for retro look
     image-rendering: pixelated;
@@ -41,7 +40,6 @@
     width: var(--cube-size);
     height: var(--cube-size);
     transform-style: preserve-3d;
-    transform-origin: center center center;
 }
 
 
@@ -103,9 +101,9 @@
     transform: translateZ(calc(var(--cube-size) / 2)); 
     background: var(--first-color); 
     box-shadow: 
-            0 0 5px var(--first-color),
-            0 0 10px var(--first-color),
-            0 0 15px var(--first-color);
+        0 0 5px var(--first-color),
+        0 0 10px var(--first-color),
+        0 0 15px var(--first-color);
     animation:
         glow 6s infinite alternate forwards 3s;
 }
@@ -135,22 +133,36 @@
     }
 }
 
-@keyframes continuous-rotate {
+@keyframes floating-movement {
     0% { 
         transform: 
             translateY(var(--cube-yEnd, 0px)) 
             translateX(var(--cube-xEnd, 0px)) 
-            rotateX(-15deg) 
-            rotateY(0deg)
-            rotateZ(0deg);
+            rotateX(-15deg);
+    }
+    25% { 
+        transform: 
+            translateY(calc(var(--cube-yEnd, 0px) + 10px)) 
+            translateX(var(--cube-xEnd, 0px)) 
+            rotateX(-15deg);
+    }
+    50% { 
+        transform: 
+            translateY(var(--cube-yEnd, 0px)) 
+            translateX(calc(var(--cube-xEnd, 0px) - 8px)) 
+            rotateX(-15deg);
+    }
+    75% { 
+        transform: 
+            translateY(calc(var(--cube-yEnd, 0px) - 10px)) 
+            translateX(var(--cube-xEnd, 0px)) 
+            rotateX(-15deg);
     }
     100% { 
         transform: 
             translateY(var(--cube-yEnd, 0px)) 
             translateX(var(--cube-xEnd, 0px)) 
-            rotateX(-15deg) 
-            rotateY(360deg) 
-            rotateZ(0deg);
+            rotateX(-15deg);
     }
 }
 
