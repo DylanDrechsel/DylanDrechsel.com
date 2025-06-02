@@ -59,9 +59,6 @@
     transform-origin: center center center;
     color: rgba(255, 255, 255, 0.8);
 
-    // Default background color incase of any issues
-    background: linear-gradient(135deg, #D33643, #21302D);
-
     // Pixelated rendering
     image-rendering: pixelated;
     image-rendering: -moz-crisp-edges;
@@ -70,21 +67,15 @@
     // Remove font smoothing for pixelated text
     -webkit-font-smoothing: none;
     -moz-osx-font-smoothing: unset;
-
-    // Pixelated-style borders using box-shadow to create retro edge effect
-    // box-shadow: 
-    //     inset -1px -1px 0px var(--first-color),
-    //     inset 1px 1px 0px var(--first-color),
-    //     inset -1px -1px 0px var(--first-color),
-    //     inset 1px 1px 0px var(--first-color);
-    
-    // text-shadow: 
-    //     2px 2px 3px #000000,
-    //     1px 1px 1px #AA2F15;
 }
 
 .face span {
     z-index: 2;
+    text-shadow: 
+        2px 2px 3px #000000,
+        1px 1px 1px #AA2F15;
+    animation:
+        letter-glow 6s infinite alternate forwards 3s;
 }
 
 .shadow-wrapper {
@@ -111,8 +102,12 @@
 .front  { 
     transform: translateZ(calc(var(--cube-size) / 2)); 
     background: var(--first-color); 
+    box-shadow: 
+            0 0 5px var(--first-color),
+            0 0 10px var(--first-color),
+            0 0 15px var(--first-color);
     animation:
-        glow 6s infinite alternate forwards 3s
+        glow 6s infinite alternate forwards 3s;
 }
 .back   { transform: rotateY(180deg) translateZ(calc(var(--cube-size) / 2)); background: var(--first-color); }
 .right  { transform: rotateY(90deg) translateZ(calc(var(--cube-size) / 2)); background: var(--second-color); }
@@ -189,5 +184,24 @@
             0 0 5px var(--first-color),
             0 0 10px var(--first-color),
             0 0 15px var(--first-color);
+    }
+}
+
+@keyframes letter-glow {
+    0% {
+        text-shadow: 
+            2px 2px 3px #000000,
+            1px 1px 1px #AA2F15;
+    }
+    50% {
+        text-shadow:
+            0 0 10px rgba(255, 255, 255, 0.8),
+            0 0 20px rgba(255, 165, 0, 0.6),
+            0 0 30px rgba(255, 69, 0, 0.4);
+    }
+    100% {
+        text-shadow: 
+            2px 2px 3px #000000,
+            1px 1px 1px #AA2F15;
     }
 }

@@ -63,11 +63,11 @@ const Cube: FC <CubeProps> = ({
     <div className="cube-wrapper" style={cubeStyle}>
       <div className="cube">
         <div className="face front"><span>{letter}</span></div>
-        <div className="face back" ><span>{letter}</span></div>
-        <div className="face right"><span>{letter}</span></div>
-        <div className="face left"><span>{letter}</span></div>
-        <div className="face top"><span>{letter}</span></div>
-        <div className="face bottom"><span>{letter}</span></div>
+        <div className="face back" >{letter}</div>
+        <div className="face right">{letter}</div>
+        <div className="face left">{letter}</div>
+        <div className="face top">{letter}</div>
+        <div className="face bottom">{letter}</div>
       </div>
     </div>
   );
