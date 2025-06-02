@@ -1,6 +1,5 @@
 import React, { type FC } from 'react';
 import './RollingCubeAnimation.scss';
-import { usePixelatedFade } from '../../../Common/Components/Animations/Hooks/usePixelatedFade';
 
 interface ShadowProps {
   index: number;
@@ -38,26 +37,14 @@ interface CubeProps {
     yEnd: number,
     animationDelay: number
   };
-
-  pixelatedFadeOptions?: {
-    enabled?: boolean;
-    color?: string;
-    pixelSize?: number;
-    transitionDuration?: number;
-    trigger?: 'hover' | 'always' | 'click';
-    initialDelay?: number;
-    showDuration?: number;
-    hideDuration?: number;
-  };
 }
 
-const Cube: FC < CubeProps > = ({
+const Cube: FC <CubeProps> = ({
     letter,
     cubeSize,
     fontSize,
     cubeColors,
-    animationOptions,
-    pixelatedFadeOptions = { enabled: false }
+    animationOptions
   }) => {
     const cubeStyle = {
       '--cube-xEnd': `${animationOptions.xEnd}px`,
@@ -68,36 +55,15 @@ const Cube: FC < CubeProps > = ({
       '--font-size': `${fontSize}rem`,
       '--animation-delay': `${animationOptions.animationDelay}s`,
       '--first-color': `${cubeColors[0]}`,
-      '--second-color': `${cubeColors[1]}`
+      '--second-color': `${cubeColors[1]}`,
+      '--third-color': `${cubeColors[2]}`
     } as React.CSSProperties;
-
-    const { elementRef, pixelContainerRef } = usePixelatedFade(
-    pixelatedFadeOptions.enabled ? {
-      color: pixelatedFadeOptions.color,
-      pixelSize: pixelatedFadeOptions.pixelSize,
-      transitionDuration: pixelatedFadeOptions.transitionDuration,
-      trigger: pixelatedFadeOptions.trigger,
-      initialDelay: pixelatedFadeOptions.initialDelay,
-      showDuration: pixelatedFadeOptions.showDuration,
-      hideDuration: pixelatedFadeOptions.hideDuration
-    } : undefined
-  );
 
   return (
     <div className="cube-wrapper" style={cubeStyle}>
       <div className="cube">
-        <div 
-          className="face front" 
-          ref={pixelatedFadeOptions.enabled ? elementRef : null}
-        >
-          <span>{letter}</span>
-          {pixelatedFadeOptions.enabled && (
-            <div
-              ref={pixelContainerRef}
-            />
-          )}
-        </div>
-        <div className="face back">{letter}</div>
+        <div className="face front"><span>{letter}</span></div>
+        <div className="face back" >{letter}</div>
         <div className="face right">{letter}</div>
         <div className="face left">{letter}</div>
         <div className="face top">{letter}</div>
@@ -121,17 +87,6 @@ interface RollingCubeAnimationProps {
       yEnd: number,
       animationDelay: number
     };
-
-  pixelatedFadeOptions?: {
-    enabled?: boolean;
-    color?: string;
-    pixelSize?: number;
-    transitionDuration?: number;
-    trigger?: 'hover' | 'always' | 'click';
-    initialDelay?: number;
-    showDuration?: number;
-    hideDuration?: number;
-    };
   }[];
 }
 
@@ -149,7 +104,6 @@ const RollingCubeAnimation: FC<RollingCubeAnimationProps> = ({ cubeConfigs }) =>
           cubeSize={props.cubeSize}
           fontSize={props.fontSize}
           cubeColors={props.cubeColors}
-          pixelatedFadeOptions={props.pixelatedFadeOptions}
         />
       ))}
 
