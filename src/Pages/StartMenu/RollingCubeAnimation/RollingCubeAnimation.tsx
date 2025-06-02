@@ -55,7 +55,8 @@ const Cube: FC <CubeProps> = ({
       '--font-size': `${fontSize}rem`,
       '--animation-delay': `${animationOptions.animationDelay}s`,
       '--first-color': `${cubeColors[0]}`,
-      '--second-color': `${cubeColors[1]}`
+      '--second-color': `${cubeColors[1]}`,
+      '--third-color': `${cubeColors[2]}`
     } as React.CSSProperties;
 
   return (
