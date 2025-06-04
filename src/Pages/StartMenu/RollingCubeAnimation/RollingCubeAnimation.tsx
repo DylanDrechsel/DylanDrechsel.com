@@ -40,6 +40,7 @@ interface CubeProps {
   floatingAnimationOptions: {
     xOffset: number;
     yOffset: number;
+    xRotate: number;
   };
 }
 
@@ -63,7 +64,8 @@ const Cube: FC <CubeProps> = ({
       '--second-color': `${cubeColors[1]}`,
       '--third-color': `${cubeColors[2]}`,
       '--floating-x-offset': `${floatingAnimationOptions.xOffset}px`,
-      '--floating-y-offset': `${Math.abs(floatingAnimationOptions.yOffset)}px`
+      '--floating-y-offset': `${Math.abs(floatingAnimationOptions.yOffset)}px`,
+      '--floating-x-rotate': `${floatingAnimationOptions.xRotate}deg`
     } as React.CSSProperties;
 
   return (
@@ -97,6 +99,7 @@ interface RollingCubeAnimationProps {
     floatingAnimationOptions: {
       xOffset: number;
       yOffset: number;
+      xRotate: number;
     };
   }[];
 }

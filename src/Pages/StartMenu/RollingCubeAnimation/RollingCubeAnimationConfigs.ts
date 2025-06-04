@@ -11,6 +11,7 @@ export type CubeConfig = {
     floatingAnimationOptions: {
         xOffset: number;
         yOffset: number;
+        xRotate: number;
     };
     letter: string;
     cubeSize: number;
@@ -34,7 +35,8 @@ export const firstNameCubeConfigs: CubeConfig[] = [{
         },
         floatingAnimationOptions: {
             xOffset: getRandomNumberExcludingMiddle(3, 10),
-            yOffset: getRandomNumberExcludingMiddle(3, 15),
+            yOffset: getRandomNumberExcludingMiddle(25, 50),
+            xRotate: getRandomNumberExcludingMiddle(3, 10)
         },
         letter: 'D',
         cubeSize: 200,
@@ -51,8 +53,9 @@ export const firstNameCubeConfigs: CubeConfig[] = [{
             animationDelay: 0.2
         },
         floatingAnimationOptions: {
-            xOffset: getRandomNumberExcludingMiddle(3, 10),
-            yOffset: getRandomNumberExcludingMiddle(3, 15),
+            xOffset: getRandomNumberExcludingMiddle(3, 25),
+            yOffset: getRandomNumberExcludingMiddle(3, 25),
+            xRotate: getRandomNumberExcludingMiddle(3, 10)
         },
         letter: 'Y',
         cubeSize: 200,
@@ -70,7 +73,8 @@ export const firstNameCubeConfigs: CubeConfig[] = [{
         },
         floatingAnimationOptions: {
             xOffset: getRandomNumberExcludingMiddle(3, 10),
-            yOffset: getRandomNumberExcludingMiddle(3, 15),
+            yOffset: getRandomNumberExcludingMiddle(3, 25),
+            xRotate: getRandomNumberExcludingMiddle(3, 10)
         },
         letter: 'L',
         cubeSize: 200,
@@ -88,7 +92,8 @@ export const firstNameCubeConfigs: CubeConfig[] = [{
         },
         floatingAnimationOptions: {
             xOffset: getRandomNumberExcludingMiddle(3, 10),
-            yOffset: getRandomNumberExcludingMiddle(3, 15),
+            yOffset: getRandomNumberExcludingMiddle(3, 35),
+            xRotate: getRandomNumberExcludingMiddle(3, 10)
         },
         letter: 'A',
         cubeSize: 200,
@@ -105,8 +110,9 @@ export const firstNameCubeConfigs: CubeConfig[] = [{
             animationDelay: 0
         },
         floatingAnimationOptions: {
-            xOffset: getRandomNumberExcludingMiddle(3, 10),
-            yOffset: getRandomNumberExcludingMiddle(3, 15),
+            xOffset: getRandomNumberExcludingMiddle(3, 25),
+            yOffset: getRandomNumberExcludingMiddle(20, 30),
+            xRotate: getRandomNumberExcludingMiddle(3, 10)
         },
         letter: 'N',
         cubeSize: 200,
@@ -125,8 +131,9 @@ export const lastNameCubeConfigs: CubeConfig[] = [{
             animationDelay: 1.6
         },
         floatingAnimationOptions: {
-            xOffset: getRandomNumberExcludingMiddle(3, 10),
-            yOffset: getRandomNumberExcludingMiddle(3, 15),
+            xOffset: getRandomNumberExcludingMiddle(3, 25),
+            yOffset: getRandomNumberExcludingMiddle(3, 25),
+            xRotate: getRandomNumberExcludingMiddle(3, 10)
         },
         letter: 'D',
         cubeSize: 100,
@@ -143,8 +150,9 @@ export const lastNameCubeConfigs: CubeConfig[] = [{
             animationDelay: 1.4
         },
         floatingAnimationOptions: {
-            xOffset: getRandomNumberExcludingMiddle(3, 10),
-            yOffset: getRandomNumberExcludingMiddle(3, 15),
+            xOffset: getRandomNumberExcludingMiddle(3, 25),
+            yOffset: getRandomNumberExcludingMiddle(3, 25),
+            xRotate: getRandomNumberExcludingMiddle(3, 10)
         },
         letter: 'R',
         cubeSize: 100,
@@ -161,8 +169,9 @@ export const lastNameCubeConfigs: CubeConfig[] = [{
             animationDelay: 1.2
         },
         floatingAnimationOptions: {
-            xOffset: getRandomNumberExcludingMiddle(3, 10),
-            yOffset: getRandomNumberExcludingMiddle(3, 15),
+            xOffset: getRandomNumberExcludingMiddle(3, 25),
+            yOffset: getRandomNumberExcludingMiddle(3, 25),
+            xRotate: getRandomNumberExcludingMiddle(3, 10)
         },
         letter: 'E',
         cubeSize: 100,
@@ -179,8 +188,9 @@ export const lastNameCubeConfigs: CubeConfig[] = [{
             animationDelay: 1.0
         },
         floatingAnimationOptions: {
-            xOffset: getRandomNumberExcludingMiddle(3, 10),
-            yOffset: getRandomNumberExcludingMiddle(3, 15),
+            xOffset: getRandomNumberExcludingMiddle(3, 25),
+            yOffset: getRandomNumberExcludingMiddle(3, 25),
+            xRotate: getRandomNumberExcludingMiddle(3, 10)
         },
         letter: 'C',
         cubeSize: 100,
@@ -197,8 +207,9 @@ export const lastNameCubeConfigs: CubeConfig[] = [{
             animationDelay: 1.0
         },
         floatingAnimationOptions: {
-            xOffset: getRandomNumberExcludingMiddle(3, 10),
-            yOffset: getRandomNumberExcludingMiddle(3, 15),
+            xOffset: getRandomNumberExcludingMiddle(3, 25),
+            yOffset: getRandomNumberExcludingMiddle(3, 25),
+            xRotate: getRandomNumberExcludingMiddle(3, 10)
         },
         letter: 'H',
         cubeSize: 100,
@@ -215,8 +226,9 @@ export const lastNameCubeConfigs: CubeConfig[] = [{
             animationDelay: 1.2
         },
         floatingAnimationOptions: {
-            xOffset: getRandomNumberExcludingMiddle(3, 10),
-            yOffset: getRandomNumberExcludingMiddle(3, 15),
+            xOffset: getRandomNumberExcludingMiddle(3, 25),
+            yOffset: getRandomNumberExcludingMiddle(3, 25),
+            xRotate: getRandomNumberExcludingMiddle(3, 10)
         },
         letter: 'S',
         cubeSize: 100,
@@ -233,8 +245,9 @@ export const lastNameCubeConfigs: CubeConfig[] = [{
             animationDelay: 1.4
         },
         floatingAnimationOptions: {
-            xOffset: getRandomNumberExcludingMiddle(3, 10),
-            yOffset: getRandomNumberExcludingMiddle(3, 15),
+            xOffset: getRandomNumberExcludingMiddle(3, 25),
+            yOffset: getRandomNumberExcludingMiddle(3, 25),
+            xRotate: getRandomNumberExcludingMiddle(3, 10)
         },
         letter: 'E',
         cubeSize: 100,
@@ -251,8 +264,9 @@ export const lastNameCubeConfigs: CubeConfig[] = [{
             animationDelay: 1.6
         },
         floatingAnimationOptions: {
-            xOffset: getRandomNumberExcludingMiddle(3, 10),
-            yOffset: getRandomNumberExcludingMiddle(3, 15),
+            xOffset: getRandomNumberExcludingMiddle(3, 25),
+            yOffset: getRandomNumberExcludingMiddle(3, 25),
+            xRotate: getRandomNumberExcludingMiddle(3, 10)
         },
         letter: 'L',
         cubeSize: 100,

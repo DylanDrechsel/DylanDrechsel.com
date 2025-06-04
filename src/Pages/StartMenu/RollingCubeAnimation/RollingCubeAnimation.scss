@@ -142,21 +142,21 @@
     }
     25% { 
         transform: 
-            translateY(calc(var(--cube-yEnd, 0px) + 10px)) 
+            translateY(calc(var(--cube-yEnd, 0px) + var(--floating-y-offset, 0px))) 
             translateX(var(--cube-xEnd, 0px)) 
-            rotateX(-15deg);
+            rotateX(calc(-15deg + var(--floating-x-rotate, -15deg)));
     }
     50% { 
         transform: 
-            translateY(var(--cube-yEnd, 0px)) 
-            translateX(calc(var(--cube-xEnd, 0px) - 8px)) 
-            rotateX(-15deg);
+            translateY(calc(var(--cube-yEnd, 0px) + var(--floating-y-offset, 0px) / 2)) 
+            translateX(calc(var(--cube-xEnd, 0px) + var(--floating-x-offset, 0px))) 
+            rotateX(calc(-15deg + var(--floating-x-rotate, -15deg) / 2));
     }
     75% { 
         transform: 
-            translateY(calc(var(--cube-yEnd, 0px) - 10px)) 
-            translateX(var(--cube-xEnd, 0px)) 
-            rotateX(-15deg);
+            translateY(calc(var(--cube-yEnd, 0px) - var(--floating-y-offset, 0px))) 
+            translateX(calc(var(--cube-xEnd, 0px) - var(--floating-x-offset, 0px) / 2)) 
+            rotateX(calc(-15deg - var(--floating-x-rotate, -15deg) / 2));
     }
     100% { 
         transform: 
