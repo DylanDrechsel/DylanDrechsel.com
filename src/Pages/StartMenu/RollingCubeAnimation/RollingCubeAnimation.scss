@@ -84,6 +84,8 @@
     transform: translateX(var(--shadow-x, 0px)) translateY(var(--shadow-y, 0px));
     pointer-events: none;
     transform-style: preserve-3d;
+    transform-origin: center bottom;
+    animation: shadow-animation 10s calc(1.5s + var(--animation-delay, 0s)) infinite linear;
 }
 
 .shadow {
@@ -93,7 +95,10 @@
     background: rgba(0, 0, 0, 0.9);
     filter: blur(3px);
     opacity: 0;
-    animation: shadow-fade 1s calc(0.5s + var(--animation-delay, 0s)) ease-out forwards;
+    transform-origin: center bottom;
+    animation: 
+        shadow-fade 1s calc(0.5s + var(--animation-delay, 0s)) ease-out forwards,
+        shadow-scale-only 10s calc(1.5s + var(--animation-delay, 0s)) infinite linear;
 }
 
 // Positioning for each face of the cube
@@ -137,7 +142,7 @@
     0% { 
         transform: 
             translateY(var(--cube-yEnd, 0px)) 
-            translateX(var(--cube-xEnd, 0px)) 
+            translateX(var(--cube-xEnd, 0px))
             rotateX(-15deg);
     }
     25% { 
@@ -169,16 +174,73 @@
 @keyframes shadow-fade {
     0% { 
         opacity: 0; 
-        transform: translateY(350px) rotateX(90deg) scale(0.1);
+        transform: translateY(300px) rotateX(90deg) scale(0.1);
     }
     100% { 
         opacity: 0.7; 
-        transform: translateY(350px) rotateX(90deg) scale(0.9);
+        transform: translateY(300px) rotateX(90deg) scale(1);
+    }
+}
+
+@keyframes shadow-scale-only {
+    0% {
+        transform:
+            translateY(300px)
+            scale(100%)
+            rotateX(90deg);
+    }
+    25% {
+        transform:
+            translateY(300px)
+            scale(calc(100% - var(--shadow-y-offset, 0%)))
+            rotateX(90deg);
+    }
+    50% {
+        transform:
+            translateY(300px)
+            scale(calc(100% - var(--shadow-y-offset, 0%) / 2))
+            rotateX(90deg);
+    }
+    75% {
+        transform:
+            translateY(300px)
+            scale(calc(100% + var(--shadow-y-offset, 0%)))
+            rotateX(90deg);
+    }
+    100% {
+        transform:
+            translateY(300px)
+            scale(100%)
+            rotateX(90deg);
     }
 }
 
 @keyframes shadow-animation {
-    
+    0% { 
+        transform: 
+            translateX(var(--shadow-x, 0px)) 
+            translateY(var(--shadow-y, 0px));
+    }
+    25% { 
+        transform: 
+            translateX(var(--shadow-x, 0px)) 
+            translateY(var(--shadow-y, 0px));
+    }
+    50% { 
+        transform: 
+            translateX(calc(var(--shadow-x, 0px) + var(--shadow-x-offset, 0px))) 
+            translateY(var(--shadow-y, 0px));
+    }
+    75% { 
+        transform: 
+            translateX(calc(var(--shadow-x, 0px) - var(--shadow-x-offset, 0px) / 2)) 
+            translateY(var(--shadow-y, 0px));
+    }
+    100% { 
+        transform: 
+            translateX(var(--shadow-x, 0px)) 
+            translateY(var(--shadow-y, 0px));
+    }
 }
 
 @keyframes glow {

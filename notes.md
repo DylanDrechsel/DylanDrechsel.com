@@ -1,8 +1,9 @@
 -----> Project Notes <-----
 -----> Animation Notes <-----
+    - CSS 3D transformations are hierarchical. When I apply a transform to a parent element, its children inherit and are affected by that parents transformations before their own transformations are applied.
     - I can use this formula for tracking the progress of all animations... (See StaticAnimation for implementation example)
         FORMULA --> (current_progress - segment_start) / (segment_end - segment_start)
-    - The forwards keyword (or fill mode) in a CSS animation ensures that the animated properties of a selector retain their final calculated values after the animation completes
+    - The forwards keyword (or fill mode) in a CSS animation ensures that the animated properties of a selector retain their final calculated values after the animation completes.
 
 -----> useRef Notes <-----
     - The value inside useRef stays the same between the components renders

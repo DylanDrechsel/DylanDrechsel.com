@@ -7,14 +7,22 @@ interface ShadowProps {
   yPos: number;
   shadowSize: number;
   animationDelay: number;
-}
+  floatingAnimationOptions: {
+    xOffset: number;
+    yOffset: number;
+    xRotate: number;
+  };
+};
 
-const Shadow: FC<ShadowProps> = ({ xPos, yPos, shadowSize, animationDelay }) => {
+const Shadow: FC<ShadowProps> = ({ xPos, yPos, shadowSize, animationDelay, floatingAnimationOptions }) => {
   const shadowStyle = {
     '--shadow-x': `${xPos}px`,
     '--shadow-y': `${yPos}px`,
     '--shadow-size': `${shadowSize}px`,
-    '--animation-delay': `${animationDelay}s`
+    '--animation-delay': `${animationDelay}s`,
+    '--shadow-x-offset': `${floatingAnimationOptions.xOffset}px`,
+    '--shadow-y-offset': `${Math.abs(floatingAnimationOptions.yOffset)}%`,
+    '--shadow-x-rotate': `${floatingAnimationOptions.xRotate}deg`
   } as React.CSSProperties;
 
   return (
@@ -42,7 +50,7 @@ interface CubeProps {
     yOffset: number;
     xRotate: number;
   };
-}
+};
 
 const Cube: FC <CubeProps> = ({
     letter,
@@ -102,7 +110,7 @@ interface RollingCubeAnimationProps {
       xRotate: number;
     };
   }[];
-}
+};
 
 const RollingCubeAnimation: FC<RollingCubeAnimationProps> = ({ cubeConfigs }) => {
   const animationData = cubeConfigs || [];
@@ -130,6 +138,7 @@ const RollingCubeAnimation: FC<RollingCubeAnimationProps> = ({ cubeConfigs }) =>
           yPos={props.animationOptions.yEnd}
           shadowSize={props.cubeSize}
           animationDelay={props.animationOptions.animationDelay}
+          floatingAnimationOptions={props.floatingAnimationOptions}
         />
       ))}
     </div>
