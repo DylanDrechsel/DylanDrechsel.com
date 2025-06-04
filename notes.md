@@ -31,4 +31,31 @@ react-lazy-load-image-component -->
 @tanstack/react-query --> 
 react-scan --> 
 
-    
+-----> Misc Notes <-----
+<--------------------------------------------------------------------
+Cube Type for Pixelated Fade Animation --> (Currently not being used)
+export type CubeConfig = {
+    pixelatedFadeOptions ? : {
+        enabled ? : boolean;
+        color ? : string;
+        pixelSize ? : number;
+        transitionDuration ? : number;
+        trigger ? : 'always' | 'hover' | 'click';
+        initialDelay ? : number;
+        showDuration ? : number;
+        hideDuration ? : number;
+    };
+    animationOptions: {
+        xStart: number;
+        yStart: number;
+        xEnd: number;
+        yEnd: number;
+        animationDelay: number;
+    };
+    letter: string;
+    cubeSize: number;
+    fontSize: number;
+    cubeColors: string[];
+    animationGroupClassName ? : string | null;
+};
+-------------------------------------------------------------------->  

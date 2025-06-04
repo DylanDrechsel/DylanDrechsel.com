@@ -37,6 +37,11 @@ interface CubeProps {
     yEnd: number,
     animationDelay: number
   };
+  floatingAnimationOptions: {
+    xOffset: number;
+    yOffset: number;
+    xRotate: number;
+  };
 }
 
 const Cube: FC <CubeProps> = ({
@@ -44,7 +49,8 @@ const Cube: FC <CubeProps> = ({
     cubeSize,
     fontSize,
     cubeColors,
-    animationOptions
+    animationOptions,
+    floatingAnimationOptions
   }) => {
     const cubeStyle = {
       '--cube-xEnd': `${animationOptions.xEnd}px`,
@@ -56,7 +62,10 @@ const Cube: FC <CubeProps> = ({
       '--animation-delay': `${animationOptions.animationDelay}s`,
       '--first-color': `${cubeColors[0]}`,
       '--second-color': `${cubeColors[1]}`,
-      '--third-color': `${cubeColors[2]}`
+      '--third-color': `${cubeColors[2]}`,
+      '--floating-x-offset': `${floatingAnimationOptions.xOffset}px`,
+      '--floating-y-offset': `${Math.abs(floatingAnimationOptions.yOffset)}px`,
+      '--floating-x-rotate': `${floatingAnimationOptions.xRotate}deg`
     } as React.CSSProperties;
 
   return (
@@ -87,6 +96,11 @@ interface RollingCubeAnimationProps {
       yEnd: number,
       animationDelay: number
     };
+    floatingAnimationOptions: {
+      xOffset: number;
+      yOffset: number;
+      xRotate: number;
+    };
   }[];
 }
 
@@ -104,6 +118,7 @@ const RollingCubeAnimation: FC<RollingCubeAnimationProps> = ({ cubeConfigs }) =>
           cubeSize={props.cubeSize}
           fontSize={props.fontSize}
           cubeColors={props.cubeColors}
+          floatingAnimationOptions={props.floatingAnimationOptions}
         />
       ))}
 

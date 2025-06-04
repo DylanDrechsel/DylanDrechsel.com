@@ -1,14 +1,6 @@
+import { COLORS } from '../../../Common/scss/_colors'
+
 export type CubeConfig = {
-    // pixelatedFadeOptions ? : {
-    //     enabled ? : boolean;
-    //     color ? : string;
-    //     pixelSize ? : number;
-    //     transitionDuration ? : number;
-    //     trigger ? : 'always' | 'hover' | 'click';
-    //     initialDelay ? : number;
-    //     showDuration ? : number;
-    //     hideDuration ? : number;
-    // };
     animationOptions: {
         xStart: number;
         yStart: number;
@@ -16,11 +8,21 @@ export type CubeConfig = {
         yEnd: number;
         animationDelay: number;
     };
+    floatingAnimationOptions: {
+        xOffset: number;
+        yOffset: number;
+        xRotate: number;
+    };
     letter: string;
     cubeSize: number;
     fontSize: number;
     cubeColors: string[];
     animationGroupClassName ? : string | null;
+};
+
+const getRandomNumberExcludingMiddle = (min: number, max: number): number => {
+    const randomInt = (min: number, max: number): number => Math.floor(Math.random() * (max - min + 1)) + min;
+    return Math.random() < 0.5 ? randomInt(-max, -min) : randomInt(min, max);
 };
 
 export const firstNameCubeConfigs: CubeConfig[] = [{
@@ -31,10 +33,15 @@ export const firstNameCubeConfigs: CubeConfig[] = [{
             yEnd: 0,
             animationDelay: 0
         },
+        floatingAnimationOptions: {
+            xOffset: getRandomNumberExcludingMiddle(3, 10),
+            yOffset: getRandomNumberExcludingMiddle(25, 50),
+            xRotate: getRandomNumberExcludingMiddle(3, 10)
+        },
         letter: 'D',
         cubeSize: 200,
         fontSize: 8,
-        cubeColors: ['#ff5722', '#03a9f4', '#323232'],
+        cubeColors: [COLORS.giantsOrange, COLORS.vividCerulean, COLORS.neutralDarkest],
         animationGroupClassName: 'first-name'
     },
     {
@@ -45,10 +52,15 @@ export const firstNameCubeConfigs: CubeConfig[] = [{
             yEnd: 25,
             animationDelay: 0.2
         },
+        floatingAnimationOptions: {
+            xOffset: getRandomNumberExcludingMiddle(3, 25),
+            yOffset: getRandomNumberExcludingMiddle(3, 25),
+            xRotate: getRandomNumberExcludingMiddle(3, 10)
+        },
         letter: 'Y',
         cubeSize: 200,
         fontSize: 8,
-        cubeColors: ['#ff5722', '#03a9f4', '#323232'],
+        cubeColors: [COLORS.giantsOrange, COLORS.vividCerulean, COLORS.neutralDarkest],
         animationGroupClassName: 'first-name'
     },
     {
@@ -59,10 +71,15 @@ export const firstNameCubeConfigs: CubeConfig[] = [{
             yEnd: 50,
             animationDelay: 0.4
         },
+        floatingAnimationOptions: {
+            xOffset: getRandomNumberExcludingMiddle(3, 10),
+            yOffset: getRandomNumberExcludingMiddle(3, 25),
+            xRotate: getRandomNumberExcludingMiddle(3, 10)
+        },
         letter: 'L',
         cubeSize: 200,
         fontSize: 8,
-        cubeColors: ['#ff5722', '#03a9f4', '#323232'],
+        cubeColors: [COLORS.giantsOrange, COLORS.vividCerulean, COLORS.neutralDarkest],
         animationGroupClassName: 'first-name'
     },
     {
@@ -73,10 +90,15 @@ export const firstNameCubeConfigs: CubeConfig[] = [{
             yEnd: 25,
             animationDelay: 0.2
         },
+        floatingAnimationOptions: {
+            xOffset: getRandomNumberExcludingMiddle(3, 10),
+            yOffset: getRandomNumberExcludingMiddle(3, 35),
+            xRotate: getRandomNumberExcludingMiddle(3, 10)
+        },
         letter: 'A',
         cubeSize: 200,
         fontSize: 8,
-        cubeColors: ['#ff5722', '#03a9f4', '#323232'],
+        cubeColors: [COLORS.giantsOrange, COLORS.vividCerulean, COLORS.neutralDarkest],
         animationGroupClassName: 'first-name'
     },
     {
@@ -87,10 +109,15 @@ export const firstNameCubeConfigs: CubeConfig[] = [{
             yEnd: 0,
             animationDelay: 0
         },
+        floatingAnimationOptions: {
+            xOffset: getRandomNumberExcludingMiddle(3, 25),
+            yOffset: getRandomNumberExcludingMiddle(20, 30),
+            xRotate: getRandomNumberExcludingMiddle(3, 10)
+        },
         letter: 'N',
         cubeSize: 200,
         fontSize: 8,
-        cubeColors: ['#ff5722', '#03a9f4', '#323232'],
+        cubeColors: [COLORS.giantsOrange, COLORS.vividCerulean, COLORS.neutralDarkest],
         animationGroupClassName: 'first-name'
     },
 ];
@@ -103,10 +130,15 @@ export const lastNameCubeConfigs: CubeConfig[] = [{
             yEnd: 250,
             animationDelay: 1.6
         },
+        floatingAnimationOptions: {
+            xOffset: getRandomNumberExcludingMiddle(3, 25),
+            yOffset: getRandomNumberExcludingMiddle(3, 25),
+            xRotate: getRandomNumberExcludingMiddle(3, 10)
+        },
         letter: 'D',
         cubeSize: 100,
         fontSize: 4,
-        cubeColors: ['#ff5722', '#03a9f4', '#323232'],
+        cubeColors: [COLORS.giantsOrange, COLORS.vividCerulean, COLORS.neutralDarkest],
         animationGroupClassName: 'last-name'
     },
     {
@@ -117,10 +149,15 @@ export const lastNameCubeConfigs: CubeConfig[] = [{
             yEnd: 200,
             animationDelay: 1.4
         },
+        floatingAnimationOptions: {
+            xOffset: getRandomNumberExcludingMiddle(3, 25),
+            yOffset: getRandomNumberExcludingMiddle(3, 25),
+            xRotate: getRandomNumberExcludingMiddle(3, 10)
+        },
         letter: 'R',
         cubeSize: 100,
         fontSize: 4,
-        cubeColors: ['#ff5722', '#03a9f4', '#323232'],
+        cubeColors: [COLORS.giantsOrange, COLORS.vividCerulean, COLORS.neutralDarkest],
         animationGroupClassName: 'last-name'
     },
     {
@@ -131,10 +168,15 @@ export const lastNameCubeConfigs: CubeConfig[] = [{
             yEnd: 150,
             animationDelay: 1.2
         },
+        floatingAnimationOptions: {
+            xOffset: getRandomNumberExcludingMiddle(3, 25),
+            yOffset: getRandomNumberExcludingMiddle(3, 25),
+            xRotate: getRandomNumberExcludingMiddle(3, 10)
+        },
         letter: 'E',
         cubeSize: 100,
         fontSize: 4,
-        cubeColors: ['#ff5722', '#03a9f4', '#323232'],
+        cubeColors: [COLORS.giantsOrange, COLORS.vividCerulean, COLORS.neutralDarkest],
         animationGroupClassName: 'last-name'
     },
     {
@@ -145,10 +187,15 @@ export const lastNameCubeConfigs: CubeConfig[] = [{
             yEnd: 100,
             animationDelay: 1.0
         },
+        floatingAnimationOptions: {
+            xOffset: getRandomNumberExcludingMiddle(3, 25),
+            yOffset: getRandomNumberExcludingMiddle(3, 25),
+            xRotate: getRandomNumberExcludingMiddle(3, 10)
+        },
         letter: 'C',
         cubeSize: 100,
         fontSize: 4,
-        cubeColors: ['#ff5722', '#03a9f4', '#323232'],
+        cubeColors: [COLORS.giantsOrange, COLORS.vividCerulean, COLORS.neutralDarkest],
         animationGroupClassName: 'last-name'
     },
     {
@@ -159,10 +206,15 @@ export const lastNameCubeConfigs: CubeConfig[] = [{
             yEnd: 100,
             animationDelay: 1.0
         },
+        floatingAnimationOptions: {
+            xOffset: getRandomNumberExcludingMiddle(3, 25),
+            yOffset: getRandomNumberExcludingMiddle(3, 25),
+            xRotate: getRandomNumberExcludingMiddle(3, 10)
+        },
         letter: 'H',
         cubeSize: 100,
         fontSize: 4,
-        cubeColors: ['#ff5722', '#03a9f4', '#323232'],
+        cubeColors: [COLORS.giantsOrange, COLORS.vividCerulean, COLORS.neutralDarkest],
         animationGroupClassName: 'last-name'
     },
     {
@@ -173,10 +225,15 @@ export const lastNameCubeConfigs: CubeConfig[] = [{
             yEnd: 150,
             animationDelay: 1.2
         },
+        floatingAnimationOptions: {
+            xOffset: getRandomNumberExcludingMiddle(3, 25),
+            yOffset: getRandomNumberExcludingMiddle(3, 25),
+            xRotate: getRandomNumberExcludingMiddle(3, 10)
+        },
         letter: 'S',
         cubeSize: 100,
         fontSize: 4,
-        cubeColors: ['#ff5722', '#03a9f4', '#323232'],
+        cubeColors: [COLORS.giantsOrange, COLORS.vividCerulean, COLORS.neutralDarkest],
         animationGroupClassName: 'last-name'
     },
     {
@@ -187,10 +244,15 @@ export const lastNameCubeConfigs: CubeConfig[] = [{
             yEnd: 200,
             animationDelay: 1.4
         },
+        floatingAnimationOptions: {
+            xOffset: getRandomNumberExcludingMiddle(3, 25),
+            yOffset: getRandomNumberExcludingMiddle(3, 25),
+            xRotate: getRandomNumberExcludingMiddle(3, 10)
+        },
         letter: 'E',
         cubeSize: 100,
         fontSize: 4,
-        cubeColors: ['#ff5722', '#03a9f4', '#323232'],
+        cubeColors: [COLORS.giantsOrange, COLORS.vividCerulean, COLORS.neutralDarkest],
         animationGroupClassName: 'last-name'
     },
     {
@@ -201,10 +263,15 @@ export const lastNameCubeConfigs: CubeConfig[] = [{
             yEnd: 250,
             animationDelay: 1.6
         },
+        floatingAnimationOptions: {
+            xOffset: getRandomNumberExcludingMiddle(3, 25),
+            yOffset: getRandomNumberExcludingMiddle(3, 25),
+            xRotate: getRandomNumberExcludingMiddle(3, 10)
+        },
         letter: 'L',
         cubeSize: 100,
         fontSize: 4,
-        cubeColors: ['#ff5722', '#03a9f4', '#323232'],
+        cubeColors: [COLORS.giantsOrange, COLORS.vividCerulean, COLORS.neutralDarkest],
         animationGroupClassName: 'last-name'
     },
 ];
