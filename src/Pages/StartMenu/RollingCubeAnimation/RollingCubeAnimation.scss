@@ -193,19 +193,22 @@
         transform:
             translateY(300px)
             scale(calc(100% - var(--shadow-y-offset, 0%)))
-            rotateX(90deg);
+            rotateX(calc(90deg + var(--shadow-x-rotate, -15deg) / 15));
+            // rotateX(90deg); --> If I dont like the 'rotateX' addition just comment these back in
     }
     50% {
         transform:
             translateY(300px)
             scale(calc(100% - var(--shadow-y-offset, 0%) / 2))
-            rotateX(90deg);
+            rotateX(calc(90deg + var(--shadow-x-rotate, -15deg) / 10));
+            // rotateX(90deg);
     }
     75% {
         transform:
             translateY(300px)
             scale(calc(100% + var(--shadow-y-offset, 0%)))
-            rotateX(90deg);
+            rotateX(calc(90deg - var(--shadow-x-rotate, -15deg) / 5));
+            // rotateX(90deg);
     }
     100% {
         transform:
