@@ -41,7 +41,7 @@ export const firstNameCubeConfigs: CubeConfig[] = [{
         letter: 'D',
         cubeSize: 200,
         fontSize: 8,
-        cubeColors: [COLORS.giantsOrange, COLORS.vividCerulean, COLORS.neutralDarkest],
+        cubeColors: [COLORS.crimsonKiss, COLORS.vividCerulean, COLORS.neutralDarkest],
         animationGroupClassName: 'first-name'
     },
     {
@@ -60,7 +60,7 @@ export const firstNameCubeConfigs: CubeConfig[] = [{
         letter: 'Y',
         cubeSize: 200,
         fontSize: 8,
-        cubeColors: [COLORS.giantsOrange, COLORS.vividCerulean, COLORS.neutralDarkest],
+        cubeColors: [COLORS.crimsonKiss, COLORS.vividCerulean, COLORS.neutralDarkest],
         animationGroupClassName: 'first-name'
     },
     {
@@ -79,7 +79,7 @@ export const firstNameCubeConfigs: CubeConfig[] = [{
         letter: 'L',
         cubeSize: 200,
         fontSize: 8,
-        cubeColors: [COLORS.giantsOrange, COLORS.vividCerulean, COLORS.neutralDarkest],
+        cubeColors: [COLORS.crimsonKiss, COLORS.vividCerulean, COLORS.neutralDarkest],
         animationGroupClassName: 'first-name'
     },
     {
@@ -98,7 +98,7 @@ export const firstNameCubeConfigs: CubeConfig[] = [{
         letter: 'A',
         cubeSize: 200,
         fontSize: 8,
-        cubeColors: [COLORS.giantsOrange, COLORS.vividCerulean, COLORS.neutralDarkest],
+        cubeColors: [COLORS.crimsonKiss, COLORS.vividCerulean, COLORS.neutralDarkest],
         animationGroupClassName: 'first-name'
     },
     {
@@ -117,7 +117,7 @@ export const firstNameCubeConfigs: CubeConfig[] = [{
         letter: 'N',
         cubeSize: 200,
         fontSize: 8,
-        cubeColors: [COLORS.giantsOrange, COLORS.vividCerulean, COLORS.neutralDarkest],
+        cubeColors: [COLORS.crimsonKiss, COLORS.vividCerulean, COLORS.neutralDarkest],
         animationGroupClassName: 'first-name'
     },
 ];
@@ -138,7 +138,7 @@ export const lastNameCubeConfigs: CubeConfig[] = [{
         letter: 'D',
         cubeSize: 100,
         fontSize: 4,
-        cubeColors: [COLORS.giantsOrange, COLORS.vividCerulean, COLORS.neutralDarkest],
+        cubeColors: [COLORS.crimsonKiss, COLORS.vividCerulean, COLORS.neutralDarkest],
         animationGroupClassName: 'last-name'
     },
     {
@@ -157,7 +157,7 @@ export const lastNameCubeConfigs: CubeConfig[] = [{
         letter: 'R',
         cubeSize: 100,
         fontSize: 4,
-        cubeColors: [COLORS.giantsOrange, COLORS.vividCerulean, COLORS.neutralDarkest],
+        cubeColors: [COLORS.crimsonKiss, COLORS.vividCerulean, COLORS.neutralDarkest],
         animationGroupClassName: 'last-name'
     },
     {
@@ -176,7 +176,7 @@ export const lastNameCubeConfigs: CubeConfig[] = [{
         letter: 'E',
         cubeSize: 100,
         fontSize: 4,
-        cubeColors: [COLORS.giantsOrange, COLORS.vividCerulean, COLORS.neutralDarkest],
+        cubeColors: [COLORS.crimsonKiss, COLORS.vividCerulean, COLORS.neutralDarkest],
         animationGroupClassName: 'last-name'
     },
     {
@@ -195,7 +195,7 @@ export const lastNameCubeConfigs: CubeConfig[] = [{
         letter: 'C',
         cubeSize: 100,
         fontSize: 4,
-        cubeColors: [COLORS.giantsOrange, COLORS.vividCerulean, COLORS.neutralDarkest],
+        cubeColors: [COLORS.crimsonKiss, COLORS.vividCerulean, COLORS.neutralDarkest],
         animationGroupClassName: 'last-name'
     },
     {
@@ -214,7 +214,7 @@ export const lastNameCubeConfigs: CubeConfig[] = [{
         letter: 'H',
         cubeSize: 100,
         fontSize: 4,
-        cubeColors: [COLORS.giantsOrange, COLORS.vividCerulean, COLORS.neutralDarkest],
+        cubeColors: [COLORS.crimsonKiss, COLORS.vividCerulean, COLORS.neutralDarkest],
         animationGroupClassName: 'last-name'
     },
     {
@@ -233,7 +233,7 @@ export const lastNameCubeConfigs: CubeConfig[] = [{
         letter: 'S',
         cubeSize: 100,
         fontSize: 4,
-        cubeColors: [COLORS.giantsOrange, COLORS.vividCerulean, COLORS.neutralDarkest],
+        cubeColors: [COLORS.crimsonKiss, COLORS.vividCerulean, COLORS.neutralDarkest],
         animationGroupClassName: 'last-name'
     },
     {
@@ -252,7 +252,7 @@ export const lastNameCubeConfigs: CubeConfig[] = [{
         letter: 'E',
         cubeSize: 100,
         fontSize: 4,
-        cubeColors: [COLORS.giantsOrange, COLORS.vividCerulean, COLORS.neutralDarkest],
+        cubeColors: [COLORS.crimsonKiss, COLORS.vividCerulean, COLORS.neutralDarkest],
         animationGroupClassName: 'last-name'
     },
     {
@@ -271,7 +271,7 @@ export const lastNameCubeConfigs: CubeConfig[] = [{
         letter: 'L',
         cubeSize: 100,
         fontSize: 4,
-        cubeColors: [COLORS.giantsOrange, COLORS.vividCerulean, COLORS.neutralDarkest],
+        cubeColors: [COLORS.crimsonKiss, COLORS.vividCerulean, COLORS.neutralDarkest],
         animationGroupClassName: 'last-name'
     },
 ];

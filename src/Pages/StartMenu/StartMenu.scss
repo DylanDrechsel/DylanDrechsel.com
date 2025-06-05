@@ -29,6 +29,9 @@
     opacity: 0;
     transition: all 0.8s ease-in-out 5.0s;
     pointer-events: none;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 25vh;
     
     &.visible {
         opacity: 1;

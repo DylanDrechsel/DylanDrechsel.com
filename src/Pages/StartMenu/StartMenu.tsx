@@ -1,5 +1,6 @@
 import { useState, useEffect, type FC } from 'react';
 import './StartMenu.scss';
+import { Container, Row, Col } from '../../Common/GridSystem/Components';
 import StaticAnimation from './StaticAnimation/StaticAnimation';
 import RollingCubeAnimation from './RollingCubeAnimation/RollingCubeAnimation';
 import { firstNameCubeConfigs, lastNameCubeConfigs } from './RollingCubeAnimation/RollingCubeAnimationConfigs';
@@ -49,6 +50,14 @@ const StartMenu: FC<StartMenuProps> = () => {
 
             <div className={`start-menu-content ${showMainContent ? 'visible' : ''}`}>
                 {/* <h1> WELCOME</h1> */}
+
+                <Container className='button-container'>
+                    <Row>
+                        <Col lg={12}>
+                            <h1> WELCOME</h1>
+                        </Col>
+                    </Row>
+                </Container>
             </div>
         </div>
     );
