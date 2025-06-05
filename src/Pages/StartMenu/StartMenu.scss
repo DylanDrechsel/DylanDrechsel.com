@@ -1,14 +1,37 @@
-.start-menu-content {
-  overflow: hidden;
-  height: 100vh;
-  width: 100vw;
-  background: #f0f0f0;
-  opacity: 0;
-  transition: opacity 2s ease-in;
-  position: relative;
-  z-index: 1;
+@import '../../Common/scss/global';
 
-  &.visible {
-    opacity: 1;
+.start-menu-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background: $start_menu_background;
+}
+
+.cube-animation-background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1; // Behind the main content
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+    
+    &.visible {
+        opacity: 1;
+    }
+}
+
+.start-menu-content {
+    position: relative;
+    z-index: 10; // Above the cube animations
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: all 0.8s ease-in-out 5.0s;
+    pointer-events: none;
+    
+    &.visible {
+        opacity: 1;
+        pointer-events: auto;
   }
 }

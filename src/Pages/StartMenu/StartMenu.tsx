@@ -33,20 +33,24 @@ const StartMenu: FC<StartMenuProps> = () => {
     }, [showMainContent]);
 
     return (
-        <>
-        {renderAnimationOverlay && (
-            <StaticAnimation onAnimationComplete={handleShowMainContent} startDice={handleShowDice}/>
-        )}
-
-        <div className={`start-menu-content ${showMainContent ? 'visible' : ''}`}>
-            {showDice && (
-                <>
-                    <RollingCubeAnimation cubeConfigs={firstNameCubeConfigs} />
-                    <RollingCubeAnimation cubeConfigs={lastNameCubeConfigs} />
-                </>
+        <div className='start-menu-container'>
+            {renderAnimationOverlay && (
+                <StaticAnimation onAnimationComplete={handleShowMainContent} startDice={handleShowDice}/>
             )}
+
+            <div className={`cube-animation-background ${showDice ? 'visible' : ''}`}>
+                {showDice && (
+                    <>
+                        <RollingCubeAnimation cubeConfigs={firstNameCubeConfigs} />
+                        <RollingCubeAnimation cubeConfigs={lastNameCubeConfigs} />
+                    </>
+                )}
+            </div>
+
+            <div className={`start-menu-content ${showMainContent ? 'visible' : ''}`}>
+                <h1> WELCOME</h1>
+            </div>
         </div>
-        </>
     );
 };
 
