@@ -48,7 +48,7 @@ const StartMenu: FC<StartMenuProps> = () => {
             </div>
 
             <div className={`start-menu-content ${showMainContent ? 'visible' : ''}`}>
-                <h1> WELCOME</h1>
+                {/* <h1> WELCOME</h1> */}
             </div>
         </div>
     );

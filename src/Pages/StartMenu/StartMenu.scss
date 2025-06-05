@@ -1,4 +1,4 @@
-@import '../../Common/scss/global';
+@use '../../Common/scss/global.scss' as *;
 
 .start-menu-container {
     position: relative;
@@ -33,5 +33,5 @@
     &.visible {
         opacity: 1;
         pointer-events: auto;
-  }
+    }
 }

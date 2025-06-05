@@ -73,7 +73,7 @@ export const firstNameCubeConfigs: CubeConfig[] = [{
         },
         floatingAnimationOptions: {
             xOffset: getRandomNumberExcludingMiddle(3, 10),
-            yOffset: getRandomNumberExcludingMiddle(3, 25),
+            yOffset: getRandomNumberExcludingMiddle(10, 25),
             xRotate: getRandomNumberExcludingMiddle(3, 10)
         },
         letter: 'L',
