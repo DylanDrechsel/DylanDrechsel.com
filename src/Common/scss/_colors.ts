@@ -1,4 +1,5 @@
 export const COLORS = {
+  crimsonKiss: '#EF1553',
   crimsonRed: '#E13763',
   blueNcs: '#0081C8',
   midnightBlue: '#00408E',

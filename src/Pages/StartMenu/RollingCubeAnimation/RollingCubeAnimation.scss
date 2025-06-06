@@ -27,7 +27,7 @@
     // Roll-in animation first, then continuous rotation
     animation:
         roll-in var(--animation-duration, 1.5s) ease-out forwards var(--animation-delay, 0s),
-        floating-movement 10s calc(1.5s + var(--animation-delay, 0s)) infinite linear;
+        floating-movement 7s calc(1.5s + var(--animation-delay, 0s)) infinite linear;
 
     // Pixelated rendering for retro look
     image-rendering: pixelated;
@@ -85,7 +85,7 @@
     pointer-events: none;
     transform-style: preserve-3d;
     transform-origin: center bottom;
-    animation: shadow-animation 10s calc(1.5s + var(--animation-delay, 0s)) infinite linear;
+    animation: shadow-animation 7s calc(1.5s + var(--animation-delay, 0s)) infinite linear;
 }
 
 .shadow {
@@ -98,7 +98,7 @@
     transform-origin: center bottom;
     animation: 
         shadow-fade 1s calc(0.5s + var(--animation-delay, 0s)) ease-out forwards,
-        shadow-scale-only 10s calc(1.5s + var(--animation-delay, 0s)) infinite linear;
+        shadow-scale-only 7s calc(1.5s + var(--animation-delay, 0s)) infinite linear;
 }
 
 // Positioning for each face of the cube

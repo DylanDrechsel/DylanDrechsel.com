@@ -1,4 +1,4 @@
-@import './mixins';
-@import './variables';
-@import '../GridSystem/grid';
-@import './utility_classes';
+@use './mixins';
+@forward './variables';
+@use '../GridSystem/grid';
+@use './utility_classes';
