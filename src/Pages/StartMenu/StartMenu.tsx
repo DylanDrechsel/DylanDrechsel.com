@@ -34,6 +34,10 @@ const StartMenu: FC<StartMenuProps> = () => {
         }
     }, [showMainContent]);
 
+    const testButton = () => {
+        console.log('Test!!')
+    }
+
     return (
         <div className='start-menu-container'>
             {renderAnimationOverlay && (
@@ -53,10 +57,10 @@ const StartMenu: FC<StartMenuProps> = () => {
                 <Container className='button-container'>
                     <Row className='button-row d-flex justify-content-center gap-3'>
                         <Col className="col-auto">
-                            <PixelButtonFadeIn title={'Start'} />
+                            <PixelButtonFadeIn title={'Start'} onClick={testButton} />
                         </Col>
                         <Col className="col-auto">
-                            <PixelButtonFadeIn title={'To Website'} />
+                            <PixelButtonFadeIn title={'To Website'} onClick={testButton} />
                         </Col>
                     </Row>
                 </Container>

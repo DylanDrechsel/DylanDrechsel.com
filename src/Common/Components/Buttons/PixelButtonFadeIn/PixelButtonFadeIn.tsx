@@ -8,9 +8,11 @@ interface PixelButtonProps {
     title: string;
     width?: number;
     height?: number;
+    animationType?: string;
+    onClick: (...args: unknown[]) => unknown;
 };
 
-const PixelButtonFadeIn: FC<PixelButtonProps> = ({ buttonColor, titleColor, title, width, height }) => {
+const PixelButtonFadeIn: FC<PixelButtonProps> = ({ buttonColor, titleColor, title, width, height, onClick }) => {
     const buttonRef = useRef<HTMLButtonElement>(null);
     const pixelContainerRef = useRef<HTMLDivElement>(null);
 
@@ -53,7 +55,7 @@ const PixelButtonFadeIn: FC<PixelButtonProps> = ({ buttonColor, titleColor, titl
 
     return (
         <div className='pixel-button-container-FI' style={buttonStyle}>
-            <button ref={buttonRef} className='pixel-button-FI'>
+            <button ref={buttonRef} className='pixel-button-FI' onClick={onClick}>
                 <span>{title}</span>
                 <div 
                     ref={pixelContainerRef} 
