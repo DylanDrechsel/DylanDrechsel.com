@@ -4,7 +4,7 @@ import { Container, Row, Col } from '../../Common/GridSystem/Components';
 import StaticAnimation from './StaticAnimation/StaticAnimation';
 import RollingCubeAnimation from './RollingCubeAnimation/RollingCubeAnimation';
 import { firstNameCubeConfigs, lastNameCubeConfigs } from './RollingCubeAnimation/RollingCubeAnimationConfigs';
-import PixelButtonFadeIn from '../../Common/Components/Buttons/PixelButtonFadeIn/PixelButtonFadeIn';
+import PixelButton from '../../Common/Components/Buttons/PixelButton/PixelButton';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-object-type
 interface StartMenuProps {};
@@ -57,10 +57,10 @@ const StartMenu: FC<StartMenuProps> = () => {
                 <Container className='button-container'>
                     <Row className='button-row d-flex justify-content-center gap-3'>
                         <Col className="col-auto">
-                            <PixelButtonFadeIn title={'Start'} onClick={testButton} />
+                            <PixelButton title={'Start'} animationType={'fadeIn'} onClick={testButton} />
                         </Col>
                         <Col className="col-auto">
-                            <PixelButtonFadeIn title={'To Website'} onClick={testButton} />
+                            <PixelButton title={'To Website'} animationType={'fadeOut'} onClick={testButton} />
                         </Col>
                     </Row>
                 </Container>
