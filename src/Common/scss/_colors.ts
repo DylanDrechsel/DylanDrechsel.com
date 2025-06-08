@@ -51,4 +51,5 @@ export const COLORS = {
   disabledText: '#bbbbbb',
   amber: '#f47b19',
   blackSemiTransparent: '#00000080',
+  antiFlashWhite: '#f0f0f0'
 };

@@ -1,7 +1,7 @@
 @use './Common/scss/_global.scss' as *;
 
 #root {
-  background: #f0f0f0;
+  background: $anti-flash-white;
 }
 
 .app-main {

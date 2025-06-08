@@ -109,8 +109,8 @@ $grid-gutter-width: 1.5rem;
 
 .container, .container-fluid {
     width: 100%;
-    padding-right: calc($grid-gutter-width * 0.5);
-    padding-left: calc($grid-gutter-width * 0.5);
+    padding-right: $grid-gutter-width * 0.5;
+    padding-left: $grid-gutter-width * 0.5;
     margin-right: auto;
     margin-left: auto;
 }
@@ -123,7 +123,7 @@ $grid-gutter-width: 1.5rem;
  * This loop applies each max-width at its corresponding breakpoints and up.
 */
 
-.container {
+.container { // $breakpoint = key & $container-max-width = value --> from object $container-max-widths
     @each $breakpoint, $container-max-width in $container-max-widths {
         @include media-breakpoint-up($breakpoint) {
             max-width: $container-max-width;
@@ -145,8 +145,8 @@ $grid-gutter-width: 1.5rem;
 .row {
     display: flex;
     flex-wrap: wrap;
-    margin-right: calc($grid-gutter-width * -0.5);
-    margin-left: calc($grid-gutter-width * -0.5);
+    margin-right: $grid-gutter-width * -0.5;
+    margin-left: $grid-gutter-width * -0.5;
 }
 
 /**
@@ -187,8 +187,8 @@ $grid-gutter-width: 1.5rem;
     flex-basis: 0;
     flex-grow: 1;
     max-width: 100%;
-    padding-right: calc($grid-gutter-width * 0.5);
-    padding-left: calc($grid-gutter-width * 0.5);
+    padding-right: $grid-gutter-width * 0.5;
+    padding-left: $grid-gutter-width * 0.5;
 }
 
 /**
@@ -236,8 +236,8 @@ $grid-gutter-width: 1.5rem;
 
         @for $i from 1 through $grid-columns {
             .col-#{$breakpoint}-#{$i} {
-                flex: 0 0 math.percentage($number: calc($i / $grid-columns));
-                max-width: math.percentage($number: calc($i / $grid-columns));
+                flex: 0 0 math.percentage($number: math.div($i, $grid-columns));
+                max-width: math.percentage($number: math.div($i, $grid-columns));
             }
         }
 
@@ -256,7 +256,7 @@ $grid-gutter-width: 1.5rem;
         @for $i from 0 through ($grid-columns - 1) {
             @if not ($breakpoint == xxs and $i == 0) {
                 .offset-#{$breakpoint}-#{$i} {
-                    margin-left: math.percentage($number: calc($i / $grid-columns));
+                    margin-left: math.percentage($number: math.div($i, $grid-columns));
                 }
             }
         }
@@ -289,8 +289,8 @@ $grid-gutter-width: 1.5rem;
 
 @for $i from 1 through $grid-columns {
     .col-#{$i} {
-        flex: 0 0 math.percentage($number: calc($i / $grid-columns));
-        max-width: math.percentage($number: calc($i / $grid-columns));
+        flex: 0 0 math.percentage($number: math.div($i, $grid-columns));
+        max-width: math.percentage($number: math.div($i, $grid-columns));
     }
 }
 
@@ -309,29 +309,6 @@ $grid-gutter-width: 1.5rem;
 */
 
 [class*='col-'] {
-  padding-right: calc($grid-gutter-width * 0.5);
-  padding-left: calc($grid-gutter-width * 0.5);
-}
-
-/**
- * UTILITY CLASSES
- * 
- * Common utility classes for layout and alignment.
- * These complement the grid system with frequently needed styles.
-*/
-
-.d-flex {
-    display: flex !important; 
-}
-
-.justify-content-center {
-    justify-content: center !important;
-}
-
-.align-items-center {
-    align-items: center !important;
-}
-
-.text-center {
-    text-align: center !important;
+  padding-right: $grid-gutter-width * 0.5;
+  padding-left: $grid-gutter-width * 0.5;
 }
