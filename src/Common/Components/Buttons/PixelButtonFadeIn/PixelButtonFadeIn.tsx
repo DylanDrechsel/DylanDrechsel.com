@@ -1,21 +1,24 @@
 import React, { useEffect, useRef, type FC } from 'react';
 import './PixelButtonFadeIn.scss';
+import { COLORS } from '../../../scss/_colors';
 
 interface PixelButtonProps {
-    color: string;
+    buttonColor?: string;
+    titleColor?: string;
     title: string;
-    width: number;
-    height: number;
+    width?: number;
+    height?: number;
 };
 
-const PixelButtonFadeIn: FC<PixelButtonProps> = ({ color, title, width, height }) => {
+const PixelButtonFadeIn: FC<PixelButtonProps> = ({ buttonColor, titleColor, title, width, height }) => {
     const buttonRef = useRef<HTMLButtonElement>(null);
     const pixelContainerRef = useRef<HTMLDivElement>(null);
 
     const buttonStyle = {
-        '--color': color,
-        '--width': `${width}px`,
-        '--height': `${height}px`,
+        '--button-color': buttonColor === undefined ? buttonColor = COLORS.giantsOrange : null,
+        '--title-color': titleColor === undefined ? titleColor = COLORS.antiFlashWhite : null,
+        '--width': `${width === undefined ? width = 180 : null }px`,
+        '--height': `${height === undefined ? height = 60 : null}px`,
     } as React.CSSProperties;
 
     useEffect(() => {

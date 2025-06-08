@@ -10,6 +10,14 @@
     - Changing the value doesn't make the component re-render
     - It has a .current property
 
+-----> Scss Notes <-----
+    -----> Sass watch command --> sass --watch ./_grid.scss:_compiledCssFile/_grid.css <-----
+    - Mixin --> is a way to group CSS declarations that you want to reuse throughout the stylesheet. It helps write more concise and organized code, especially for repetitive patterns.
+    - map.get() --> function retrieves the value associated with a specified key in a map.
+        example --> $min: map.get($map: $grid-breakpoints ,$key: $lg); --> $min: 1200px
+    - @content --> is a special Sass directive used within mixins. When you @include a mixin, any CSS declarations you put inside the @include block will be inserted at the @content point within the mixin's definition.
+    - @include --> is a directive used to insert the styles defined by a @mixin into the current rule set. Its how you 'call' a mixin.
+
 -----> NPM Packages <-----
 Vite React --> Completed!
 React Router --> Completed!
@@ -60,3 +68,8 @@ export type CubeConfig = {
     animationGroupClassName ? : string | null;
 };
 -------------------------------------------------------------------->  
+
+-----> My Responsive Grid <-----
+    My Changes:
+        - Added 3 more spacing options (12px, 36px, 64px)
+        - Added 1 more breakpoint (xxl: 1600px)
