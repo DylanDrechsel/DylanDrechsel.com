@@ -57,6 +57,13 @@ $displays: (
     }
 }
 
+// Print display classes
+@each $display, $value in $displays {
+    .d-print-#{$display} {
+        display: #{$value} !important;
+    }
+}
+
 // Responsive display classes
 @each $breakpoint in map.keys($grid-breakpoints) {
     @include media-breakpoint-up($breakpoint) {
@@ -251,6 +258,105 @@ $align-selfs: (
     flex-shrink: 1 !important;
 }
 
+// Responsive flex-fill, flex-grow, and flex-shrink classes
+@each $breakpoint in map.keys($grid-breakpoints) {
+    @include media-breakpoint-up($breakpoint) {
+        .flex-#{$breakpoint}-fill {
+            flex: 1 1 auto !important;
+        }
+        .flex-#{$breakpoint}-grow-0 {
+            flex-grow: 0 !important;
+        }
+        .flex-#{$breakpoint}-grow-1 {
+            flex-grow: 1 !important;
+        }
+        .flex-#{$breakpoint}-shrink-0 {
+            flex-shrink: 0 !important;
+        }
+        .flex-#{$breakpoint}-shrink-1 {
+            flex-shrink: 1 !important;
+        }
+    }
+}
+
+/**
+ * ORDER UTILITIES
+ *
+ * Change the visual order of flex items.
+ * Classes: .order-{value}, .order-{breakpoint}-{value}
+ */
+
+$order-values: (
+    0: 0,
+    1: 1,
+    2: 2,
+    3: 3,
+    4: 4,
+    5: 5
+);
+
+// Base order classes
+@each $order, $value in $order-values {
+    .order-#{$order} {
+        order: #{$value} !important;
+    }
+}
+
+// Responsive order classes
+@each $breakpoint in map.keys($grid-breakpoints) {
+    @include media-breakpoint-up($breakpoint) {
+        @each $order, $value in $order-values {
+            .order-#{$breakpoint}-#{$order} {
+                order: #{$value} !important;
+            }
+        }
+    }
+}
+
+// Order first/last
+.order-first {
+    order: -1 !important;
+}
+
+.order-last {
+    order: 6 !important; // Bootstrap uses 6 for last
+}
+
+// Responsive order first/last
+@each $breakpoint in map.keys($grid-breakpoints) {
+    @include media-breakpoint-up($breakpoint) {
+        .order-#{$breakpoint}-first {
+            order: -1 !important;
+        }
+        .order-#{$breakpoint}-last {
+            order: 6 !important; // Bootstrap uses 6 for last
+        }
+    }
+}
+
+/**
+ * VERTICAL ALIGNMENT UTILITIES
+ *
+ * Easily change the vertical alignment of inline, inline-block,
+ * inline-table, and table cell elements.
+ * Classes: .align-{value}
+ */
+
+$vertical-aligns: (
+    baseline: baseline,
+    top: top,
+    middle: middle,
+    bottom: bottom,
+    text-top: text-top,
+    text-bottom: text-bottom
+);
+
+@each $align, $value in $vertical-aligns {
+    .align-#{$align} {
+        vertical-align: #{$value} !important;
+    }
+}
+
 /**
  * SPACING UTILITIES
  * 
@@ -441,8 +547,6 @@ $sides: (
 
 // Text Alignment
 $text-aligns: (
-    left: left,
-    right: right,
     center: center,
     justify: justify,
     start: left,
