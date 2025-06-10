@@ -82,7 +82,7 @@ const PixelButtonFadeIn: FC<PixelButtonProps> = ({ buttonColor, titleColor, titl
     });
 
     return (
-        <div className={animationType === 'fadeIn' ? 'pixel-button-container-FI' : 'pixel-button-container-FO'} style={buttonStyle}>
+        <div className='pixel-button-container' style={buttonStyle}>
             <button ref={buttonRef} className={animationType === 'fadeIn' ? 'pixel-button-FI' : 'pixel-button-FO'} onClick={onClick}>
                 <span>{title}</span>
                 <div 

@@ -48,11 +48,6 @@
 }
 
 // Fade In Animation
-
-.pixel-button-container-FI {
-    @extend .pixel-button-container;
-}
-
 .pixel-button-FI {
     @extend .pixel-button;
     background: $neutral-darkest; 
@@ -75,11 +70,6 @@
 }
 
 // Fade Out Animation
-
-.pixel-button-container-FO {
-    @extend .pixel-button-container;
-}
-
 .pixel-button-FO {
     @extend .pixel-button;
     background: $neutral-darkest; 
