@@ -1,0 +1,8 @@
+@use '../../scss/global.scss' as *;
+
+.navigation-bar-container {
+    position: fixed;
+    height: 10vh;
+    width: 100%;
+    background: $start_menu_background;
+}
