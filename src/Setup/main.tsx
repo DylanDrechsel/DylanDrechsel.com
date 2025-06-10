@@ -1,5 +1,4 @@
 import './index.scss'
-import './tailwind.css';
 import '../Common/scss/_global.scss';
 import App from '../App.tsx'
 import { StrictMode } from 'react'

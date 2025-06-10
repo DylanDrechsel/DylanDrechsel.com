@@ -25,4 +25,5 @@ dist-ssr
 
 # Compiled CSS files
 /src/Common/GridSystem/_compiledCssFiles/
+notes.md
 
