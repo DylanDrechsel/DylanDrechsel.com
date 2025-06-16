@@ -6,6 +6,7 @@
  * to ensure they override other styles when needed.
  */
 
+@use "sass:color";
 @use "sass:map";
 @use "sass:meta";
 
@@ -1286,3 +1287,10 @@ $gaps: (
         }
     }
 }
+
+/**
+ * COLOR UTILITIES
+ *
+ * Define and apply text, background, and border colors with responsive variants.
+ * Colors are fully customizable by overriding Sass variables before importing this file.
+ */
