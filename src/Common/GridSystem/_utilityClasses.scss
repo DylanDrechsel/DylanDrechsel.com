@@ -7,6 +7,7 @@
  */
 
 @use "sass:color";
+@use "sass:math";
 @use "sass:map";
 @use "sass:meta";
 
@@ -1294,3 +1295,85 @@ $gaps: (
  * Define and apply text, background, and border colors with responsive variants.
  * Colors are fully customizable by overriding Sass variables before importing this file.
  */
+
+$primary:    #007bff !default; // blue
+$secondary:  #6c757d !default; // gray
+$success:    #28a745 !default; // green
+$info:       #17a2b8 !default; // cyan
+$warning:    #ffc107 !default; // yellow
+$danger:     #dc3545 !default; // red
+$light:      #f8f9fa !default; // off white
+$dark:       #343a40 !default; // off black
+$white:      #fff    !default; // white
+$black:      #000    !default; // black
+$body:       #212529 !default; // off gray
+$muted:      #6c757d !default; // gray
+
+$theme-colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "success": $success,
+  "info": $info,
+  "warning": $warning,
+  "danger": $danger,
+  "light": $light,
+  "dark": $dark,
+  "white": $white,
+  "black": $black,
+  "body": $body,
+  "muted": $muted
+);
+
+// Define global body text color
+body {
+    color: map.get($theme-colors, 'body');
+};
+
+// Generate Text Color Utilities (ex.., .text-primary, .text-success)
+@each $color-name, $color-value in $theme-colors {
+    .text-#{$color-name} {
+        color: $color-value !important;
+    }
+}
+
+// Generate Background Color Utilities (ex.., .bg-primary, .bg-danger)
+@each $color-name, $color-value in $theme-colors {
+    .bg-#{$color-name} {
+        background-color: $color-value !important;
+    }
+}
+
+// Generate Border Color Utilities (ex.., .border-primary, .border-warning)
+// Note: Requires .border, .border-top, etc., utilities to be present elsewhere
+@each $color-name, $color-value in $theme-colors {
+    .border-#{$color-name} {
+        border-color: $color-value !important;
+    }
+}
+
+// --- Background Gradients ---
+// Mixin to create Background Gradient
+@mixin gradient-bg($color) {
+    background-image: linear-gradient(180deg, color.mix($white, $color, 15%), $color) !important;
+}
+
+// Generate Gradient Utility Classes
+@each $color-name, $color-value in $theme-colors {
+    .bg-gradient-#{$color-name} {
+        @include gradient-bg($color-value);
+    }
+}
+
+// --- Background with Opacity ---
+// Define the opacity levels you want to generate
+// These are percentages (e.g., 25 for 25%)
+$bg-opacity-levels: (10, 25, 50, 75, 90) !default;
+
+// Generate Background Color Utilities with Opacity
+@each $color-name, $color-value in $theme-colors {
+    @each $level in $bg-opacity-levels {
+        .bg-#{$color-name}-opacity-#{$level} {
+            background-color: rgba($color-value, math.div($level, 100)) !important;
+        }
+    }
+}
